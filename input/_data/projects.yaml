@@ -1,7 +1,8 @@
 ---
   - title: 24 hours out at sea with Gazan fishermen
     type: single
-    description: I worked with photographer Marcus Yam and editor Kate Kuo to design and develop a side-scroll presentation for this profile of fishermen in the Gaza strip.
+    role: design/development
+    description: I designed and developed this side-scroll presentation for a profile of fishermen in the Gaza strip, working with photographer Marcus Yam and editor Kate Kuo.
     link: https://www.latimes.com/projects/24-hours-at-sea-with-gazan-fishermen/
     assets:
       - src: gf
@@ -10,7 +11,8 @@
 
   - title: Image magazine landing template
     type: gallery
-    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine*, under the guidance of creative director Jess de Jesus. I then developed it as a customizable page generator, which has been used for six issues thus far.
+    role: design/development
+    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 6 issues thus far. 
     link: https://www.latimes.com/projects/reverence/
     assets:
       - src: image
@@ -25,6 +27,7 @@
 
   - title: What’s on your plate?
     type: single
+    role: design/development
     description: This piece, featuring Californians with interesting vanity plates, was a collaboration of LAT interns. My role was to design/develop a custom build to navigate all the plates and their corresponding profiles.
     link: https://www.latimes.com/projects/license-plates/
     assets:
@@ -34,6 +37,7 @@
 
   - title: Afghan women under the Taliban
     type: single
+    role: design/development
     description: Also under Marcus Yam and Kate Kuo, I built this fast-turnaround custom build for Yam’s photo profiles of Afghan women facing the return of the Taliban.
     link: https://www.latimes.com/projects/afghan-women/
     assets:
@@ -43,6 +47,7 @@
 
   - title: “The Secret” Animated Home Page
     type: single
+    role: design/development
     description: As a personal project I built this animated lead-in for a theatre company website. The animation is fully responsive, and users can scroll to move it forwards and backwards.
     link: https://work.nicochilla.com/advanced_type_motion/
     assets:
@@ -52,7 +57,8 @@
 
   - title: WNSR New School Radio
     type: gallery
-    description: I built this single-page application for my college radio station, as a homepage and audio visualizer for student-produced media. The visualizer takes live FFT data from tracks using the web audio API, which is then animated using D3.
+    role: design/development
+    description: I built a single-page application for my college radio station, as a homepage and audio visualizer for student-produced media. I also designed a series of header graphics for their various shows.
     link: https://www.newschoolradio.org/
     assets:
       - src: wnsr
@@ -73,7 +79,8 @@
 
   - title: Tractatus Logico-Philosophicus Reader
     type: single
-    description: This site allows readers to navigate Wittgenstein’s Tractatus, a philosophy text arranged in a multileveled hierarchy. As you read, it detects your relative position in the text and maps it to a dendrogram with D3.js.
+    role: design/development
+    description: This site allows readers to navigate Wittgenstein’s Tractatus, a philosophy text arranged in a multileveled hierarchy. As you read, it detects your relative position in the text and maps it to a diagram using D3.js.
     link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
     assets:
       - src: tr
@@ -82,7 +89,8 @@
 
   - title: “How we can reimagine California?” illustrations
     type: gallery
-    description: These illustrations ran with a series of op-eds that address different policy issues in California, and explore possible ways to “reimagine” the state in the future.
+    role: illustration
+    description: These illustrations ran with a series of op-eds entitled *How can we reimagine California*, which discuss different policy issues and visions for the future of the state.
     link:
     assets:
       - src: rc-waste
@@ -100,6 +108,7 @@
 
   - title: Editorial illustrations
     type: gallery
+    role: illustration
     description: Here are some more illustrations I did during my time at LAT and at my college newspaper, *The New School Free Press*.
     link:
     assets:

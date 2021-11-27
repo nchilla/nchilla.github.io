@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="../css/clearstyle.css">
     <link rel="stylesheet" href="../css/fast-track.css">
     <script src="../js/lozad.js" charset="utf-8"></script>
-    <script type="text/javascript">
-
-    </script>
+    <link rel="stylesheet" href="https://use.typekit.net/tst3cyv.css">
   </head>
   <body>
     <article class='grid'>
@@ -25,14 +23,30 @@
 
       {% for project in projects %}
 
+      <div class="description text-width">
+        <div class="project-meta">
+          <h3>{{ project.title }}</h3>
+          <span>
+            {# <span class='role'>{{ project.role }}</span> #}
+            {% if project.link %} <a href="{{ project.link }}" target="_blank">Visit</a> {% endif %}
+          </span>
+        </div>
+
+        <p>{{ project.description | md | safe}}</p>
+      </div>
+
       {% if project.type == 'single' %}
       <div class="single">
         {{ macros.media(project.assets[0].src, project.assets[0].type) }}
       </div>
       {% else %}
       <div class="gallery">
+        <div class="scroll-indicator">
+          <span>Scroll<br>me --&gt;</span>
+        </div>
         {% for media in project.assets %}
         <div class="slide">
+
           {{ macros.media(media.src, media.type, media.effects) }}
         </div>
         {% endfor %}
@@ -40,26 +54,7 @@
 
       {% endif %}
 
-      <div class="description text-width">
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.description | md | safe}}</p>
-      </div>
-
-
-        {# <section class='project'>
-          <div class="slide-wrapper">
-
-              <div class="slide video">
-                <video class="lozad" autoplay muted playsinline loop data-poster="">
-                  <source data-src="../assets/video/gf.mp4" type="video/mp4">
-                </video>
-              </div>
-              <!-- <span class="caption">{{item.caption}}</span> -->
-            </div>
-        </section> #}
-        <div class="divider">
-
-        </div>
+        <div class="divider">  </div>
       {% endfor %}
 
 
