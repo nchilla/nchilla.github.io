@@ -1,0 +1,72 @@
+
+{% import 'macros.njk' as macros %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+    <title>Nico’s work</title>
+    <link rel="stylesheet" href="../css/clearstyle.css">
+    <link rel="stylesheet" href="../css/fast-track.css">
+    <script src="../js/lozad.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+    <article class='grid'>
+      <header>
+
+      </header>
+      <div class="reference">
+
+      </div>
+
+      {% for project in projects %}
+
+      {% if project.type == 'single' %}
+      <div class="single">
+        {{ macros.media(project.assets[0].src, project.assets[0].type) }}
+      </div>
+      {% else %}
+      <div class="gallery">
+        {% for media in project.assets %}
+        <div class="slide">
+          {{ macros.media(media.src, media.type, media.effects) }}
+        </div>
+        {% endfor %}
+      </div>
+
+      {% endif %}
+
+      <div class="description text-width">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description | md | safe}}</p>
+      </div>
+
+
+        {# <section class='project'>
+          <div class="slide-wrapper">
+
+              <div class="slide video">
+                <video class="lozad" autoplay muted playsinline loop data-poster="">
+                  <source data-src="../assets/video/gf.mp4" type="video/mp4">
+                </video>
+              </div>
+              <!-- <span class="caption">{{item.caption}}</span> -->
+            </div>
+        </section> #}
+        <div class="divider">
+
+        </div>
+      {% endfor %}
+
+
+
+
+    </article>
+
+    <script src="../js/fast-track.js" charset="utf-8" defer></script>
+  </body>
+</html>

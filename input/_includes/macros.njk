@@ -1,0 +1,31 @@
+
+
+{% macro media(src,type,effects) %}
+
+  {% if type == 'video'%}
+  <figure style='--ratio:0.58;' class='video'>
+    <video class="lozad" autoplay muted playsinline loop data-poster="">
+      <source data-src="../assets/video/{{ src }}.mp4" type="video/mp4">
+    </video>
+  </figure>
+
+  {% elseif type == 'image' %}
+  <figure style='--ratio:{{ src | getRatio }};' class="{{ effects }}">
+    <!-- For an element to be caught, add a block type that is different from the inline and some min-height for correct caught into view -->
+  <picture class="lozad">
+    <source type="image/webp" srcset="../assets/images/{{ src }}.webp" type="image/webp">
+    <source type="image/jpg" srcset="../assets/images/{{ src }}.jpg">
+    {# <source srcset="images/thumbs/05.jpg" media="(min-width: 980px)">
+    <source srcset="images/thumbs/06.jpg" media="(min-width: 320px)"> #}
+    <!-- NO img element -->
+    <!-- instead of img element, there will be the last source with the minimum dimensions -->
+    <!-- for disabled JS you can set <noscript><img src="images/thumbs/04.jpg" alt=""></noscript> -->
+  </picture>
+  </figure>
+
+
+
+
+
+  {% endif %}
+{% endmacro %}
