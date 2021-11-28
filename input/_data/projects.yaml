@@ -5,14 +5,14 @@
     description: I designed and developed this side-scroll presentation for a profile of fishermen in the Gaza strip, working with photographer Marcus Yam and editor Kate Kuo.
     link: https://www.latimes.com/projects/24-hours-at-sea-with-gazan-fishermen/
     assets:
-      - src: gf
+      - src: gf2
         type: video
         effects:
 
   - title: Image magazine landing template
     type: gallery
     role: design/development
-    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 6 issues thus far. 
+    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 6 issues thus far.
     link: https://www.latimes.com/projects/reverence/
     assets:
       - src: image
@@ -87,10 +87,10 @@
         type: video
         effects:
 
-  - title: “How we can reimagine California?” illustrations
+  - title: Reimagine California illustrations
     type: gallery
     role: illustration
-    description: These illustrations ran with a series of op-eds entitled *How can we reimagine California*, which discuss different policy issues and visions for the future of the state.
+    description: These illustrations ran with a series of op-eds entitled *How can we reimagine California*, which discussed different policy issues and visions for the future of the state.
     link:
     assets:
       - src: rc-waste
