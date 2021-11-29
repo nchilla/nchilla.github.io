@@ -292,6 +292,10 @@ em{
     margin-left:calc((100vw - var(--magic-formula)) / 2 + 10px);
     /* display:none; */
   }
+  .scroll-indicator span{
+    display:none;
+  }
+
 
   /* header{
     grid-column: 2/9;
