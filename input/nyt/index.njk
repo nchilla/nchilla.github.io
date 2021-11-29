@@ -17,21 +17,24 @@
     <article class='grid'>
       <header>
         <h1>My work</h1>
-        <h2>Hello NYT Hiring Team! Here is an overview of the projects that I am most proud of at the moment. Thank you for your consideration. <em>— Nico Chilla</em></h2>
+        <h2>Hello NYT Hiring Team! Here is an overview of the projects that I am most proud of at the moment, and you can see more work <a href='https://nicochilla.com/' target="_blank">here</a>. Thank you for your consideration.</h2>
+        <h2><em>— Nico Chilla</em></h2>
       </header>
-      <div class="reference">
+      {# <div class="reference">
 
-      </div>
+      </div> #}
 
       {% for project in projects %}
 
       <div class="description text-width">
         <div class="project-meta">
-          <h3>{{ project.title }}</h3>
-          <span>
-            {# <span class='role'>{{ project.role }}</span> #}
-            {% if project.link %} <a href="{{ project.link }}" target="_blank">visit</a> {% endif %}
-          </span>
+          <h3>{{ project.title }}
+            <span>
+              {# <span class='role'>{{ project.role }}</span> #}
+              {% if project.link %} <a href="{{ project.link }}" target="_blank">visit</a> {% endif %}
+            </span>
+          </h3>
+
         </div>
 
         <p>{{ project.description | md | safe}}</p>
