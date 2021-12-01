@@ -84,7 +84,7 @@ h3 a::after{
   margin-left:15px;
 }
 
-span{
+span,figcaption{
   font-family: anonymous-pro, monospace;
   font-size:18px;
   line-height: 24px;
@@ -189,6 +189,25 @@ figure{
   overflow:hidden;
   box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.16);
   font-size: 0;
+  position:relative;
+}
+
+figcaption{
+  position:absolute;
+  bottom:0;
+  left:0;
+  /* box-sizing: border-box; */
+  /* width: 100%; */
+  /* height:25px; */
+  padding:9px;
+  transform:translateY(100%);
+  transition: transform 0.3s;
+}
+
+figcaption a {
+  background-color: white;
+  display:inline-block;
+  padding:7px;
 }
 
 figure.video{
@@ -265,6 +284,10 @@ em{
 
 
 @media(hover:hover){
+  figure:hover figcaption{
+    transform:translateY(0%);
+  }
+
   /* a:hover::after{
     content:'→';
   } */
@@ -312,7 +335,7 @@ em{
 
 @media(max-width:730px){
 
-  p,h2,h3,span,a{
+  p,h2,h3,span,figcaption,a{
     font-size:16px;
     line-height: 22px;
   }
