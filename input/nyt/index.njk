@@ -28,12 +28,13 @@
 
       <div class="description text-width">
         <div class="project-meta">
-          <h3>{{ project.title }}
-            <span>
-              {# <span class='role'>{{ project.role }}</span> #}
-              {% if project.link %} <a href="{{ project.link }}" target="_blank">visit</a> {% endif %}
-            </span>
-          </h3>
+            <h3>
+              {% if project.link %}
+                <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+              {% else %}
+                {{ project.title }}
+              {% endif %}
+            </h3>
 
         </div>
 
