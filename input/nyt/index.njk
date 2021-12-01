@@ -53,7 +53,7 @@
         {% for media in project.assets %}
         <div class="slide">
 
-          {{ macros.media(media.src, media.type, media.effects) }}
+          {{ macros.media(media.src, media.type, media.effects, media.caption, media.link) }}
         </div>
         {% endfor %}
       </div>

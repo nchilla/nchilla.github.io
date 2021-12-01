@@ -8,6 +8,8 @@
       - src: gf2
         type: video
         effects:
+        link:
+        caption:
 
   - title: Image magazine landing template
     type: gallery
@@ -18,12 +20,18 @@
       - src: image
         type: video
         effects:
+        link: https://www.latimes.com/projects/reverence/
+        caption: Issue 5 - Reverence 🡕
       - src: image-i4
         type: image
         effects: video
+        link: https://www.latimes.com/projects/imagemakers/
+        caption: Issue 4 - Imagemakers 🡕
       - src: image-i6
         type: image
         effects: video
+        link: https://www.latimes.com/projects/energy/
+        caption: Issue 6 - Energy 🡕
 
   - title: What’s on your plate?
     type: single
@@ -34,6 +42,8 @@
       - src: lp-2
         type: video
         effects:
+        link:
+        caption:
 
   - title: Afghan women under the Taliban
     type: single
@@ -44,6 +54,8 @@
       - src: aw
         type: video
         effects:
+        link:
+        caption:
 
   - title: “The Secret” Animated Home Page
     type: single
@@ -54,6 +66,8 @@
       - src: secret
         type: video
         effects:
+        link:
+        caption:
 
   - title: WNSR New School Radio
     type: gallery
@@ -64,18 +78,28 @@
       - src: wnsr
         type: video
         effects:
+        link:
+        caption:
       - src: wnsr-whatsnew
         type: image
         effects:
+        link:
+        caption:
       - src: wnsr-memories
         type: image
         effects:
+        link:
+        caption:
       - src: wnsr-artculture
         type: image
         effects:
+        link:
+        caption:
       - src: wnsr-centennial
         type: image
         effects:
+        link:
+        caption:
 
   - title: Tractatus Logico-Philosophicus Reader
     type: single
@@ -86,6 +110,8 @@
       - src: tr
         type: video
         effects:
+        link:
+        caption:
 
   - title: Reimagine California illustrations
     type: gallery
@@ -96,15 +122,26 @@
       - src: rc-waste
         type: image
         effects:
+        link: https://www.latimes.com/opinion/story/2021-06-06/la-ed-reduce-reuse-recycle-reimagine-california
+        caption: Circular economy 🡕
+
       - src: rc-workfromhome
         type: image
         effects:
+        link: https://www.latimes.com/opinion/story/2021-06-06/editorial-weve-discovered-we-can-work-from-home-theres-no-turning-back
+        caption: Working from home 🡕
+
       - src: rc-healthcare
         type: image
         effects:
+        link: https://www.latimes.com/opinion/story/2021-06-06/health-insurance-employer-plans-obamacare-pandemic-lessons
+        caption: Single-payer healthcare 🡕
+
       - src: rc-housing
         type: image
         effects:
+        link: https://www.latimes.com/opinion/story/2021-06-06/homelessness-right-to-housing-human-right-reimagine-california
+        caption: Right to housing 🡕
 
   - title: Editorial illustrations
     type: gallery
@@ -115,9 +152,15 @@
       - src: socializing-post-covid
         type: image
         effects:
+        link: https://www.latimes.com/lifestyle/story/2021-08-03/making-new-friends-los-angeles-guide
+        caption: How to make friends during the pandemic 🡕
       - src: illos-schreiber
         type: image
         effects:
+        link: https://www.newschoolfreepress.com/2019/02/01/parsonsdean/
+        caption: Parsons announces a new dean 🡕
       - src: covid
         type: image
         effects:
+        link: https://www.newschoolfreepress.com/2020/02/01/as-coronavirus-outbreak-advances-the-new-school-temporarily-suspends-university-wide-travel-to-china/
+        caption: Covid-19 anti-Asian racism 🡕
