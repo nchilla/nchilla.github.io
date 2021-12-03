@@ -24,6 +24,12 @@ header{
   /* border-bottom:1px solid var(--fg); */
 }
 
+footer{
+  grid-column:1/12;
+  padding:40px;
+  /* text-align:right; */
+}
+
 h1{
   /* font-family: anonymous-pro, monospace; */
   font-family:'charis-sil',serif;
