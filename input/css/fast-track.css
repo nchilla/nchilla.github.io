@@ -91,7 +91,7 @@ h3 a::after{
 }
 
 span,figcaption{
-  font-family: anonymous-pro, monospace;
+  font-family: anonymous-pro, 'iosevka', monospace;
   font-size:18px;
   line-height: 24px;
 }
@@ -309,11 +309,16 @@ em{
   } */
 
 
-  .single,.text-width,header{
+  .single,.text-width,header,footer{
     grid-column:2/10;
   }
   .gallery{
     grid-column:1/11;
+  }
+
+  footer{
+    padding:0px;
+    padding-bottom:40px;
   }
 
   /* .gallery>.slide:first-of-type{
@@ -341,9 +346,14 @@ em{
 
 @media(max-width:730px){
 
-  p,h2,h3,span,figcaption,a{
+  p,h2,h3,figcaption,a{
     font-size:16px;
     line-height: 22px;
+  }
+
+  span,figcaption{
+    font-size:14px;
+    line-height: 20px;
   }
   .project-meta h3>span{
     margin-left:10px;
