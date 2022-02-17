@@ -387,26 +387,6 @@ em{
 
 
 @font-face {
-  font-family: 'charis-sil';
-  src: url('../assets/fonts/charis-reg.woff2'),
-       url('../assets/fonts/charis-reg.woff');
-}
-
-@font-face {
   font-family: 'iosevka';
   src: url('../assets/fonts/iosevka-regular.woff2');
-}
-
-@font-face {
-  font-family: 'charis-sil';
-  font-weight: 600;
-  src: url('../assets/fonts/charis-bold.woff2'),
-       url('../assets/fonts/charis-bold.woff');
-}
-
-@font-face {
-  font-family: 'charis-sil';
-  font-style: italic;
-  src: url('../assets/fonts/charis-reg-italic.woff2'),
-       url('../assets/fonts/charis-reg-italic.woff');
 }
