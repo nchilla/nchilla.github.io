@@ -104,7 +104,7 @@
   - title: Tractatus Logico-Philosophicus Reader
     type: single
     role: design/development
-    description: This site allows readers to navigate Wittgenstein’s Tractatus, a philosophy text arranged in a multileveled hierarchy. As you read, it detects your relative position in the text and maps it to a diagram using D3.js.
+    description: This project presents a single text — Wittgenstein's *Tractatus Logico-Philosophicus* — in 4 different ways, experimenting with different forms of reading and navigation.
     link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
     assets:
       - src: tr
