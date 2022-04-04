@@ -2,7 +2,7 @@
   - title: 24 hours out at sea with Gazan fishermen
     type: single
     role: design/development
-    description: While interning at the Los Angeles Times, I designed and developed this side-scroll build for a profile of fishermen in the Gaza Strip, working with photographer Marcus Yam and editor Kate Kuo.
+    description: I designed and developed this side-scroll build for a profile of fishermen in the Gaza Strip, working with photographer Marcus Yam and editor Kate Kuo.
     link: https://www.latimes.com/projects/24-hours-at-sea-with-gazan-fishermen/
     assets:
       - src: gf2
@@ -14,7 +14,7 @@
   - title: Image magazine landing template
     type: gallery
     role: design/development
-    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 4 issues thus far.
+    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 7 issues thus far.
     link: https://www.latimes.com/projects/reverence/
     assets:
       - src: image

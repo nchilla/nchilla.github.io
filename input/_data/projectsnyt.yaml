@@ -14,7 +14,7 @@
   - title: Image magazine landing template
     type: gallery
     role: design/development
-    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 4 issues thus far.
+    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 7 issues thus far and won a [bronze award](https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&viewControls=on) from the Society of News Design.
     link: https://www.latimes.com/projects/reverence/
     assets:
       - src: image
@@ -104,7 +104,7 @@
   - title: Tractatus Logico-Philosophicus Reader
     type: single
     role: design/development
-    description: This site allows readers to navigate Wittgenstein’s Tractatus, a philosophy text arranged in a multileveled hierarchy. As you read, it detects your relative position in the text and maps it to a diagram using D3.js.
+    description: This project presents a single text — Wittgenstein's *Tractatus Logico-Philosophicus* — in 4 different ways, experimenting with different forms of reading and navigation.
     link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
     assets:
       - src: tr
