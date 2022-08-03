@@ -10,18 +10,18 @@ npx @11ty/eleventy --serve
 
 single:
 
-`ffmpeg -i "tractatus-tabs.mov" -vf "scale=1700:-1" "../video/tractatus-tabs.mp4"`
+`ffmpeg -i "goby.mov" -vf "scale=1700:-1" "../video/goby.mp4"`
 
 #### FFMPEG convert videos in a folder to nicely sized good quality webm:
 `for i in *.mp4; do ffmpeg -i "$i" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "${i%.*}.webm"; done`
 
 single:
 
-`ffmpeg -i "tractatus-tabs.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "tractatus-tabs.webm"`
+`ffmpeg -i "goby.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "goby.webm"`
 
 #### FFMPEG get first frame of each mp4 in folder and save it as a jpg
 `for i in *.mp4; do ffmpeg -ss 00:00:00 -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done`
 
 single:
 
-`ffmpeg -ss 00:00:00 -i "tractatus-tabs.mp4" -vframes 1 -q:v 2 "tractatus-tabs.jpg"`
+`ffmpeg -ss 00:00:00 -i "goby.mp4" -vframes 1 -q:v 2 "goby.jpg"`

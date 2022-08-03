@@ -11,6 +11,18 @@
         link:
         caption:
 
+  - title: Goby
+    type: single
+    role: design/development
+    description: For my Parsons thesis I designed and developed *Goby*, a tool that allows you to model relationships between different items in a collection, and alternate between table and graph representations of the same information.
+    link: https://goby.garden
+    assets:
+      - src: goby
+        type: video
+        effects:
+        link:
+        caption:
+
   - title: Image magazine landing template
     type: gallery
     role: design/development
