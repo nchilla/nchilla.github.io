@@ -1,0 +1,129 @@
+{% import 'macros.njk' as macros %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nico’s work</title>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/clearstyle.css">
+    <link rel="stylesheet" href="css/work.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✏</text></svg>">
+    <script src="js/lozad.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <main id="grid">
+      <div id="left-divider"><div class="stroke"></div></div>
+      <div id="left-col">
+
+        <header>
+          {# <p>Welcome! I’m Nico.<br>I design/develop websites and interfaces, and I also do some other things. Here you can view a selection of my recent work.
+          </p> #}
+          <p>Welcome! I’m Nico.<br>I work as a designer and developer, and I also do some other things. Here you can view a selection of my recent work.
+          </p>
+
+        </header>
+        <div id="right-divider"><div class="stroke"></div></div>
+
+      </div>
+      <div id="project-width"></div>
+      {% set project = projectsaugust2022[0] %}
+      <div class="single">
+
+        {{ macros.media(project.assets[0].src, project.assets[0].type) }}
+      </div>
+
+      <h3 data-type="{{project.type}}">
+        {% if project.link %}
+          <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+        {% else %}
+          {{ project.title }}
+        {% endif %}
+      </h3>
+
+      <div class="description text-width" data-type="{{project.type}}">
+        <p>{{ project.description | md | safe}}</p>
+      </div>
+      <div class="divider">
+
+      </div>
+
+      {% set project = projectsaugust2022[1] %}
+      <div class="single">
+
+        {{ macros.media(project.assets[0].src, project.assets[0].type) }}
+      </div>
+
+      <h3 data-type="{{project.type}}">
+        {% if project.link %}
+          <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+        {% else %}
+          {{ project.title }}
+        {% endif %}
+      </h3>
+
+      <div class="description text-width" data-type="{{project.type}}">
+        <p>{{ project.description | md | safe}}</p>
+      </div>
+
+
+
+      {# {% for project in projectsaugust2022 %}
+      {% if project.type == 'single' %}
+      <div class="single">
+        {{ macros.media(project.assets[0].src, project.assets[0].type) }}
+      </div>
+      {% else %}
+      <div class="gallery">
+        {% for media in project.assets %}
+        <div class="slide">
+
+          {{ macros.media(media.src, media.type, media.effects, media.caption, media.link) }}
+        </div>
+        {% endfor %}
+      </div>
+
+      {% endif %}
+      <h3 data-type="{{project.type}}">
+        {% if project.link %}
+          <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+        {% else %}
+          {{ project.title }}
+        {% endif %}
+      </h3>
+
+      <div class="description text-width" data-type="{{project.type}}">
+        <div class="project-meta">
+
+
+        </div>
+
+        <p>{{ project.description | md | safe}}</p>
+      </div>
+        <div class="divider">  </div>
+      {% endfor %} #}
+
+    </main>
+
+
+
+
+
+    <script type="text/javascript">
+      const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+      observer.observe();
+      window.addEventListener('load',setProjectWidth)
+      window.addEventListener('resize',setProjectWidth);
+
+      function setProjectWidth(){
+        let w=document.querySelector('#project-width').offsetWidth;
+        document.documentElement.style.setProperty('--refwidth', w + 'px');
+        console.log(w+'px');
+      }
+
+
+    </script>
+  </body>
+</html>

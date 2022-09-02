@@ -1,86 +1,115 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Nico’s links</title>
+    <title>Nico’s work</title>
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/clearstyle.css">
+    <link rel="stylesheet" href="css/work.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✏</text></svg>">
-    <style>
-      p{
-        font-family: 'Courier New', monospace;
-        font-size:25px;
-        line-height: 35px;
-        margin-bottom:15px;
-      }
-      .hello{
-        padding:40px;
-        max-width:800px;
-        /* margin:auto; */
-      }
-      a{
-        text-decoration: none;
-        background-color: palegreen;
-        border-radius:20px;
-        padding:0px 7px;
-        /* text-decoration-style: wavy;
-        text-decoration-color: palegreen; */
-        color:black;
-      }
-
-      .signoff{
-        font-style: italic;
-        /* font-family:cursive; */
-      }
-
-      @media(max-width:600px){
-        .hello{
-          padding:20px;
-        }
-        p{
-          font-size:22px;
-          line-height: 32px;
-        }
-      }
-
-      @media(max-width:500px){
-        .hello{
-          padding:20px;
-        }
-        p{
-          font-size:19px;
-          line-height: 24px;
-        }
-      }
-    </style>
+    <script src="js/lozad.js" charset="utf-8"></script>
   </head>
 
   <body>
-    <article class="hello">
-      <p>Dear visitor,</p>
+    <main id="grid">
+      <div id="left-divider"><div class="stroke"></div></div>
+      <div id="left-col">
 
-      <p>Welcome! Here are some things that I do:</p>
+        <header>
+          
+          <p>Welcome! I’m Nico.<br>I work as a designer and developer, and I also do some other things. Here you can view a selection of my recent work.
+          </p>
 
-      <p>I’m building <a target="_blank" href="https://www.are.na/nico-chilla/goby-journal">Goby</a>, a desktop tool for systematically organizing files and ideas. You can find my ongoing documentation of the project at the link above.
+        </header>
+        <div id="right-divider"><div class="stroke"></div></div>
 
-      <p>I design and develop websites, most recently for the Los Angeles Times. Here is <a target="_blank" href="https://work.nicochilla.com/fast-track/">my past work</a>.</p>
+      </div>
+      <div id="project-width"></div>
+      
+      <div class="single">
 
-      <p>I’m currently completing dual degrees in graphic design and philosophy.</p>
+        
 
-      <p>I’m an avid user of <a target="_blank" href='https://www.are.na/nico-chilla/index'>Are.na</a>, where I write about all these topics and discuss them with others.</p>
+  
+  <figure style='--ratio:0.58;' class='video'>
+    <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/lp-2.jpg">
+      <source data-src="../assets/video/lp-2.webm" type="video/webm">
+      <source data-src="../assets/video/lp-2.mp4" type="video/mp4">
+    </video>
+    
+  </figure>
 
-      <p>Thanks for stopping by,</p>
-      <p class='signoff'>— Nico</p>
-      <p>~</p>
-      <p>~</p>
-      <p>~</p>
-      <p>Even more links...</p>
-      <p><a target="_blank" href='https://psdguild.github.io/'>My friends</a>, who are dear to me</p>
-      <p><a target="_blank" href='https://nicochilla.com'>My main site</a>, to some day be updated</p>
-      <p><a target="_blank" href='https://github.com/nchilla'>My Github</a>, where I put code sometimes</p>
-      <p><a target="_blank" href='mailto:jnico.chilla@gmail.com'>My email</a>, if you want to get in touch</p>
-    </article>
+  
 
+      </div>
+
+      <h3 data-type="single">
+        
+          <a href="https://www.latimes.com/projects/license-plates/" target="_blank">What’s on your plate?</a>
+        
+      </h3>
+
+      <div class="description text-width" data-type="single">
+        <p>While interning at The Los Angeles Times, I collaborated with a team of reporting and photo interns on this custom story build, which showcases people around L.A. with interesting vanity plates.</p>
+      </div>
+      <div class="divider">
+
+      </div>
+
+      
+      <div class="single">
+
+        
+
+  
+  <figure style='--ratio:0.58;' class='video'>
+    <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/goby.jpg">
+      <source data-src="../assets/video/goby.webm" type="video/webm">
+      <source data-src="../assets/video/goby.mp4" type="video/mp4">
+    </video>
+    
+  </figure>
+
+  
+
+      </div>
+
+      <h3 data-type="single">
+        
+          <a href="https://goby.garden" target="_blank">Goby</a>
+        
+      </h3>
+
+      <div class="description text-width" data-type="single">
+        <p>For my Parsons thesis I designed and developed <em>Goby</em>, a tool that allows you to model relationships between different items in a collection, and alternate between table and graph representations of the same information.</p>
+      </div>
+
+
+
+      
+
+    </main>
+
+
+
+
+
+    <script type="text/javascript">
+      const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+      observer.observe();
+      window.addEventListener('load',setProjectWidth)
+      window.addEventListener('resize',setProjectWidth);
+
+      function setProjectWidth(){
+        let w=document.querySelector('#project-width').offsetWidth;
+        document.documentElement.style.setProperty('--refwidth', w + 'px');
+        console.log(w+'px');
+      }
+
+
+    </script>
   </body>
 </html>
