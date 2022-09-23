@@ -22,6 +22,10 @@ header{
 }
 
 
+section,p,button,header{
+  overflow:visible;
+}
+
 section,.accordion.selected{
   margin-bottom:1.5em;
 }
@@ -47,6 +51,10 @@ section,.accordion.selected{
   display:block;
 }
 
+.accordion button{
+  position:relative;
+}
+
 .accordion button::before{
   content:'+ ';
   /* width:0px; */
@@ -61,10 +69,11 @@ section,.accordion.selected{
 
 .accordion.selected button::before{
   content:'';
-  margin-right:-15px;
-
+  margin-right:0px;
 }
-
+.accordion.selected button{
+  left:-15px;
+}
 .push-back{
   position:relative;
   left:-15px;
