@@ -19,9 +19,11 @@
         {# <p>Welcome! I’m Nico.<br>I design/develop websites and interfaces, and I also do some other things. Here you can view a selection of my recent work.
         </p> #}
         <section>
-          <div class="push-back">Welcome! I’m Nico.</div>
-          <p>I work as a designer and developer, and I also do some other things. You can view a selection of my previous work <a href="/fast-track">here</a>.
+          <h1 class="push-back">Welcome! I’m Nico.</h1>
+          <p>I work as a designer and developer, and I also do some other things. Here you can view a selection of my previous work.
           </p>
+          {# <p>I work as a designer and developer, and I also do some other things. You can view a selection of my previous work <a href="/fast-track">here</a>.
+          </p> #}
         </section>
 
 
@@ -55,6 +57,23 @@
         </section>
 
       </header>
+      <div id="grid">
+        <div class="top-bar">
+
+        </div>
+        {% for project in projectsseptember %}
+        {{ macros.media(project.assets[0].src, project.assets[0].type) }}
+        <h3>
+          {{ project.title }}
+          {# {% if project.link %}
+            <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+          {% else %}
+            {{ project.title }}
+          {% endif %} #}
+        </h3>
+        <p class='description'>{{ project.description | md | safe}}</p>
+        {% endfor %}
+      </div>
 
     </main>
 
@@ -75,16 +94,16 @@
         });
 
       }
-      // const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-      // observer.observe();
-      // window.addEventListener('load',setProjectWidth)
-      // window.addEventListener('resize',setProjectWidth);
-      //
-      // function setProjectWidth(){
-      //   let w=document.querySelector('#project-width').offsetWidth;
-      //   document.documentElement.style.setProperty('--refwidth', w + 'px');
-      //   console.log(w+'px');
-      // }
+      const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+      observer.observe();
+      window.addEventListener('load',setProjectWidth)
+      window.addEventListener('resize',setProjectWidth);
+
+      function setProjectWidth(){
+        let w=document.querySelector('#project-width').offsetWidth;
+        document.documentElement.style.setProperty('--refwidth', w + 'px');
+        console.log(w+'px');
+      }
 
 
     </script>

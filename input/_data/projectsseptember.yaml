@@ -11,10 +11,11 @@
         link:
         caption:
 
-  - title: Goby
+  - title: >
+        Parsons thesis: Goby
     type: single
     role: design/development
-    description: For my Parsons thesis I designed and developed *Goby*, a tool that allows you to model relationships between different items in a collection, and alternate between table and graph representations of the same information.
+    description: Goby is a tool that allows you to model relationships between different items in a collection, and alternate between table and graph representations of the same information.
     link: https://goby.garden
     assets:
       - src: goby
@@ -23,10 +24,10 @@
         link:
         caption:
 
-  - title: Image magazine landing template
+  - title: Image Magazine issue landing template
     type: gallery
     role: design/development
-    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 7 issues thus far and won a [bronze award](https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&viewControls=on) from the Society of News Design.
+    description: Customizeable page generator for LAT’s *Image Magazine*, designed under the guidance of creative director Jess de Jesus. It has been used going on 7 issues and won a [bronze award](https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&viewControls=on) from the Society of News Design.
     link: https://www.latimes.com/projects/reverence/
     assets:
       - src: image
@@ -72,7 +73,7 @@
   - title: “The Secret” Animated Home Page
     type: single
     role: design/development
-    description: As a personal project I built this lead-in for a theatre company website, featuring a responsive animation of text from William Shakespeare’s *King Lear*.
+    description: As a personal project I built this lead-in for a theatre website, featuring a responsive animation of text from William Shakespeare’s *King Lear*.
     link: https://work.nicochilla.com/advanced_type_motion/
     assets:
       - src: secret
@@ -97,7 +98,7 @@
   - title: WNSR New School Radio
     type: gallery
     role: design/development
-    description: I built a single-page application for my college radio station, as a homepage and audio visualizer for student-produced media. I also designed a set of header graphics for their various shows to display on podcast platforms.
+    description: I built a single-page application for my college radio station, as a homepage and audio visualizer for student-produced media. I also designed series graphics to display on podcast platforms.
     link: https://www.newschoolradio.org/
     assets:
       - src: wnsr
