@@ -17,8 +17,11 @@ body{
 
 header{
   /* width:380px; */
-  width:24em;
-  margin:40px 50px;
+  width:380px;
+  /* margin:40px 50px; */
+  position:absolute;
+  top:40px;
+  left:50px;
 }
 
 
@@ -73,6 +76,7 @@ section,.accordion.selected{
 }
 .accordion.selected button{
   left:-15px;
+  cursor:default;
 }
 .push-back{
   position:relative;
