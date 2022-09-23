@@ -1,86 +1,91 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Nico’s links</title>
+    <title>Nico’s work</title>
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/clearstyle.css">
+    <link rel="stylesheet" href="css/work.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✏</text></svg>">
-    <style>
-      p{
-        font-family: 'Courier New', monospace;
-        font-size:25px;
-        line-height: 35px;
-        margin-bottom:15px;
-      }
-      .hello{
-        padding:40px;
-        max-width:800px;
-        /* margin:auto; */
-      }
-      a{
-        text-decoration: none;
-        background-color: palegreen;
-        border-radius:20px;
-        padding:0px 7px;
-        /* text-decoration-style: wavy;
-        text-decoration-color: palegreen; */
-        color:black;
-      }
-
-      .signoff{
-        font-style: italic;
-        /* font-family:cursive; */
-      }
-
-      @media(max-width:600px){
-        .hello{
-          padding:20px;
-        }
-        p{
-          font-size:22px;
-          line-height: 32px;
-        }
-      }
-
-      @media(max-width:500px){
-        .hello{
-          padding:20px;
-        }
-        p{
-          font-size:19px;
-          line-height: 24px;
-        }
-      }
-    </style>
+    <script src="js/lozad.js" charset="utf-8"></script>
   </head>
 
   <body>
-    <article class="hello">
-      <p>Dear visitor,</p>
+    <main>
+      <header class="prose">
+        
+        <section>
+          <div class="push-back">Welcome! I’m Nico.</div>
+          <p>I work as a designer and developer, and I also do some other things. You can view a selection of my previous work <a href="/fast-track">here</a>.
+          </p>
+        </section>
 
-      <p>Welcome! Here are some things that I do:</p>
 
-      <p>I’m building <a target="_blank" href="https://www.are.na/nico-chilla/goby-journal">Goby</a>, a desktop tool for systematically organizing files and ideas. You can find my ongoing documentation of the project at the link above.
 
-      <p>I design and develop websites, most recently for the Los Angeles Times. Here is <a target="_blank" href="https://work.nicochilla.com/fast-track/">my past work</a>.</p>
+        <section class="accordion selected">
+          <button type="button" name="button">What am I up to?</button>
+          <p>I’m currently finishing out my degrees in <a href="https://bfacd.parsons.edu/2022/nico-chilla">Communication Design</a> and Philosophy at Parsons / The New School (expected Fall 2022).</p>
+          <p>In the meantime, I’m available for freelance and pursuing full-time positions to begin in 2023.</p>
 
-      <p>I’m currently completing dual degrees in graphic design and philosophy.</p>
+        </section>
+        <section class="accordion">
+          <button type="button" name="button">Where to find me?</button>
+          <p>Currently, in Brooklyn, NY.&nbsp;Also these places:<br>
+          <a href="mailto:jnico.chilla@gmail.com">email</a>,
+          <a href="https://www.are.na/nico-chilla">are.na</a>,
+          <a href="https://github.com/nchilla">github</a>,
+          <a href="https://www.linkedin.com/in/nico-chilla-359529182/">linkedin</a>,
+          <a href="https://mobile.twitter.com/nicochilla">twitter</a>
+          </p>
+        </section>
 
-      <p>I’m an avid user of <a target="_blank" href='https://www.are.na/nico-chilla/index'>Are.na</a>, where I write about all these topics and discuss them with others.</p>
+        <section class="accordion">
+          <button type="button" name="button">What is Goby?</button>
+          <p>Goby is my ongoing personal project to create a new interface for organizing and representing information on your computer.</p>
+          <p>You can find my documentation <a href="https://www.are.na/nico-chilla/goby-journal">here</a>, and also feel free to <a href="mailto:jnico.chilla@gmail.com">reach out</a>! I love talking to other people pondering the question of how interfaces shape our thought.</p>
+        </section>
+        <section class="accordion">
+          <button type="button" name="button">What’s with this subdomain?</button>
+          <p>My plan is for my main site to be a more general catalog of my existence, while this subdomain showcases my professional work.</p>
+          <p>However until I update it, <a href="https://nicochilla.com/">nicochilla.com</a> will host my very first website - the work on it is outdated, but as a website I’m still rather proud of it.</p>
+        </section>
 
-      <p>Thanks for stopping by,</p>
-      <p class='signoff'>— Nico</p>
-      <p>~</p>
-      <p>~</p>
-      <p>~</p>
-      <p>Even more links...</p>
-      <p><a target="_blank" href='https://psdguild.github.io/'>My friends</a>, who are dear to me</p>
-      <p><a target="_blank" href='https://nicochilla.com'>My main site</a>, to some day be updated</p>
-      <p><a target="_blank" href='https://github.com/nchilla'>My Github</a>, where I put code sometimes</p>
-      <p><a target="_blank" href='mailto:jnico.chilla@gmail.com'>My email</a>, if you want to get in touch</p>
-    </article>
+      </header>
 
+    </main>
+
+
+
+
+
+    <script type="text/javascript">
+
+      window.addEventListener('load',init);
+
+      function init(){
+        document.querySelectorAll('.accordion button').forEach((button) => {
+          button.addEventListener('click',function(){
+            document.querySelector('.accordion.selected').classList.remove('selected');
+            button.parentNode.classList.add('selected');
+          })
+        });
+
+      }
+      // const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+      // observer.observe();
+      // window.addEventListener('load',setProjectWidth)
+      // window.addEventListener('resize',setProjectWidth);
+      //
+      // function setProjectWidth(){
+      //   let w=document.querySelector('#project-width').offsetWidth;
+      //   document.documentElement.style.setProperty('--refwidth', w + 'px');
+      //   console.log(w+'px');
+      // }
+
+
+    </script>
   </body>
 </html>

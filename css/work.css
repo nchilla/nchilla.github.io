@@ -1,0 +1,103 @@
+
+:root{
+  --col:90px;
+  --bg:white;
+  --margin:20px;
+  --border:1px solid black;
+}
+
+body{
+  /* background-color: gainsboro; */
+  font-family:'minotaur  sans';
+  font-size:16px;
+  line-height: 1.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header{
+  /* width:380px; */
+  width:24em;
+  margin:40px 50px;
+}
+
+
+section,.accordion.selected{
+  margin-bottom:1.5em;
+}
+
+.accordion.selected{
+  margin-top:0.75em;
+}
+
+.prose p{
+  margin-bottom:0.75em;
+}
+
+.accordion p{
+  display:none;
+}
+
+.accordion{
+  margin-bottom:0em;
+}
+
+
+.accordion.selected p{
+  display:block;
+}
+
+.accordion button::before{
+  content:'+ ';
+  /* width:0px; */
+  display:inline-block;
+  transform:translateX(-15px);
+  margin-right:-10px;
+}
+
+.accordion.selected button{
+  /* color:gainsboro; */
+}
+
+.accordion.selected button::before{
+  content:'';
+  margin-right:-15px;
+
+}
+
+.push-back{
+  position:relative;
+  left:-15px;
+}
+
+
+
+
+a{
+  color:black;
+  text-decoration-thickness:1px;
+  text-underline-offset:2px;
+}
+
+
+@media(max-width:450px){
+  header{
+    width:20em;
+    margin:20px 30px;
+  }
+}
+
+@media(max-width:360px){
+  body{
+    font-size:15px;
+  }
+}
+
+
+
+
+
+@font-face {
+  font-family: 'minotaur  sans';
+  src: url('../assets/fonts/msans-light.otf');
+}
