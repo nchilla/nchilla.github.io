@@ -1,8 +1,10 @@
 ---
   - title: What’s on your plate?
     type: single
-    role: design/development
-    description: While interning at The Los Angeles Times, I collaborated with a team of reporting and photo interns on this custom story build, which showcases people around L.A. with interesting vanity plates.
+    role:
+      - design
+      - development
+    description: Interactive website for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while I was interning at The L.A. Times.
     link: https://www.latimes.com/projects/license-plates/
     assets:
       - src: lp-2
@@ -14,7 +16,9 @@
   - title: >
         Parsons thesis: Goby
     type: single
-    role: design/development
+    role:
+      - design
+      - development
     description: Goby is a tool that allows you to model relationships between different items in a collection, and alternate between table and graph representations of the same information.
     link: https://goby.garden
     assets:
@@ -26,8 +30,10 @@
 
   - title: Image Magazine issue landing template
     type: gallery
-    role: design/development
-    description: Customizeable page generator for LAT’s *Image Magazine*, designed under the guidance of creative director Jess de Jesus. It has been used going on 7 issues and won a [bronze award](https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&viewControls=on) from the Society of News Design.
+    role:
+      - design
+      - development
+    description: Customizeable page generator for issues of LAT’s *Image Magazine*, designed to match their print identity system. It has been used going on 10 issues and won a [bronze award](https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&viewControls=on) from the Society of News Design.
     link: https://www.latimes.com/projects/reverence/
     assets:
       - src: image
@@ -48,7 +54,9 @@
 
   - title: Platform Economies Research Network (PERN)
     type: single
-    role: design/development
+    role:
+      - design
+      - development
     description: As a freelancer, I designed and programmed this home site for *PERN*, a research collaboration based out of my university.
     link: https://platformeconomies.net/
     assets:
@@ -60,8 +68,10 @@
 
   - title: Afghan women under the Taliban
     type: single
-    role: design/development
-    description: Working with foreign correspondent Marcus Yam and photo editor Kate Kuo, I built this fast-turnaround custom build for an L.A. Times profile of Afghan women facing the return of the Taliban.
+    role:
+      - design
+      - development
+    description: Fast-turnaround custom build for an L.A. Times profile of Afghan women facing the return of the Taliban. Built in collaboration with foreign correspondent Marcus Yam and photo editor Kate Kuo.
     link: https://www.latimes.com/projects/afghan-women/
     assets:
       - src: aw
@@ -72,8 +82,10 @@
 
   - title: “The Secret” Animated Home Page
     type: single
-    role: design/development
-    description: As a personal project I built this lead-in for a theatre website, featuring a responsive animation of text from William Shakespeare’s *King Lear*.
+    role:
+      - design
+      - development
+    description: As a personal project, I built this identity system and website for a theatre company called ‘the secret’. Excerpts from play scripts are used to conceal and reveal the name of the brand.
     link: https://work.nicochilla.com/advanced_type_motion/
     assets:
       - src: secret
@@ -84,7 +96,9 @@
 
   - title: Tractatus Logico-Philosophicus Reader
     type: single
-    role: design/development
+    role:
+      - design
+      - development
     description: This project presents a single text — Wittgenstein's *Tractatus Logico-Philosophicus* — in 4 different ways, experimenting with different forms of reading and navigation.
     link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
     assets:
@@ -97,8 +111,10 @@
 
   - title: WNSR New School Radio
     type: gallery
-    role: design/development
-    description: I built a single-page application for my college radio station, as a homepage and audio visualizer for student-produced media. I also designed series graphics to display on podcast platforms.
+    role:
+      - design
+      - development
+    description: Landing page for my college radio station, featuring an audio visualizer and track listings for student-produced media. I also designed series graphics to display on audio platforms.
     link: https://www.newschoolradio.org/
     assets:
       - src: wnsr
@@ -106,53 +122,23 @@
         effects:
         link:
         caption:
-      - src: wnsr-whatsnew
-        type: image
-        effects: small-span
-        link:
-        caption:
       - src: wnsr-memories
         type: image
-        effects: small-span
+        effects: fitheight
+        link:
+        caption:
+      - src: wnsr-whatsnew
+        type: image
+        effects: fitheight
         link:
         caption:
       - src: wnsr-artculture
         type: image
-        effects: small-span
+        effects: fitheight
         link:
         caption:
       - src: wnsr-centennial
         type: image
-        effects: small-span
+        effects: fitheight
         link:
         caption:
-
-  - title: Reimagine California illustrations
-    type: gallery
-    role: illustration
-    description: These illustrations ran with a series of op-eds entitled *How can we reimagine California*, which discussed different policy issues and visions for the future of the state.
-    link:
-    assets:
-      - src: rc-waste
-        type: image
-        effects: small-span
-        link: https://www.latimes.com/opinion/story/2021-06-06/la-ed-reduce-reuse-recycle-reimagine-california
-        caption: Circular economy 🡕
-
-      - src: rc-workfromhome
-        type: image
-        effects: small-span
-        link: https://www.latimes.com/opinion/story/2021-06-06/editorial-weve-discovered-we-can-work-from-home-theres-no-turning-back
-        caption: Working from home 🡕
-
-      - src: rc-healthcare
-        type: image
-        effects: small-span
-        link: https://www.latimes.com/opinion/story/2021-06-06/health-insurance-employer-plans-obamacare-pandemic-lessons
-        caption: Single-payer healthcare 🡕
-
-      - src: rc-housing
-        type: image
-        effects: small-span
-        link: https://www.latimes.com/opinion/story/2021-06-06/homelessness-right-to-housing-human-right-reimagine-california
-        caption: Right to housing 🡕
