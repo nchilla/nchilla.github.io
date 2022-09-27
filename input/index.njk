@@ -27,8 +27,8 @@
           </section>
           <section class="accordion selected">
             <button type="button" name="button">What am I up to?</button>
-            <p>I’m currently finishing out my degrees in <a target="_blank" href="https://bfacd.parsons.edu/2022/nico-chilla">Communication Design</a> and Philosophy at Parsons / The New School (expected Fall 2022).</p>
-            <p>In the meantime, I’m available for freelance and pursuing full-time positions to begin in 2023.</p>
+            <p>I’m currently finishing out my degrees in <a target="_blank" href="https://bfacd.parsons.edu/2022/nico-chilla">Communication Design</a> and Philosophy at Parsons / The New School <span class='abbrev-1'></span>.</p>
+            <p>In the meantime, I’m available for freelance and pursuing full-time positions <span class='abbrev-2'></span>.</p>
 
           </section>
           <section class="accordion">
@@ -50,7 +50,7 @@
           <section class="accordion">
             <button type="button" name="button">What’s with this subdomain?</button>
             <p>My plan is for my main site to be a more general catalog of my existence, while this subdomain showcases my professional work.</p>
-            <p>However until I update it, <a href="https://nicochilla.com/">nicochilla.com</a> will host my very first website; the work on it is outdated, but as a website I’m still rather proud of it.</p>
+            <p>However until I update it, <a href="https://nicochilla.com/">nicochilla.com</a> will host my very first website — the projects on it are outdated, but as a website I’m still rather proud of it.</p>
           </section>
 
         </header>
@@ -61,8 +61,19 @@
         <div class="gallery">
           {% for media in project.assets %}
           <div class="slide">
+            {% if (media.type=='loop')%}
+            <div class="loop">
+              {% for img in media.images%}
+              {{ macros.media(img.src, img.type, img.effects, '', img.link) }}
+              {% endfor %}
+            </div>
 
+            {% else %}
             {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link) }}
+            {% endif %}
+
+
+
           </div>
           {% endfor %}
           <div class="end-cap">
@@ -107,10 +118,29 @@
           })
         });
 
+        setColumnCount();
+        initLoops();
       }
+
+      function initLoops(){
+        document.querySelectorAll('.loop').forEach((loop) => {
+          let imgs=Array.from(loop.querySelectorAll('figure'));
+          imgs[0].style.opacity=1;
+          loop.dataset.current=0;
+          setInterval(function(){
+            let current=parseInt(loop.dataset.current);
+            imgs[current+1==imgs.length?0:current+1].style.opacity=1;
+            imgs[current].style.opacity=0;
+            loop.dataset.current=current+1==imgs.length?0:current+1;
+          },1000)
+
+        });
+
+
+      }
+
       const observer = lozad(); // lazy loads elements with default selector as '.lozad'
       observer.observe();
-      window.addEventListener('load',setColumnCount)
       window.addEventListener('resize',setColumnCount);
 
       let timer;

@@ -14,13 +14,13 @@
         caption:
 
   - title: >
-        Parsons thesis: Goby
+        Goby - Parsons thesis
     type: single
     role:
       - design
       - development
-    description: Goby is a tool that allows you to model relationships between different items in a collection, and alternate between table and graph representations of the same information.
-    link: https://goby.garden
+    description: Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.
+    link: https://bfacd.parsons.edu/2022/nico-chilla
     assets:
       - src: goby
         type: video
@@ -34,7 +34,7 @@
       - design
       - development
     description: Customizeable page generator for issues of LAT’s *Image Magazine*, designed to match their print identity system. It has been used going on 10 issues and won a [bronze award](https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&viewControls=on) from the Society of News Design.
-    link: https://www.latimes.com/projects/reverence/
+    link: https://www.latimes.com/projects/imagemakersvol2/
     assets:
       - src: image
         type: video
@@ -57,7 +57,7 @@
     role:
       - design
       - development
-    description: As a freelancer, I designed and programmed this home site for *PERN*, a research collaboration based out of my university.
+    description: Website and identity designed as a freelancer for PERN, a research collaboration based out of my university which studies the economics of digital platforms.
     link: https://platformeconomies.net/
     assets:
       - src: pern
@@ -81,16 +81,49 @@
         caption:
 
   - title: “The Secret” Animated Home Page
-    type: single
+    type: gallery
     role:
       - design
       - development
-    description: As a personal project, I built this identity system and website for a theatre company called ‘the secret’. Excerpts from play scripts are used to conceal and reveal the name of the brand.
+    description: Identity system and website for a hypothetical theatre company. Rather than a logo, excerpts from play scripts are used to conceal and reveal the name (‘the secret’) on different assets.
     link: https://work.nicochilla.com/advanced_type_motion/
     assets:
       - src: secret
         type: video
         effects:
+        link:
+        caption:
+      - src: lear-2
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - title: tempest-posters
+        type: loop
+        images:
+          - src: tempest-1
+            type: image
+            effects:
+            link:
+            caption:
+          - src: tempest-2
+            type: image
+            effects:
+            link:
+            caption:
+          - src: tempest-3
+            type: image
+            effects:
+            link:
+            caption:
+          - src: tempest-4
+            type: image
+            effects:
+            link:
+            caption:
+      - src: msd-2
+        type: image
+        effects: fitheight
         link:
         caption:
 
