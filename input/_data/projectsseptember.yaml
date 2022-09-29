@@ -26,6 +26,11 @@
         effects:
         link:
         caption:
+      - src: lear-1
+        type: image
+        effects: fitheight
+        link:
+        caption:
       - title: slides
         type: loop
         images:
