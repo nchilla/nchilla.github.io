@@ -26,25 +26,20 @@
         effects:
         link:
         caption:
-      - src: lear-2
-        type: image
-        effects: fitheight
-        link:
-        caption:
-      - title: tempest-posters
+      - title: slides
         type: loop
         images:
+          - src: lear-2
+            type: image
+            effects:
+            link:
+            caption:
+          - src: lear-4
+            type: image
+            effects:
+            link:
+            caption:
           - src: tempest-1
-            type: image
-            effects:
-            link:
-            caption:
-          - src: tempest-2
-            type: image
-            effects:
-            link:
-            caption:
-          - src: tempest-3
             type: image
             effects:
             link:
@@ -54,11 +49,16 @@
             effects:
             link:
             caption:
-      - src: msd-2
-        type: image
-        effects: fitheight
-        link:
-        caption:
+          - src: msd-2
+            type: image
+            effects:
+            link:
+            caption:
+          - src: msd-4
+            type: image
+            effects:
+            link:
+            caption:
 
   - title: Platform Economies Research Network (PERN)
     type: single
