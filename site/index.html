@@ -15,6 +15,7 @@
   
   <body>
     <main>
+
       <div id="grid">
         <div class="top-bar">
 
@@ -59,7 +60,7 @@
         
 
   
-  <figure style='--ratio:0.58;' class='video'>
+  <figure style='--ratio:0.58;' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/lp-2.jpg">
       <source data-src="../assets/video/lp-2.webm" type="video/webm">
       <source data-src="../assets/video/lp-2.mp4" type="video/mp4">
@@ -90,12 +91,12 @@
         
         <div class="gallery">
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
   
-  <figure style='--ratio:0.58;' class='video'>
+  <figure style='--ratio:0.58;' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/secret.jpg">
       <source data-src="../assets/video/secret.webm" type="video/webm">
       <source data-src="../assets/video/secret.mp4" type="video/mp4">
@@ -111,7 +112,7 @@
 
           </div>
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
@@ -137,7 +138,7 @@
 
           </div>
           
-          <div class="slide">
+          <div class="slide media">
             
             <div class="loop">
               
@@ -289,7 +290,7 @@
         
 
   
-  <figure style='--ratio:0.58;' class='video'>
+  <figure style='--ratio:0.58;' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/pern.jpg">
       <source data-src="../assets/video/pern.webm" type="video/webm">
       <source data-src="../assets/video/pern.mp4" type="video/mp4">
@@ -320,12 +321,12 @@
         
         <div class="gallery">
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
   
-  <figure style='--ratio:0.58;' class='video'>
+  <figure style='--ratio:0.58;' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/image.jpg">
       <source data-src="../assets/video/image.webm" type="video/webm">
       <source data-src="../assets/video/image.mp4" type="video/mp4">
@@ -341,7 +342,7 @@
 
           </div>
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
@@ -367,7 +368,7 @@
 
           </div>
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
@@ -419,7 +420,7 @@
         
 
   
-  <figure style='--ratio:0.58;' class='video'>
+  <figure style='--ratio:0.58;' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/tr.jpg">
       <source data-src="../assets/video/tr.webm" type="video/webm">
       <source data-src="../assets/video/tr.mp4" type="video/mp4">
@@ -451,7 +452,7 @@
         
 
   
-  <figure style='--ratio:0.58;' class='video'>
+  <figure style='--ratio:0.58;' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/aw.jpg">
       <source data-src="../assets/video/aw.webm" type="video/webm">
       <source data-src="../assets/video/aw.mp4" type="video/mp4">
@@ -483,7 +484,7 @@
         
 
   
-  <figure style='--ratio:0.58;' class='video'>
+  <figure style='--ratio:0.58;' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/goby.jpg">
       <source data-src="../assets/video/goby.webm" type="video/webm">
       <source data-src="../assets/video/goby.mp4" type="video/mp4">
@@ -515,12 +516,12 @@
         
         <div class="gallery">
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
   
-  <figure style='--ratio:0.58;' class='video'>
+  <figure style='--ratio:0.58;' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/wnsr.jpg">
       <source data-src="../assets/video/wnsr.webm" type="video/webm">
       <source data-src="../assets/video/wnsr.mp4" type="video/mp4">
@@ -536,7 +537,7 @@
 
           </div>
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
@@ -562,7 +563,7 @@
 
           </div>
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
@@ -588,7 +589,7 @@
 
           </div>
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
@@ -614,7 +615,7 @@
 
           </div>
           
-          <div class="slide">
+          <div class="slide media">
             
             
 
@@ -674,6 +675,8 @@
 
       window.addEventListener('load',init);
 
+      const grid=document.querySelector('#grid');
+
       function init(){
         document.querySelectorAll('.accordion button').forEach((button) => {
           button.addEventListener('click',function(){
@@ -681,6 +684,18 @@
             button.parentNode.classList.add('selected');
           })
         });
+
+
+        document.querySelectorAll('.media').forEach((media) => {
+          media.addEventListener('click',function(){
+            grid.classList.toggle('media-view');
+          })
+        });
+
+        function lightbox(media){
+
+        }
+
 
         setColumnCount();
         initLoops();
@@ -714,35 +729,20 @@
         timer=setTimeOut(setColumnCount,100);
       }
 
-      const grid=document.querySelector('#grid')
-
       function setColumnCount(){
         const w=window.innerWidth;
         const outer=w>1100?40:20;
         const col=w>1100?174:145;
         const start=15 + col + outer;
         const count=Math.floor((w-start)/(col+30));
-
-        // let colString='var(--m)) var(--m)) var(--col)';
-        // let colRepeat=
         let styleStr=`var(--m) var(--col) repeat(${count},var(--m) var(--m) var(--col)) 1fr`;
         let end=(count*3)+4;
-        // let flexStr='var(--m) var(--col) repeat(2, var(--m)) var(--col) 1fr repeat(3,var(--m) var(--m) var(--col)) 35px';
-        // let styleStr='var(--m) var(--col)';
-        // for (let i = 0; i < count; i++) {
-        //   styleStr=styleStr+' repeat(2, var(--m)) var(--col)';
-        // }
-        // styleStr=styleStr+' 1fr';
         if(w>1260){
           grid.style.gridTemplateColumns=styleStr;
-          // grid.style.setProperty('grid-template-columns',styleStr);
           grid.style.setProperty('--end',end);
         }else{
           grid.style='';
         }
-
-
-
       }
 
 

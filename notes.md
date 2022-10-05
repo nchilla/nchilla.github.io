@@ -1,8 +1,8 @@
 run eleventy
-npx @11ty/eleventy
+`npx @11ty/eleventy`
 
 start live server:
-npx @11ty/eleventy --serve
+`npx @11ty/eleventy --serve`
 
 
 #### FFMPEG golden 1-step command for mov->scaled mp4 saved in video folder:

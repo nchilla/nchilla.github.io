@@ -164,6 +164,23 @@ a{
   box-sizing: border-box;
 }
 
+#lightbox{
+  position:fixed;
+  top:var(--edge);
+  left:var(--edge);
+  width:calc(100vw - var(--edge) * 2);
+  height:calc(100vh - var(--edge) * 2);
+}
+
+
+.media{
+  cursor:zoom-in;
+}
+
+
+#grid.media-view .media{
+  cursor:zoom-out;
+}
 
 
 #grid>figure{

@@ -15,6 +15,7 @@
   {% set captions = false %}
   <body>
     <main>
+
       <div id="grid">
         <div class="top-bar">
 
@@ -60,7 +61,7 @@
         {% elseif project.type == 'gallery' %}
         <div class="gallery">
           {% for media in project.assets %}
-          <div class="slide">
+          <div class="slide media">
             {% if (media.type=='loop')%}
             <div class="loop">
               {% for img in media.images%}
@@ -110,6 +111,8 @@
 
       window.addEventListener('load',init);
 
+      const grid=document.querySelector('#grid');
+
       function init(){
         document.querySelectorAll('.accordion button').forEach((button) => {
           button.addEventListener('click',function(){
@@ -117,6 +120,18 @@
             button.parentNode.classList.add('selected');
           })
         });
+
+
+        document.querySelectorAll('.media').forEach((media) => {
+          media.addEventListener('click',function(){
+            grid.classList.toggle('media-view');
+          })
+        });
+
+        function lightbox(media){
+
+        }
+
 
         setColumnCount();
         initLoops();
@@ -150,35 +165,20 @@
         timer=setTimeOut(setColumnCount,100);
       }
 
-      const grid=document.querySelector('#grid')
-
       function setColumnCount(){
         const w=window.innerWidth;
         const outer=w>1100?40:20;
         const col=w>1100?174:145;
         const start=15 + col + outer;
         const count=Math.floor((w-start)/(col+30));
-
-        // let colString='var(--m)) var(--m)) var(--col)';
-        // let colRepeat=
         let styleStr=`var(--m) var(--col) repeat(${count},var(--m) var(--m) var(--col)) 1fr`;
         let end=(count*3)+4;
-        // let flexStr='var(--m) var(--col) repeat(2, var(--m)) var(--col) 1fr repeat(3,var(--m) var(--m) var(--col)) 35px';
-        // let styleStr='var(--m) var(--col)';
-        // for (let i = 0; i < count; i++) {
-        //   styleStr=styleStr+' repeat(2, var(--m)) var(--col)';
-        // }
-        // styleStr=styleStr+' 1fr';
         if(w>1260){
           grid.style.gridTemplateColumns=styleStr;
-          // grid.style.setProperty('grid-template-columns',styleStr);
           grid.style.setProperty('--end',end);
         }else{
           grid.style='';
         }
-
-
-
       }
 
 
