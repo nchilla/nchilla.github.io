@@ -450,9 +450,20 @@ figure video,figure.video img{
     --top-edge:25px;
     padding-top:var(--top-edge);
     --normal-column-config:var(--edge) var(--m) 1fr repeat(2,var(--m) var(--m) 1fr) var(--m) 0 var(--edge);
+    --right-start: 3;
+    --right-end: 10;
+    --end: 13;
     /* grid-template-columns: var(--edge) var(--m) 1fr repeat(2,var(--m) var(--m) 1fr) var(--m) 0 var(--edge); */
   }
-  /* deal with stuff */
+
+  .gallery{
+    --outside: calc(var(--edge) + var(--m));
+  }
+
+  .gallery .end-cap{
+    margin-left:calc(var(--outside) - var(--m))
+  }
+
 }
 
 
