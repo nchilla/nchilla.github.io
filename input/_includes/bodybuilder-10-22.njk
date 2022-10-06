@@ -1,0 +1,208 @@
+{% macro html(defaultview,projects) %}
+
+<main>
+
+  <div id="grid" class='{{ defaultview }}'>
+    <div class="top-bar">
+
+    </div>
+    <header class="prose">
+      <section>
+        <h1 class="push-back">Welcome! I’m Nico.</h1>
+        <p class='two-col-only'>I work as a designer and developer, and I also do some other things. Here you can view a selection of my previous work.</p>
+        <button id="info-view-button" class='one-col-only' type="button" name="button">info</button>
+      </section>
+      <section class="accordion selected two-col-only">
+        <button type="button" name="button">What am I up to?</button>
+        <p>I’m currently finishing out my degrees in <a target="_blank" href="https://bfacd.parsons.edu/2022/nico-chilla">Communication Design</a> and Philosophy at Parsons / The New School <span class='abbrev-1'></span>.</p>
+        <p>In the meantime, I’m available for freelance and pursuing full-time positions <span class='abbrev-2'></span>.</p>
+
+      </section>
+      <section class="accordion two-col-only">
+        <button type="button" name="button">Where to find me?</button>
+        <p>Currently, in Brooklyn, NY.&nbsp;Also these places:<br>
+        <a target="_blank" href="mailto:jnico.chilla@gmail.com">email</a>,
+        <a target="_blank" href="https://www.are.na/nico-chilla">are.na</a>,
+        <a target="_blank" href="https://github.com/nchilla">github</a>,
+        <a target="_blank" href="https://www.linkedin.com/in/nico-chilla-359529182/">linkedin</a>,
+        <a target="_blank" href="https://mobile.twitter.com/nicochilla">twitter</a>
+        </p>
+      </section>
+
+      <section class="accordion two-col-only">
+        <button type="button" name="button">What is Goby?</button>
+        <p>Goby is my ongoing personal project to create a new interface for organizing and representing information on your computer.</p>
+        <p>You can find my documentation <a target="_blank" href="https://www.are.na/nico-chilla/goby-journal">here</a>, and also feel free to <a href="mailto:jnico.chilla@gmail.com">reach out</a>! I love talking to other people pondering the question of how interfaces shape our thought.</p>
+      </section>
+      <section class="accordion two-col-only">
+        <button type="button" name="button">What’s with this subdomain?</button>
+        <p>My plan is for my main site to be a more general catalog of my existence, while this subdomain showcases my professional work.</p>
+        <p>However until I update it, <a href="https://nicochilla.com/">nicochilla.com</a> will host my very first website — the projects on it are outdated, but as a website I’m still rather proud of it.</p>
+      </section>
+    </header>
+    {% for project in projects %}
+    {% if project.type == 'single' %}
+    {{ macros.media(project.assets[0].src, project.assets[0].type) }}
+    {% elseif project.type == 'gallery' %}
+    <div class="gallery">
+      {% for media in project.assets %}
+      <div class="slide">
+        {% if (media.type=='loop')%}
+        <div class="loop media">
+          {% for img in media.images%}
+          {{ macros.media(img.src, img.type, img.effects, '', img.link) }}
+          {% endfor %}
+        </div>
+
+        {% else %}
+        {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link) }}
+        {% endif %}
+
+
+
+      </div>
+      {% endfor %}
+      <div class="end-cap">
+
+      </div>
+    </div>
+    {% endif %}
+    <h3>
+      {# {{ project.title }} #}
+      {% if project.link %}
+        <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+      {% else %}
+        {{ project.title }}
+      {% endif %}
+      <span class='tag-holder'>
+        {% for role in project.role %}
+          <span class='tag' data-role="{{ role }}">{{ role }}</span>
+        {% endfor %}
+      </span>
+
+
+    </h3>
+    <p class='description'>{{ project.description | md | safe}}</p>
+    {% endfor %}
+  </div>
+
+</main>
+
+
+
+
+
+<script type="text/javascript">
+
+  window.addEventListener('load',init);
+
+  const grid=document.querySelector('#grid');
+
+  {% if defaultview !== 'media-view' %}
+
+  let url=new URL(window.location);
+  const params=new URLSearchParams(url.search);
+  if(params.has('view')&&params.get('view')=='media'){
+    grid.classList.add('media-view');
+  }
+  
+  {% endif %}
+
+  function init(){
+    document.querySelectorAll('.accordion button').forEach((button) => {
+      button.addEventListener('click',function(){
+        document.querySelector('.accordion.selected').classList.remove('selected');
+        button.parentNode.classList.add('selected');
+      })
+    });
+
+
+    document.querySelectorAll('.media').forEach((media) => {
+      media.addEventListener('click',function(){
+        zoom(media)
+
+      })
+    });
+
+    document.querySelector('#info-view-button').addEventListener('click',function(){
+      grid.classList.remove('media-view');
+      {% if defaultview !== 'media-view' %}
+      history.replaceState(null, "Nico’s work", "/");
+      {% endif %}
+    })
+
+    function zoom(media){
+      console.log('zoom toggle');
+      grid.classList.toggle('media-view');
+      {% if defaultview !== 'media-view' %}
+      if(grid.classList.contains('media-view')){
+        params.set('view','media');
+        history.replaceState(null, "Nico’s work", "?"+params.toString())
+      }else{
+        history.replaceState(null, "Nico’s work", "/");
+      }
+      {% endif %}
+
+      media.scrollIntoView({block: "start"});
+
+    }
+
+
+    setColumnCount();
+    initLoops();
+  }
+
+  function initLoops(){
+    document.querySelectorAll('.loop').forEach((loop) => {
+      let imgs=Array.from(loop.querySelectorAll('figure'));
+      imgs[0].style.opacity=1;
+      loop.dataset.current=0;
+      setInterval(function(){
+        let current=parseInt(loop.dataset.current);
+        imgs[current+1==imgs.length?0:current+1].style.opacity=1;
+        imgs[current].style.opacity=0;
+        loop.dataset.current=current+1==imgs.length?0:current+1;
+      },1500)
+
+    });
+
+
+  }
+
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+  window.addEventListener('resize',setColumnCount);
+
+  let timer;
+
+  function timeOutResize(){
+    clearTimeOut(timer);
+    timer=setTimeOut(setColumnCount,100);
+  }
+
+  function setColumnCount(){
+    const w=window.innerWidth;
+    const outer=w>1100?40:20;
+    const col=w>1100?174:145;
+    const start=15 + col + outer;
+    const count=Math.floor((w-start)/(col+30));
+    let styleStr=`var(--m) var(--col) repeat(${count},var(--m) var(--m) var(--col)) 1fr`;
+    let end=(count*3)+4;
+    if(w>1260){
+      // grid.style.gridTemplateColumns=styleStr;
+      grid.style.setProperty('--normal-column-config',styleStr);
+      if(!grid.classList.contains('media-view')){
+        grid.style.setProperty('--end',end);
+      }
+
+    }else{
+      grid.style='';
+    }
+  }
+
+
+
+
+</script>
+
+{% endmacro%}

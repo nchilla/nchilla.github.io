@@ -9,7 +9,7 @@ html{
   --m:15px;
   --border:1px solid black;
   --ot:calc(var(--m) * -1);
-  --line1:0px;
+  --line1:20px;
   --top-edge:40px;
 }
 
@@ -158,7 +158,7 @@ a{
   --right-start:11;
   --right-end:18;
   --contentw:calc(var(--col) * 3 + var(--m) * 4);
-  --collapsed-config:var(--m) 1fr var(--m) var(--m) var(--col) repeat(3,var(--m) var(--m) var(--col)) var(--m) 1fr var(--m) var(--edge);
+  --collapsed-config:var(--edge) var(--m) 1fr var(--m) var(--m) var(--col) repeat(3,var(--m) var(--m) var(--col)) var(--m) 1fr var(--m) var(--edge);
   --normal-column-config:var(--m) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) 1fr;
   /* 495px */
   grid-template-columns: var(--normal-column-config);
@@ -274,21 +274,36 @@ figure video,figure.video img{
 
 
 
-@media(max-width:1460px) and (min-width:905px){
+@media(min-width:905px){
   .media{
     cursor:zoom-in;
   }
 
   #grid.media-view{
     grid-template-columns:var(--collapsed-config);
-    --right-start:5;
-    --right-end:15;
-    --end:19;
+    --right-start:6;
+    --right-end:16;
+    --end:20;
     /* --top-edge:45px;
     --edge:20px; */
     --contentw:calc(var(--col) * 4 + var(--m) * 6);
     padding:var(--edge);
+    padding-left:0;
     padding-right:0;
+  }
+
+  #grid.media-view .gallery{
+    grid-column: 1 / var(--end);
+    --outside:calc((100vw - (var(--m) * 5 + var(--col) * 4)) / 2 );
+    /* padding-left:calc(50vw - (var(--col) * 2 + var(--m) * 6 + var(--edge))); */
+    /* padding-left:calc(50vw - (var(--col) * 2 + var(--edge))); */
+    padding-left:var(--outside);
+    /* 100vh - () */
+    /* --push-in:calc(var(--col) * 4) */
+  }
+
+  #grid.media-view .gallery .end-cap{
+    margin-left:calc(var(--outside) - 30px);
   }
 
   #grid.media-view .two-col-only{
@@ -306,19 +321,24 @@ figure video,figure.video img{
   #grid.media-view header{
     z-index:100;
     background-blend-mode:difference;
-    grid-column:2/ var(--right-end);
+    grid-column:3/ var(--right-end);
     height:auto;
     top:var(--top-edge);
   }
 
   #grid.media-view header :where(h1,button){
-    display:inline;
+    display:inline-block;
     background-color: transparent;
     --col:rgba(244, 244, 244,0.9);
     background-image: linear-gradient(to left, var(--col), var(--col));
     background-size: 100% 13px;
     background-repeat: no-repeat;
-    background-position: 0 3px;
+    background-position: 0 6px;
+  }
+
+  #grid.media-view header button{
+    background-size: 120% 15px;
+    background-position: 0 6px;
   }
 
   #grid.media-view .media{
@@ -331,6 +351,10 @@ figure video,figure.video img{
   #grid{
     --right-end:21;
     --contentw:calc(var(--col) * 4 + var(--m) * 6);
+  }
+
+  .media,#grid.media-view .media{
+    cursor:default;
   }
 }
 
@@ -370,16 +394,35 @@ figure video,figure.video img{
 @media(max-width:905px){
   #grid{
     --col:174px;
-    --normal-column-config:1fr var(--m) var(--col) repeat(2,var(--m) var(--m) var(--col)) var(--m) var(--m) 1fr;
+    --normal-column-config:var(--edge) 1fr var(--m) var(--col) repeat(2,var(--m) var(--m) var(--col)) var(--m) var(--m) 1fr;
     /* grid-template-columns: 1fr var(--m) var(--col) repeat(2,var(--m) var(--m) var(--col)) var(--m) var(--m) 1fr; */
 
-    --right-start:3;
-    --right-end:10;
-    --end:13;
+    --right-start:4;
+    --right-end:11;
+    --end:14;
     --top-edge:45px;
     --edge:20px;
     padding:var(--top-edge) var(--edge);
+    padding-left:0;
     padding-right:0;
+  }
+
+
+  .gallery{
+    grid-column: 1 / var(--end);
+    --outside:calc((100vw - (var(--col) * 3 + var(--m) * 5) + var(--edge)) / 2 );
+    padding-left:var(--outside);
+
+
+    /* padding-left:calc(50vw - (var(--col) * 2 + var(--m) * 6 + var(--edge))); */
+    /* padding-left:calc(50vw - (var(--col) * 2 + var(--edge))); */
+
+    /* 100vh - () */
+    /* --push-in:calc(var(--col) * 4) */
+  }
+
+  .gallery .end-cap{
+    margin-left:calc(var(--outside) - 20px);
   }
 
   .top-bar{
