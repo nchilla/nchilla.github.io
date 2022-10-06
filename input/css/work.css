@@ -154,7 +154,10 @@ a{
   display: grid;
   --edge:35px;
   --col:174px;
-  --end:19;
+
+  --info-end:19;
+
+  --end:var(--info-end);
   --right-start:11;
   --right-end:18;
   --contentw:calc(var(--col) * 3 + var(--m) * 4);

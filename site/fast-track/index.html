@@ -142,7 +142,7 @@
       
       <div class="slide">
         
-        <div class="loop media">
+        <div class="loop">
           
           
 
@@ -755,10 +755,7 @@
     if(w>1260){
       // grid.style.gridTemplateColumns=styleStr;
       grid.style.setProperty('--normal-column-config',styleStr);
-      if(!grid.classList.contains('media-view')){
-        grid.style.setProperty('--end',end);
-      }
-
+      grid.style.setProperty('--info-end',end);
     }else{
       grid.style='';
     }
