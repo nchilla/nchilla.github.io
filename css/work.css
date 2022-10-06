@@ -1,7 +1,11 @@
 
+html{
+  scroll-padding: 100px;
+}
+
 :root{
   /* --col:90px; */
-  --bg:white;
+  --bg:#f4f4f4;
   --m:15px;
   --border:1px solid black;
   --ot:calc(var(--m) * -1);
@@ -11,7 +15,7 @@
 
 body{
   /* background-color: gainsboro; */
-  background-color:#f4f4f4;
+  background-color:var(--bg);
   font-family:'minotaur  sans';
   font-size:16px;
   line-height: 1.5em;
@@ -32,14 +36,6 @@ body{
   content:'to begin in 2023';
 }
 
-.header{
-  /* width:380px; */
-  width:384px;
-  /* margin:40px 50px; */
-  position:fixed;
-  top:40px;
-  left:50px;
-}
 
 header{
   grid-column: 2 / 6;
@@ -54,7 +50,7 @@ header{
   height:var(--line1);
 }
 
-section,p,button,.header{
+section,p,button{
   overflow:visible;
 }
 
@@ -91,7 +87,7 @@ section,.accordion.selected{
   position:relative;
 }
 
-.accordion button::before{
+.accordion button::before,#info-view-button::before{
   content:'+ ';
   /* width:0px; */
   display:inline-block;
@@ -99,9 +95,14 @@ section,.accordion.selected{
   margin-right:-10px;
 }
 
-.accordion.selected button{
-  /* color:gainsboro; */
+#info-view-button{
+  color:black;
+  text-decoration: underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:2px;
 }
+
+
 
 .accordion.selected button::before{
   content:'';
@@ -157,13 +158,26 @@ a{
   --right-start:11;
   --right-end:18;
   --contentw:calc(var(--col) * 3 + var(--m) * 4);
+  --collapsed-config:var(--m) 1fr var(--m) var(--m) var(--col) repeat(3,var(--m) var(--m) var(--col)) var(--m) 1fr var(--m) var(--edge);
+  --normal-column-config:var(--m) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) 1fr;
   /* 495px */
-  grid-template-columns: var(--m) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) repeat(2, var(--m)) var(--col) 1fr;
+  grid-template-columns: var(--normal-column-config);
   padding:var(--top-edge) var(--edge);
   padding-right:0;
   box-sizing: border-box;
 }
 
+#lightbox{
+  position:fixed;
+  top:var(--edge);
+  left:var(--edge);
+  width:calc(100vw - var(--edge) * 2);
+  height:calc(100vh - var(--edge) * 2);
+}
+
+.one-col-only{
+  display:none;
+}
 
 
 #grid>figure{
@@ -259,6 +273,60 @@ figure video,figure.video img{
 }
 
 
+
+@media(max-width:1460px) and (min-width:905px){
+  .media{
+    cursor:zoom-in;
+  }
+
+  #grid.media-view{
+    grid-template-columns:var(--collapsed-config);
+    --right-start:5;
+    --right-end:15;
+    --end:19;
+    /* --top-edge:45px;
+    --edge:20px; */
+    --contentw:calc(var(--col) * 4 + var(--m) * 6);
+    padding:var(--edge);
+    padding-right:0;
+  }
+
+  #grid.media-view .two-col-only{
+    display:none;
+  }
+
+  #grid.media-view .one-col-only{
+    display:block;
+  }
+
+  #grid.media-view .top-bar{
+    display:none;
+  }
+
+  #grid.media-view header{
+    z-index:100;
+    background-blend-mode:difference;
+    grid-column:2/ var(--right-end);
+    height:auto;
+    top:var(--top-edge);
+  }
+
+  #grid.media-view header :where(h1,button){
+    display:inline;
+    background-color: transparent;
+    --col:rgba(244, 244, 244,0.9);
+    background-image: linear-gradient(to left, var(--col), var(--col));
+    background-size: 100% 13px;
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+  }
+
+  #grid.media-view .media{
+    cursor:zoom-out;
+  }
+}
+
+
 @media(min-width:1460px){
   #grid{
     --right-end:21;
@@ -272,11 +340,6 @@ figure video,figure.video img{
 @media(max-width:1100px){
   :root{
     --top-edge:15px;
-  }
-  .header{
-    width:320px;
-    left:30px;
-    top:15px;
   }
 
   #grid{
@@ -293,7 +356,8 @@ figure video,figure.video img{
     --right-start: 9;
     --right-end: 16;
     --end: 17;
-    grid-template-columns: var(--m) var(--col) repeat(2, var(--m)) var(--col) 1fr repeat(3,var(--m) var(--m) var(--col)) var(--edge);
+    --normal-column-config:var(--m) var(--col) repeat(2, var(--m)) var(--col) 1fr repeat(3,var(--m) var(--m) var(--col)) var(--edge);
+    /* grid-template-columns: var(--m) var(--col) repeat(2, var(--m)) var(--col) 1fr repeat(3,var(--m) var(--m) var(--col)) var(--edge); */
   }
 }
 
@@ -306,7 +370,8 @@ figure video,figure.video img{
 @media(max-width:905px){
   #grid{
     --col:174px;
-    grid-template-columns: 1fr var(--m) var(--col) repeat(2,var(--m) var(--m) var(--col)) var(--m) var(--m) 1fr;
+    --normal-column-config:1fr var(--m) var(--col) repeat(2,var(--m) var(--m) var(--col)) var(--m) var(--m) 1fr;
+    /* grid-template-columns: 1fr var(--m) var(--col) repeat(2,var(--m) var(--m) var(--col)) var(--m) var(--m) 1fr; */
 
     --right-start:3;
     --right-end:10;
@@ -341,7 +406,8 @@ figure video,figure.video img{
     padding:0;
     --top-edge:25px;
     padding-top:var(--top-edge);
-    grid-template-columns: var(--edge) var(--m) 1fr repeat(2,var(--m) var(--m) 1fr) var(--m) 0 var(--edge);
+    --normal-column-config:var(--edge) var(--m) 1fr repeat(2,var(--m) var(--m) 1fr) var(--m) 0 var(--edge);
+    /* grid-template-columns: var(--edge) var(--m) 1fr repeat(2,var(--m) var(--m) 1fr) var(--m) 0 var(--edge); */
   }
   /* deal with stuff */
 }
