@@ -42,7 +42,7 @@
     </header>
     {% for project in projects %}
     {% if project.type == 'single' %}
-    {{ macros.media(project.assets[0].src, project.assets[0].type) }}
+    {{ macros.media(project.assets[0].src, project.assets[0].type,'','','',project.assets[0].ratio) }}
     {% elseif project.type == 'gallery' %}
     <div class="gallery">
       {% for media in project.assets %}

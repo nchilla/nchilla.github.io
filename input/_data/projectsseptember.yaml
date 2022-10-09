@@ -9,6 +9,7 @@
     assets:
       - src: lp-2
         type: video
+        ratio: 0.58
         effects:
         link:
         caption:
@@ -23,6 +24,7 @@
     assets:
       - src: secret
         type: video
+        ratio: 0.58
         effects:
         link:
         caption:
@@ -75,6 +77,22 @@
     assets:
       - src: pern
         type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
+
+  - title: Common Language studio website
+    type: single
+    role:
+      - design
+      - development
+    description: Studio website for an architecture student’s personal practice.
+    link:
+    assets:
+      - src: cl
+        type: video
+        ratio: 0.64
         effects:
         link:
         caption:
@@ -89,6 +107,7 @@
     assets:
       - src: image
         type: video
+        ratio: 0.58
         effects:
         link: https://www.latimes.com/projects/reverence/
         caption: Issue 5 - Reverence 🡕
@@ -113,6 +132,7 @@
     assets:
       - src: tr
         type: video
+        ratio: 0.58
         effects:
         link:
         caption:
@@ -127,6 +147,7 @@
     assets:
       - src: aw
         type: video
+        ratio: 0.58
         effects:
         link:
         caption:
@@ -142,6 +163,7 @@
     assets:
       - src: goby
         type: video
+        ratio: 0.58
         effects:
         link:
         caption:
@@ -157,6 +179,7 @@
     assets:
       - src: wnsr
         type: video
+        ratio: 0.58
         effects:
         link:
         caption:
@@ -178,5 +201,21 @@
       - src: wnsr-centennial
         type: image
         effects: fitheight
+        link:
+        caption:
+
+
+  - title: Sonnet index
+    type: single
+    role:
+      - design
+      - development
+    description: Shakespeare’s 154 sonnets, presented as a single block of unbroken text. Visitors can browse each sonnet and learn about the body of work through filtering and editing features.
+    link:
+    assets:
+      - src: sonnets
+        type: video
+        ratio: 0.58
+        effects:
         link:
         caption:
