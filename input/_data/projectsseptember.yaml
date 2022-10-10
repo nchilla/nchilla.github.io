@@ -204,7 +204,7 @@
       - design
       - development
     description: Shakespeare’s 154 sonnets, presented as a single block of unbroken text. Visitors can browse each sonnet and learn about the body of work through filtering and editing features.
-    link:
+    link: https://work.nicochilla.com/ci20/collection/
     assets:
       - src: sonnets
         type: video
