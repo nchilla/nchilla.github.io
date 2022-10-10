@@ -1,93 +1,20 @@
-
 {% import 'macros.njk' as macros %}
+{% import 'bodybuilder-10-22.njk' as bodybuilder with context %}
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
+    <title>Nico’s work</title>
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
-    <title>Nico’s work</title>
     <link rel="stylesheet" href="../css/clearstyle.css">
-    <link rel="stylesheet" href="../css/fast-track.css">
-    <script src="../js/lozad.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/tst3cyv.css">
+    <link rel="stylesheet" href="../css/work.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✏</text></svg>">
-    <style media="screen">
-    @font-face {
-      font-family: 'charis-sil';
-      src: url('../assets/fonts/charter-regular.woff2');
-    }
-
-    @font-face {
-      font-family: 'charis-sil';
-      font-weight: 600;
-      src: url('../assets/fonts/charter-bold.woff2');
-    }
-
-    @font-face {
-      font-family: 'charis-sil';
-      font-style: italic;
-      src: url('../assets/fonts/charter-italic.woff2');
-    }
-    </style>
+    <script src="../js/lozad.js" charset="utf-8"></script>
   </head>
+  {% set captions = false %}
   <body>
-    <article class='grid'>
-      <header>
-        <h1>My work</h1>
-        <h2>Hello NYT Hiring Team! Here is an overview of the projects that I am most proud of at the moment, and you can see more work <a href='https://nicochilla.com/' target="_blank">here</a>. Thank you for your consideration.</h2>
-        <h2><em>— Nico Chilla</em></h2>
-      </header>
-      {# <div class="reference">
-
-      </div> #}
-
-      {% for project in projectsnyt %}
-
-      <div class="description text-width">
-        <div class="project-meta">
-            <h3>
-              {% if project.link %}
-                <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
-              {% else %}
-                {{ project.title }}
-              {% endif %}
-            </h3>
-
-        </div>
-
-        <p>{{ project.description | md | safe}}</p>
-      </div>
-
-      {% if project.type == 'single' %}
-      <div class="single">
-        {{ macros.media(project.assets[0].src, project.assets[0].type) }}
-      </div>
-      {% else %}
-      <div class="gallery">
-        <div class="scroll-indicator">
-          <span>Scroll<br>me --&gt;</span>
-        </div>
-        {% for media in project.assets %}
-        <div class="slide">
-
-          {{ macros.media(media.src, media.type, media.effects, media.caption, media.link) }}
-        </div>
-        {% endfor %}
-      </div>
-
-      {% endif %}
-
-        <div class="divider">  </div>
-      {% endfor %}
-
-
-
-      <footer>
-        <h2>Thanks for your time! You can find more work on <a href="https://nicochilla.com" target='_blank'>my website</a> and code on <a href="https://github.com/nchilla" target='_blank'>Github</a>, or get in touch with me <a href="mailto:jnico.chilla@gmail.com">here</a>.</h2>
-      </footer>
-    </article>
-
-    <script src="../js/fast-track.js" charset="utf-8" defer></script>
+    {{ bodybuilder.html('media-view',projectsseptember) }}
   </body>
 </html>
