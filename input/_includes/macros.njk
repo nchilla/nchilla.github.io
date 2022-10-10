@@ -1,5 +1,3 @@
-
-
 {% macro media(src,type,effects,caption,link,ratio) %}
 
   {% if type == 'video'%}
@@ -15,11 +13,12 @@
   </figure>
 
   {% elseif type == 'image' %}
+  {% set srcpath = "../assets/images/" if effects !== 'video' else "../assets/images-large/"  %}
+
   <figure style='--ratio:{{ src | getRatio }};' class="{{ effects }} media">
-    <!-- For an element to be caught, add a block type that is different from the inline and some min-height for correct caught into view -->
   <picture class="lozad">
-    <source type="image/webp" srcset="../assets/images/{{ src }}.webp" type="image/webp">
-    <source type="image/jpg" srcset="../assets/images/{{ src }}.jpg">
+    <source type="image/webp" srcset="{{ srcpath }}{{ src }}.webp" type="image/webp">
+    <source type="image/jpg" srcset="{{ srcpath }}{{ src }}.jpg">
   </picture>
   {% if caption %}
     <figcaption>

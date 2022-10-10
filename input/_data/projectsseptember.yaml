@@ -1,16 +1,33 @@
 ---
-  - title: What’s on your plate?
-    type: single
+
+  - title: Tractatus Logico-Philosophicus Reader
+    type: gallery
     role:
       - design
       - development
-    description: Interactive website for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while I was interning at The L.A. Times.
-    link: https://www.latimes.com/projects/license-plates/
+    description: This project presents a single text, Wittgenstein's [Tractatus](https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus), in 4 different ways, experimenting with different forms of reading and navigation.
+    link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
     assets:
-      - src: lp-2
+      - src: tr
         type: video
         ratio: 0.58
         effects:
+        link:
+        caption:
+      - src: tabs-open
+        type: image
+        effects: video
+        link:
+        caption:
+      - src: tractatus-nonsense
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
+      - src: thread
+        type: image
+        effects: video
         link:
         caption:
 
@@ -33,49 +50,42 @@
         effects: fitheight
         link:
         caption:
-      - title: slides
-        type: loop
-        images:
-          - src: lear-2
-            type: image
-            effects:
-            link:
-            caption:
-          - src: lear-4
-            type: image
-            effects:
-            link:
-            caption:
-          - src: tempest-1
-            type: image
-            effects:
-            link:
-            caption:
-          - src: tempest-4
-            type: image
-            effects:
-            link:
-            caption:
-          - src: msd-2
-            type: image
-            effects:
-            link:
-            caption:
-          - src: msd-4
-            type: image
-            effects:
-            link:
-            caption:
+      - src: msd-4
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: tempest-4
+        type: image
+        effects: fitheight
+        link:
+        caption:
 
-  - title: Platform Economies Research Network (PERN)
+  - title: What’s on your plate?
     type: single
     role:
       - design
       - development
-    description: Website and identity designed as a freelancer for PERN, a research collaboration based out of my university which studies the economics of digital platforms.
-    link: https://platformeconomies.net/
+    description: Interactive website for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while I was interning at The L.A. Times.
+    link: https://www.latimes.com/projects/license-plates/
     assets:
-      - src: pern
+      - src: lp-2
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
+
+  - title: >
+        Goby - Parsons thesis
+    type: single
+    role:
+      - design
+      - development
+    description: Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.
+    link: https://bfacd.parsons.edu/2022/nico-chilla
+    assets:
+      - src: goby
         type: video
         ratio: 0.58
         effects:
@@ -93,6 +103,21 @@
       - src: cl
         type: video
         ratio: 0.64
+        effects:
+        link:
+        caption:
+
+  - title: Platform Economies Research Network (PERN)
+    type: single
+    role:
+      - design
+      - development
+    description: Website and identity designed as a freelancer for PERN, a research collaboration based out of my university which studies the economics of digital platforms.
+    link: https://platformeconomies.net/
+    assets:
+      - src: pern
+        type: video
+        ratio: 0.58
         effects:
         link:
         caption:
@@ -122,21 +147,6 @@
         link: https://www.latimes.com/projects/energy/
         caption: Issue 6 - Energy 🡕
 
-  - title: Tractatus Logico-Philosophicus Reader
-    type: single
-    role:
-      - design
-      - development
-    description: This project presents a single text — Wittgenstein's *Tractatus Logico-Philosophicus* — in 4 different ways, experimenting with different forms of reading and navigation.
-    link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
-    assets:
-      - src: tr
-        type: video
-        ratio: 0.58
-        effects:
-        link:
-        caption:
-
   - title: Afghan women under the Taliban
     type: single
     role:
@@ -146,22 +156,6 @@
     link: https://www.latimes.com/projects/afghan-women/
     assets:
       - src: aw
-        type: video
-        ratio: 0.58
-        effects:
-        link:
-        caption:
-
-  - title: >
-        Goby - Parsons thesis
-    type: single
-    role:
-      - design
-      - development
-    description: Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.
-    link: https://bfacd.parsons.edu/2022/nico-chilla
-    assets:
-      - src: goby
         type: video
         ratio: 0.58
         effects:
@@ -203,7 +197,6 @@
         effects: fitheight
         link:
         caption:
-
 
   - title: Sonnet index
     type: single

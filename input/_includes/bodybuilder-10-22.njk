@@ -53,7 +53,6 @@
           {{ macros.media(img.src, img.type, img.effects, '', img.link) }}
           {% endfor %}
         </div>
-
         {% else %}
         {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link) }}
         {% endif %}
