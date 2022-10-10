@@ -265,6 +265,10 @@ h3{
   color:#696969;
 }
 
+.description a{
+  color:#696969;
+}
+
 figure video,figure img,figure picture {
   width:100%;
   position:absolute;
