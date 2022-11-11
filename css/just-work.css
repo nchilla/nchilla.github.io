@@ -62,6 +62,9 @@ figure video,figure.video img{
   overflow:scroll;
 }
 
+::selection{
+  background-color:#FFFEE2;
+}
 
 .gallery[data-position="left"]{
   padding-left:var(--outer);
