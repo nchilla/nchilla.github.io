@@ -1,0 +1,15 @@
+html,body{
+  height: 100%;
+  overflow: hidden;
+}
+
+
+main{
+  width:150vw;
+  height:100vh;
+  transform:translateX(-50%);
+  position:fixed;
+  left:50vw;
+  top:0;
+  overflow:scroll;
+}
