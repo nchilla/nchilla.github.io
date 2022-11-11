@@ -143,6 +143,7 @@ figure video,figure.video img{
 }
 
 h3{
+  font-size:16px;
   padding-top:5px;
 }
 
@@ -224,10 +225,6 @@ header{
 
 @media(max-width:700px){
 
-  body{
-    font-size:15px;
-  }
-
   header{
     display: block;
     z-index: 20;
@@ -236,7 +233,8 @@ header{
     padding: 0;
     width: var(--contentw);
     margin-left: 20px;
-    /* margin-top: 10px; */
+    margin-top:20px;
+    margin-bottom:10px;
     padding: 8px 0px;
   }
 
@@ -309,6 +307,10 @@ header{
     display:none;
   }
 
+  h3{
+    font-size:15px;
+  }
+
 
 
 
@@ -320,10 +322,11 @@ header{
 
 
 @media(max-width:500px){
-  header{
-    margin-top:20px;
-    margin-bottom:10px;
+
+  body{
+    font-size:15px;
   }
+
   .description{
     display:none;
   }
