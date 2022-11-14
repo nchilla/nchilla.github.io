@@ -21,6 +21,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("input/assets/fonts");
   eleventyConfig.addPassthroughCopy("input/assets/images");
   eleventyConfig.addPassthroughCopy("input/assets/images-large");
+  eleventyConfig.addPassthroughCopy("input/assets/favicon");
   eleventyConfig.addPassthroughCopy("input/CNAME");
 
   eleventyConfig.addNunjucksFilter( "md", function(value) {
