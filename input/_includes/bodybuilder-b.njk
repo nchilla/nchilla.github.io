@@ -92,11 +92,22 @@
 
 
     </h3>
-    <p class='description' data-position="{{ project.position }}" data-project="{{ project.title }}">{{ project.description | md | safe}}</p>
+    <div class='description' data-position="{{ project.position }}" data-project="{{ project.title }}">
+      <p>{{ project.description | md | safe}}</p>
+      <p>
+        <button class="type expandable" data-text="{{project.typefaces}}"><span></span></button>
+        <button class="code expandable" data-text="{{project.code}}"><span></span></button>
+      </p>
+    </div>
     {% endfor %}
   </div>
   <footer>
-    <span><a href="https://www.are.na/nico-chilla" target="blank">are.na</a> - <a href="https://github.com/nchilla" target="blank">github</a> - <a href="https://www.linkedin.com/in/nico-chilla-359529182" target="blank">linkedin</a></span>
+    <span>
+      <button class="type expandable" data-text="set in Minotaur Sans"><span></span></button>
+      <button class="code expandable" data-text="html+css+js, using eleventy as a static site generator"><span></span></button>
+    </span>
+
+    {# <span><a href="https://www.are.na/nico-chilla" target="blank">are.na</a> - <a href="https://github.com/nchilla" target="blank">github</a> - <a href="https://www.linkedin.com/in/nico-chilla-359529182" target="blank">linkedin</a></span> #}
   </footer>
 </main>
 <script type="text/javascript">
@@ -123,6 +134,21 @@
     clearTimeout(timer);
     timer=setTimeout(setColumnCount,10);
   }
+
+  document.querySelectorAll('.expandable.type, .expandable.code').forEach((button) => {
+    button.addEventListener('click',function(){
+      let el=event.currentTarget;
+      let inside=el.querySelector('span');
+      if(!el.classList.contains('open')){
+        el.classList.add('open');
+        inside.innerHTML=el.dataset.text;
+      }else{
+        el.classList.remove('open');
+        inside.innerText='';
+      }
+    })
+  });
+
 
 
   function setColumnCount(){

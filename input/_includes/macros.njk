@@ -1,11 +1,11 @@
-{% macro media(src,type,effects,caption,link,ratio) %}
+{% macro media(src,type,effects,caption,link,ratio,path="../assets/") %}
 
   {% if type == 'video'%}
-  {% set ratio = ratio if ratio !== undefined else 0.58  %}
+  {% set ratio = ratio if ratio.length<1 else 0.58  %}
   <figure style='--ratio:{{ ratio }};' class='video media'>
-    <video class="lozad" autoplay muted playsinline loop data-poster="../assets/video/{{ src }}.jpg">
-      <source data-src="../assets/video/{{ src }}.webm" type="video/webm">
-      <source data-src="../assets/video/{{ src }}.mp4" type="video/mp4">
+    <video class="lozad" autoplay muted playsinline loop data-poster="{{ path }}video/{{ src }}.jpg">
+      <source data-src="{{ path }}video/{{ src }}.webm" type="video/webm">
+      <source data-src="{{ path }}video/{{ src }}.mp4" type="video/mp4">
     </video>
     {% if caption %}
       <figcaption><a href="{{ link }}" target='_blank'>{{ caption }}</a></figcaption>
@@ -13,7 +13,7 @@
   </figure>
 
   {% elseif type == 'image' %}
-  {% set srcpath = "../assets/images/" if effects !== 'video' else "../assets/images-large/"  %}
+  {% set srcpath = path+"images/" if effects !== 'video' else path+"images-large/"  %}
 
   <figure style='--ratio:{{ src | getRatio }};' class="{{ effects }} media">
   <picture class="lozad">

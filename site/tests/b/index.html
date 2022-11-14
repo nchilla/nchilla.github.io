@@ -4,41 +4,74 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
     <title>Nico’s work</title>
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/clearstyle.css">
-    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="b.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✏</text></svg>">
     <script src="../../js/lozad.js" charset="utf-8"></script>
   </head>
+
   
   <body>
     
-<header class="show">
-  <h1>Welcome! I’m Nico. This website catalogs my work as a designer and developer.</h1>
-</header>
-<main>
-
-  <header class="hide">
-    <h1>Welcome! I’m Nico. This website catalogs my work as a designer and developer.</h1>
-    <button>projects</button><button>info</button><button>contact</button><button>index</button>
-    
+<main data-view="projects">
+  <nav>
+    <h1><span>Nico Chilla</span><br><button class="expandable" id="view-toggle"><span></span></button></h1>
+    <a class='email stick' href="mailto:jnico.chilla@gmail.com">contact</a>
+  </nav>
+  <header>
+    <h1><span class="hide">Nico Chilla</span><span class="pronunciation-key">*</span>
+      <span class="intro">is a designer and programmer based in Brooklyn, NY.</span>
+    </h1>
   </header>
   <div id="grid">
-    <div id="info-box">
-      <section>
-        <h4>Currently:</h4>
-        <p>Finishing out my degrees in <a target="_blank" href="https://bfacd.parsons.edu/2022/nico-chilla">Communication Design</a> and Philosophy (expected Fall 2022), and pursuing internships and full-time positions beginning in the spring.</p>
-      </section>
+    <section class="center" style="--mark:0;">
+      <h3 class="pronunciation">* <span>Spanish: (chi-ya)</span>, <span>Argentinean: (chi-sha)</span>, <span>American: (chill-uh)</span></h3>
+    </section>
+    <section class="center" style="--mark:0;">
+      <h3>Me:</h3>
+      
+      
+      <p>Originally from San Jose, CA, I’m an undergraduate at Parsons / The New School in New York. While in school, I’ve worked for the L.A. Times and <a href="https://908a.org/" target="_blank">908A</a>, alongside various freelance clients.</p>
+      <p>My background is in web and interaction design, working as both a designer and developer. Many of my projects explore how information is represented and translated across different formats. </p>
 
-      <section>
-        <h4>Me:</h4>
-        <p>Originally from San Jose, CA, I’m currently a student at Parsons / The New School in New York. While in school, I’ve worked for the L.A. Times and 908A, alongside various freelance clients.</p>
-        <p>My approach to design is informed by a background in philosophy and programming, and these three disciplines often run together in my work. I spend a lot of time thinking about how information is represented and translated across different formats.</p>
-      </section>
-    </div>
+    
+      
+      
+
+
+    </section>
+    <section class="center" style="--mark:1;">
+      <h3>Currently:</h3>
+      <p>Finishing out my degrees in <a target="_blank" href="https://bfacd.parsons.edu/2022/nico-chilla">Communication Design</a> and Philosophy (expected Fall 2022), and pursuing positions beginning in the spring.</p>
+    </section>
+    <section class="center" style="--mark:0;">
+      <h3>Elsewhere:</h3>
+      <p>You can find me in these places:<br>
+        <a target="_blank" href="mailto:jnico.chilla@gmail.com">email</a>,
+        <a target="_blank" href="https://www.are.na/nico-chilla">are.na</a>,
+        <a target="_blank" href="https://github.com/nchilla">github</a>,
+        <a target="_blank" href="https://www.linkedin.com/in/nico-chilla-359529182/">linkedin</a>
+    </section>
+    <section class="center small-break" style="--mark:1;">
+      <h3>Activities:</h3>
+      <p>Here are some other things I’ve been up to:</p>
+    </section>
+
+    <section class="center small-break" style="--mark:1;">
+      <p class='outdent'>○ I use Are.na to write, order, and discuss my ideas with interesting people. Last spring, I had the chance to present one of my channels at an are.na event and <a target="_blank" href="https://www.are.na/blog/on-rejecting-narrative-identity">write about it</a> for their blog.</p>
+    </section>
+    <section class="center small-break" style="--mark:1;">
+      <p class='outdent'>○ <a href="https://bfacd.parsons.edu/2022/nico-chilla" target="_blank">Goby</a> is my ongoing personal project to create a new interface for organizing and representing information. You can find my documentation <a href="https://www.are.na/nico-chilla/goby-journal" target="_blank">here</a>, and feel free to reach out! I love talking to people pondering the question of how interfaces shape our thought.</p>
+    </section>
+
+
+
+
+
+
     
     
     <div class="gallery media-box" data-position="left" data-project="Tractatus Logico-Philosophicus Reader">
@@ -146,14 +179,20 @@
       </div>
     </div>
     
-    <h3 data-position="left" data-project="Tractatus Logico-Philosophicus Reader">
+    <h3 class="label" data-position="left" data-project="Tractatus Logico-Philosophicus Reader">
       
         <a href="https://work.nicochilla.com/tractatus-tree/dendrogram.html" target="_blank">Tractatus Logico-Philosophicus Reader</a>
       
 
 
     </h3>
-    <p class='description' data-position="left" data-project="Tractatus Logico-Philosophicus Reader">This project presents a single text, Wittgenstein’s <a href="https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus">Tractatus</a>, in 4 different ways, experimenting with different forms of reading and navigation.</p>
+    <div class='description' data-position="left" data-project="Tractatus Logico-Philosophicus Reader">
+      <p>This project presents a single text, Wittgenstein’s <a href="https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus">Tractatus</a>, in 4 different ways, experimenting with different forms of reading and navigation.</p>
+      <p>
+        <button class="type expandable" data-text="heading is set in Panama, body text in Signifier, numbering and notation in Aktiv Grotesk"><span></span></button>
+        <button class="code expandable" data-text="html+css+js, using Matter.js and D3.js"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="gallery media-box" data-position="center" data-project="“The Secret” identity">
@@ -266,14 +305,20 @@
       </div>
     </div>
     
-    <h3 data-position="center" data-project="“The Secret” identity">
+    <h3 class="label" data-position="center" data-project="“The Secret” identity">
       
         <a href="https://work.nicochilla.com/advanced_type_motion/" target="_blank">“The Secret” identity</a>
       
 
 
     </h3>
-    <p class='description' data-position="center" data-project="“The Secret” identity">Identity system and website for a hypothetical theatre company. Rather than using a logo, excerpts from play scripts are used to conceal and reveal the name (‘the secret’) on different assets.</p>
+    <div class='description' data-position="center" data-project="“The Secret” identity">
+      <p>Identity system and website for a hypothetical theatre company. Rather than using a logo, excerpts from play scripts are used to conceal and reveal the name (‘the secret’) on different assets.</p>
+      <p>
+        <button class="type expandable" data-text="display set in Krona, body set in Space Mono"><span></span></button>
+        <button class="code expandable" data-text="html+css+js, using D3.js"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="single media-box" style="--ratio:0.58" data-position="center" data-project="What’s on your plate?">
@@ -293,14 +338,20 @@
 
     </div>
     
-    <h3 data-position="center" data-project="What’s on your plate?">
+    <h3 class="label" data-position="center" data-project="What’s on your plate?">
       
         <a href="https://www.latimes.com/projects/license-plates/" target="_blank">What’s on your plate?</a>
       
 
 
     </h3>
-    <p class='description' data-position="center" data-project="What’s on your plate?">Interactive for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while interning at The L.A. Times.</p>
+    <div class='description' data-position="center" data-project="What’s on your plate?">
+      <p>Interactive for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while interning at The L.A. Times.</p>
+      <p>
+        <button class="type expandable" data-text="KisFB, Benton Sans, and Georgia"><span></span></button>
+        <button class="code expandable" data-text="nunjucks and html+css+js"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="single media-box" style="--ratio:0.58" data-position="left" data-project="Goby - Parsons thesis
@@ -321,7 +372,7 @@
 
     </div>
     
-    <h3 data-position="left" data-project="Goby - Parsons thesis
+    <h3 class="label" data-position="left" data-project="Goby - Parsons thesis
 ">
       
         <a href="https://bfacd.parsons.edu/2022/nico-chilla" target="_blank">Goby - Parsons thesis
@@ -330,8 +381,14 @@
 
 
     </h3>
-    <p class='description' data-position="left" data-project="Goby - Parsons thesis
-">Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.</p>
+    <div class='description' data-position="left" data-project="Goby - Parsons thesis
+">
+      <p>Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.</p>
+      <p>
+        <button class="type expandable" data-text="iA Writer Duospace and IBM Plex Sans"><span></span></button>
+        <button class="code expandable" data-text="built in Electron, using Vue.js and d3.js for frontend and SQLite for the backend"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="single media-box" style="--ratio:0.64" data-position="right" data-project="Common Language studio website">
@@ -351,14 +408,20 @@
 
     </div>
     
-    <h3 data-position="right" data-project="Common Language studio website">
+    <h3 class="label" data-position="right" data-project="Common Language studio website">
       
         Common Language studio website
       
 
 
     </h3>
-    <p class='description' data-position="right" data-project="Common Language studio website">Studio website for an architecture student’s personal practice.</p>
+    <div class='description' data-position="right" data-project="Common Language studio website">
+      <p>Studio website for an architecture student’s personal practice.</p>
+      <p>
+        <button class="type expandable" data-text="set in Nimbus Sans and Nimbus Roman"><span></span></button>
+        <button class="code expandable" data-text="Wordpress custom theme written in php and html+css+js"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="single media-box" style="--ratio:0.58" data-position="center" data-project="Platform Economies Research Network (PERN)">
@@ -378,14 +441,20 @@
 
     </div>
     
-    <h3 data-position="center" data-project="Platform Economies Research Network (PERN)">
+    <h3 class="label" data-position="center" data-project="Platform Economies Research Network (PERN)">
       
         <a href="https://platformeconomies.net/" target="_blank">Platform Economies Research Network (PERN)</a>
       
 
 
     </h3>
-    <p class='description' data-position="center" data-project="Platform Economies Research Network (PERN)">Website and identity designed as a freelancer for PERN, a research collaboration based out of my university which studies the economics of digital platforms.</p>
+    <div class='description' data-position="center" data-project="Platform Economies Research Network (PERN)">
+      <p>Website and identity designed as a freelancer for PERN, a research collaboration based out of my university which studies the economics of digital platforms.</p>
+      <p>
+        <button class="type expandable" data-text="set in Anonymous Pro and Aktiv Grotesk"><span></span></button>
+        <button class="code expandable" data-text="Wordpress custom theme written in php and html+css+js"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="gallery media-box" data-position="left" data-project="Image Magazine issue landing template">
@@ -471,14 +540,20 @@
       </div>
     </div>
     
-    <h3 data-position="left" data-project="Image Magazine issue landing template">
+    <h3 class="label" data-position="left" data-project="Image Magazine issue landing template">
       
         <a href="https://www.latimes.com/projects/imagemakersvol2/" target="_blank">Image Magazine issue landing template</a>
       
 
 
     </h3>
-    <p class='description' data-position="left" data-project="Image Magazine issue landing template">Customizeable page generator for issues of LAT’s <em>Image Magazine</em>, designed to match their print identity system. It has been used going on 10 issues and won a <a href="https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&amp;viewControls=on">bronze award</a> from the Society of News Design.</p>
+    <div class='description' data-position="left" data-project="Image Magazine issue landing template">
+      <p>Customizeable page generator for issues of LAT’s <em>Image Magazine</em>, designed to match their print identity system. It has been used going on 10 issues and won a <a href="https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&amp;viewControls=on">bronze award</a> from the Society of News Design.</p>
+      <p>
+        <button class="type expandable" data-text="set in Druk Wide, Mabry Mono, and Grenette"><span></span></button>
+        <button class="code expandable" data-text="Custom template written in Nunjucks with the L.A. Times static page generator, &lt;a href=&quot;https://github.com/datadesk/baker&quot; target=&quot;_blank&quot;&gt;Baker&lt;/a&gt;"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="single media-box" style="--ratio:0.58" data-position="center" data-project="Afghan women under the Taliban">
@@ -498,14 +573,20 @@
 
     </div>
     
-    <h3 data-position="center" data-project="Afghan women under the Taliban">
+    <h3 class="label" data-position="center" data-project="Afghan women under the Taliban">
       
         <a href="https://www.latimes.com/projects/afghan-women/" target="_blank">Afghan women under the Taliban</a>
       
 
 
     </h3>
-    <p class='description' data-position="center" data-project="Afghan women under the Taliban">Custom build for an L.A. Times profile of Afghan women facing the return of the Taliban. Built in collaboration with foreign correspondent Marcus Yam and photo editor Kate Kuo.</p>
+    <div class='description' data-position="center" data-project="Afghan women under the Taliban">
+      <p>Custom build for an L.A. Times profile of Afghan women facing the return of the Taliban. Built in collaboration with foreign correspondent Marcus Yam and photo editor Kate Kuo.</p>
+      <p>
+        <button class="type expandable" data-text="set in Standard, KisFB, and Georgia"><span></span></button>
+        <button class="code expandable" data-text="nunjucks and html+css+js"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="gallery media-box" data-position="left" data-project="WNSR New School Radio">
@@ -645,14 +726,20 @@
       </div>
     </div>
     
-    <h3 data-position="left" data-project="WNSR New School Radio">
+    <h3 class="label" data-position="left" data-project="WNSR New School Radio">
       
         <a href="https://www.newschoolradio.org/" target="_blank">WNSR New School Radio</a>
       
 
 
     </h3>
-    <p class='description' data-position="left" data-project="WNSR New School Radio">Landing page for my college radio station, featuring an audio visualizer and track listings for student-produced media. I also designed series graphics to display on audio platforms.</p>
+    <div class='description' data-position="left" data-project="WNSR New School Radio">
+      <p>Landing page for my college radio station, featuring an audio visualizer and track listings for student-produced media. I also designed series graphics to display on audio platforms.</p>
+      <p>
+        <button class="type expandable" data-text="set in Neue and Neue Haas Unica"><span></span></button>
+        <button class="code expandable" data-text="written in php and html+css+js, pulling data from an RSS feed and using the Web Audio API and D3.js for the visualizer"><span></span></button>
+      </p>
+    </div>
     
     
     <div class="single media-box" style="--ratio:0.58" data-position="center" data-project="Sonnet index">
@@ -672,26 +759,40 @@
 
     </div>
     
-    <h3 data-position="center" data-project="Sonnet index">
+    <h3 class="label" data-position="center" data-project="Sonnet index">
       
         <a href="https://work.nicochilla.com/ci20/collection/" target="_blank">Sonnet index</a>
       
 
 
     </h3>
-    <p class='description' data-position="center" data-project="Sonnet index">Shakespeare’s 154 sonnets, presented as a single block of unbroken text. Visitors can browse each sonnet and learn about the body of work through filtering and editing features.</p>
+    <div class='description' data-position="center" data-project="Sonnet index">
+      <p>Shakespeare’s 154 sonnets, presented as a single block of unbroken text. Visitors can browse each sonnet and learn about the body of work through filtering and editing features.</p>
+      <p>
+        <button class="type expandable" data-text="set in Starlet, IBM Plex Mono, and IBM Plex Sans"><span></span></button>
+        <button class="code expandable" data-text="html+css+js"><span></span></button>
+      </p>
+    </div>
     
   </div>
   <footer>
-    <span><a href="https://www.are.na/nico-chilla" target="blank">are.na</a> - <a href="https://github.com/nchilla" target="blank">github</a> - <a href="https://www.linkedin.com/in/nico-chilla-359529182" target="blank">linkedin</a></span>
+    <span>
+      <button class="type expandable" data-text="set in Minotaur Sans"><span></span></button>
+      <button class="code expandable" data-text="html+css+js, using eleventy as a static site generator"><span></span></button>
+    </span>
+
+    
   </footer>
 </main>
-<header class="show">
-  <h1 class='hide'>Welcome! I’m Nico. This website catalogs my work as a designer and developer.</h1>
-  
-  <button class='down viewchange' data-action="projects">projects</button><button class='left viewchange' data-action="info">info</button><button data-action="contact">contact</button><button data-action="index viewchange">index</button>
-</header>
 <script type="text/javascript">
+
+  const main=document.querySelector('main');
+
+  document.querySelector('#view-toggle').addEventListener('click',function(){
+    let current=main.dataset.view;
+    window.scroll(0,0);
+    main.dataset.view=current=='projects'?'info':'projects';
+  })
 
   let large=window.matchMedia('(min-width:1000px)');
   const grid=document.querySelector('#grid');
@@ -707,17 +808,20 @@
     clearTimeout(timer);
     timer=setTimeout(setColumnCount,10);
   }
-  // const main=document.querySelector('main')
 
-  document.querySelectorAll('.viewchange').forEach((item, i) => {
-    item.addEventListener('click',function(){
-      document.body.dataset.view=event.currentTarget.dataset.action;
-
+  document.querySelectorAll('.expandable.type, .expandable.code').forEach((button) => {
+    button.addEventListener('click',function(){
+      let el=event.currentTarget;
+      let inside=el.querySelector('span');
+      if(!el.classList.contains('open')){
+        el.classList.add('open');
+        inside.innerHTML=el.dataset.text;
+      }else{
+        el.classList.remove('open');
+        inside.innerText='';
+      }
     })
   });
-
-
-
 
 
 

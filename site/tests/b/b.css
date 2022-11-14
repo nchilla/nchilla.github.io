@@ -46,13 +46,43 @@ figure{
   overflow:hidden;
 }
 
+.expandable{
+  color:black;
+  text-align: left;
+  /* white-space:nowrap; */
+}
+
+.expandable.open{
+  display:contents;
+}
+
+.expandable span{
+  color:var(--mid);
+  text-align: left;
+  /* white-space: wrap; */
+}
+
 .expandable.type span::before{
-    content:'type...';
+  color:black;
+  content:'type...';
+}
+
+.expandable.type.open span::before{
+  margin-right:3px;
+  content:'type:';
 }
 
 .expandable.code span::before{
-    content:'code...';
+  color:black;
+  content:'code...';
+
 }
+
+.expandable.code.open span::before{
+  margin-right:3px;
+  content:'code:';
+}
+
 
 
 
@@ -263,6 +293,10 @@ footer{
   top:calc(100vw - 40px);
 }
 
+footer>span{
+  margin-left:var(--indent);
+}
+
 #view-toggle{
   white-space:nowrap;
   /* color:var(--mid); */
@@ -270,6 +304,7 @@ footer{
 }
 
 #view-toggle span::after{
+  color:black;
   display:inline-block;
   content:'more...';
 }
@@ -575,11 +610,11 @@ header{
 
 @font-face {
   font-family: 'iosevka';
-  src: url('../assets/fonts/iosevka-regular.woff2');
+  src: url('../../assets/fonts/iosevka-regular.woff2');
 }
 
 
 @font-face {
   font-family: 'minotaur  sns';
-  src: url('../assets/fonts/msans-light.otf');
+  src: url('../../assets/fonts/msans-light.otf');
 }
