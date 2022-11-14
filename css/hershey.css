@@ -229,9 +229,9 @@ h3.label{
  position: relative;
 } */
 
-/* h3.label[data-project="“The Secret” identity"]{
-  margin-left:-0.5em;
-} */
+h3.label[data-project="“The Secret” identity"]{
+  margin-left:-0.5rem;
+}
 
 
 h3.label a{
