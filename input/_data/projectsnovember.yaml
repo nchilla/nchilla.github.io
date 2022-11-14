@@ -237,7 +237,7 @@
   - title: Sonnet index
     type: single
     position: center
-    typefaces: set in Starlet, IBM Plex Mono, and IBM Plex Sans
+    typefaces: set in Starling, IBM Plex Mono, and IBM Plex Sans
     code: html+css+js
     role:
       - design
