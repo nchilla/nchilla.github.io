@@ -5,16 +5,16 @@
   --col:90px;
   --contentcols:6;
   --contentw:615px;
-  --fontsize:16px;
-  --indent:20px;
+  --fontsize:23px;
+  --indent:25px;
 }
 
 body{
   /* background-color: gainsboro; */
   background-color:var(--bg);
-  font-family:'minotaur  sns', 'iosevka';
+  font-family:'hershey-times';
   font-size:var(--fontsize);
-  line-height: 1.5em;
+  line-height: 27px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,18 +46,48 @@ figure{
   overflow:hidden;
 }
 
+.expandable{
+  color:black;
+  text-align: left;
+  /* white-space:nowrap; */
+}
+
+.expandable.open{
+  display:contents;
+}
+
+.expandable span{
+  color:var(--mid);
+  text-align: left;
+  /* white-space: wrap; */
+}
+
 .expandable.type span::before{
-    content:'type...';
+  color:black;
+  content:'type...';
+}
+
+.expandable.type.open span::before{
+  margin-right:3px;
+  content:'type:';
 }
 
 .expandable.code span::before{
-    content:'code...';
+  color:black;
+  content:'code...';
+
 }
+
+.expandable.code.open span::before{
+  margin-right:3px;
+  content:'code:';
+}
+
 
 
 
 .expandable::before{
-  display:inline-block;
+  /* display:inline-block; */
   content:'(';
 }
 
@@ -70,7 +100,7 @@ figure{
 
 
 .expandable::after{
-  display:inline-block;
+  /* display:inline-block; */
   content:')';
 }
 
@@ -183,7 +213,7 @@ figure video,figure.video img{
 
 
 .media-box{
-  /* margin-bottom:5px; */
+  margin-bottom:5px;
 }
 
 h3.label{
@@ -203,14 +233,14 @@ h3.label{
   margin-left:-0.5em;
 } */
 
-h3.label a::after{
-  content:' \1F855';
-  /* content:' ↗'; */
-  font-weight: 600;
-  /* font-family: u1f800; */
-  line-height: 20px;
-  /* unicode-bidi: isolate;
-  font-variant-numeric: tabular-nums; */
+
+h3.label a{
+  text-decoration: none;
+  color:var(--bg);
+  background-color: var(--mid);
+  padding:1px 6px;
+  border-radius:20px;
+  margin-left:3px;
 }
 
 
@@ -263,6 +293,10 @@ footer{
   top:calc(100vw - 40px);
 }
 
+footer>span{
+  margin-left:var(--indent);
+}
+
 #view-toggle{
   white-space:nowrap;
   /* color:var(--mid); */
@@ -270,6 +304,7 @@ footer{
 }
 
 #view-toggle span::after{
+  color:black;
   display:inline-block;
   content:'more...';
 }
@@ -316,16 +351,25 @@ section.small-break{
 
 
 section .outdent,p:first-of-type.outdent{
-  text-indent:-12px;
+  text-indent:-17px;
 }
 
-.pronunciation{
-  text-indent:-10px;
-}
+/* .pronunciation{
+  text-indent:-17px;
+} */
 
 .pronunciation span{
   white-space: nowrap;
 }
+
+p.bullet::before,.pronunciation::before {
+    content: '*';
+    max-width: 0px;
+    display: inline-block;
+    transform: translateX(-0.8rem);
+    text-align: right;
+}
+
 
 main[data-view="info"] header{
   /* height: 0; */
@@ -363,7 +407,7 @@ section p:first-of-type,.description p:first-of-type{
 
 
 nav h1{
-  max-width:100px;
+  max-width:140px;
 }
 
 
@@ -419,15 +463,19 @@ header{
   }
 }
 
+@media(min-width:1100px){
+  section.center{
+    /* --end:min( calc(8 + var(--bump) + var(--mark)) , calc(var(--edge) - 1) ); */
+    grid-column: calc(2 + var(--bump) + var(--mark)) / calc(8 + var(--bump) + var(--mark));
+  }
+}
+
 @media(min-width:1000px){
   :root{
     --col:110px;
     --contentw:735px;
   }
 
-  section.center{
-    grid-column: calc(2 + var(--bump) + var(--mark)) / calc(7 + var(--bump) + var(--mark));
-  }
 }
 
 
@@ -526,9 +574,9 @@ header{
     display:none;
   }
 
-  h3.label{
-    font-size:15px;
-  }
+  /* h3.label{
+    font-size:var(--fontsize);
+  } */
 
 
 
@@ -541,6 +589,12 @@ header{
 
 
 @media(max-width:500px){
+  :root{
+    --fontsize:20px;
+  }
+  body{
+    line-height: 24px;
+  }
 
   header{
     position:sticky;
@@ -548,16 +602,17 @@ header{
     background-color: var(--bg);
     padding-bottom: 30px;
     margin-bottom:1.5rem;
+    z-index: 20;
 
   }
+
+
 
   nav :where(button,h1,a){
     /* background-color: var(--bg); */
   }
 
-  body{
-    font-size:15px;
-  }
+
 
   .description{
     display:none;
@@ -565,21 +620,19 @@ header{
 
   h3.label{
     margin-top:-10px;
-    margin-bottom:40px;
-  }
-
-  h3.label a::after{
-    display:none;
+    margin-bottom:1.5rem;
   }
 }
 
-@font-face {
-  font-family: 'iosevka';
-  src: url('../assets/fonts/iosevka-regular.woff2');
+
+@media(max-width:400px){
+  .pronunciation span{
+    margin-right:20px;
+  }
 }
 
 
 @font-face {
-  font-family: 'minotaur  sns';
-  src: url('../assets/fonts/msans-light.otf');
+  font-family: 'hershey-times';
+  src: url('../../assets/fonts/hershey-noailles-simplex-regular.woff');
 }
