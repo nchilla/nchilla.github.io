@@ -28,9 +28,9 @@ main[data-view="info"] :where(.single,.gallery,.description,h3.label){
 }
 
 
-main[data-view="info"] footer{
+/* main[data-view="info"] footer{
   opacity:0;
-}
+} */
 
 a{
   color:black;
