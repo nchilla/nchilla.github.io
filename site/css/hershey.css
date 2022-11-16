@@ -175,6 +175,11 @@ figure video,figure.video img{
 
 .slide img, .slide video{
   position:relative;
+
+}
+
+.gallery[data-project="Goby — Parsons thesis"] .slide video{
+  left:-1px;
 }
 
 .slide .video{
