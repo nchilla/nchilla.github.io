@@ -69,70 +69,6 @@
         link:
         caption:
 
-  - title: What’s on your plate?
-    type: single
-    position: center
-    typefaces: KisFB, Benton Sans, and Georgia
-    code: nunjucks and html+css+js
-    role:
-      - design
-      - development
-    description: Interactive for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while interning at The L.A. Times.
-    link: https://www.latimes.com/projects/license-plates/
-    link_copy: visit
-    assets:
-      - src: lp-2
-        type: video
-        ratio: 0.58
-        effects:
-        link: https://www.latimes.com/projects/license-plates/
-        caption: visit
-
-  - title: >
-        Goby - Parsons thesis
-    type: gallery
-    position: left
-    typefaces: iA Writer Duospace and IBM Plex Sans
-    code: built in Electron, using Vue.js and d3.js for frontend and SQLite for the backend
-    role:
-      - design
-      - development
-    description: Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.
-    link: https://bfacd.parsons.edu/2022/nico-chilla
-    link_copy: info
-    assets:
-      - src: goby-new-relation
-        type: video
-        ratio: 0.58
-        effects:
-        link:
-        caption:
-      - src: goby-space
-        type: video
-        ratio: 0.58
-        effects:
-        link:
-        caption:
-
-  - title: Common Language studio website
-    type: single
-    position: right
-    typefaces: set in Nimbus Sans and Nimbus Roman
-    code: Wordpress custom theme written in php and html+css+js
-    role:
-      - design
-      - development
-    description: Studio website for an architecture student’s personal practice.
-    link:
-    link_copy: visit
-    assets:
-      - src: cl
-        type: video
-        ratio: 0.64
-        effects:
-        link:
-        caption:
-
   - title: Platform Economies Research Network (PERN)
     type: single
     position: center
@@ -181,25 +117,50 @@
         link: https://www.latimes.com/projects/energy/
         caption: Issue 6 - Energy 🡕
 
-  - title: Afghan women under the Taliban
-    type: single
+
+  - title: Goby — Parsons thesis
+    type: gallery
     position: center
-    typefaces: set in Standard, KisFB, and Georgia
-    code: nunjucks and html+css+js
+    typefaces: iA Writer Duospace and IBM Plex Sans
+    code: built in Electron, using Vue.js and d3.js for frontend and SQLite for the backend
     role:
       - design
       - development
-    description: Custom build for an L.A. Times profile of Afghan women facing the return of the Taliban. Built in collaboration with foreign correspondent Marcus Yam and photo editor Kate Kuo.
-    link: https://www.latimes.com/projects/afghan-women/
-    link_copy: visit
+    description: Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.
+    link: https://bfacd.parsons.edu/2022/nico-chilla
+    link_copy: info
     assets:
-      - src: aw
+      - src: goby-new-relation
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
+      - src: goby-space
         type: video
         ratio: 0.58
         effects:
         link:
         caption:
 
+  - title: Common Language studio website
+    type: single
+    position: right
+    typefaces: set in Nimbus Sans and Nimbus Roman
+    code: Wordpress custom theme written in php and html+css+js
+    role:
+      - design
+      - development
+    description: Studio website for an architecture student’s personal practice.
+    link:
+    link_copy: visit
+    assets:
+      - src: cl
+        type: video
+        ratio: 0.64
+        effects:
+        link:
+        caption:
 
   - title: WNSR New School Radio
     type: gallery
@@ -237,6 +198,44 @@
       - src: wnsr-centennial
         type: image
         effects: fitheight
+        link:
+        caption:
+
+  - title: What’s on your plate?
+    type: single
+    position: center
+    typefaces: KisFB, Benton Sans, and Georgia
+    code: nunjucks and html+css+js
+    role:
+      - design
+      - development
+    description: Interactive for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while interning at The L.A. Times.
+    link: https://www.latimes.com/projects/license-plates/
+    link_copy: visit
+    assets:
+      - src: lp-2
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://www.latimes.com/projects/license-plates/
+        caption: visit
+
+  - title: Afghan women under the Taliban
+    type: single
+    position: left
+    typefaces: set in Standard, KisFB, and Georgia
+    code: nunjucks and html+css+js
+    role:
+      - design
+      - development
+    description: Custom build for an L.A. Times profile of Afghan women facing the return of the Taliban. Built in collaboration with foreign correspondent Marcus Yam and photo editor Kate Kuo.
+    link: https://www.latimes.com/projects/afghan-women/
+    link_copy: visit
+    assets:
+      - src: aw
+        type: video
+        ratio: 0.58
+        effects:
         link:
         caption:
 
