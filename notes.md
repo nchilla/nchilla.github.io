@@ -10,18 +10,23 @@ start live server:
 
 single:
 
-`ffmpeg -i "sonnets.mov" -vf "scale=1700:-1" "../video/sonnets.mp4"`
+`ffmpeg -i "cl-extend.mov" -vf "scale=1700:-1" "../video/cl-extend.mp4"`
 
 #### FFMPEG convert videos in a folder to nicely sized good quality webm:
 `for i in *.mp4; do ffmpeg -i "$i" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "${i%.*}.webm"; done`
 
 single:
 
-`ffmpeg -i "sonnets.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "sonnets.webm"`
+`ffmpeg -i "cl-extend.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "cl-extend.webm"`
 
 #### FFMPEG get first frame of each mp4 in folder and save it as a jpg
 `for i in *.mp4; do ffmpeg -ss 00:00:00 -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done`
 
 single:
 
-`ffmpeg -ss 00:00:00 -i "sonnets.mp4" -vframes 1 -q:v 2 "sonnets.jpg"`
+`ffmpeg -ss 00:00:00 -i "goby-space.mp4" -vframes 1 -q:v 2 "goby-space.jpg"`
+
+
+
+
+ffmpeg -i cl.mov -vf tpad=stop_mode=clone:stop_duration=1 cl-extend.mov

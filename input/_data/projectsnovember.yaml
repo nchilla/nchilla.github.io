@@ -90,7 +90,7 @@
 
   - title: >
         Goby - Parsons thesis
-    type: single
+    type: gallery
     position: left
     typefaces: iA Writer Duospace and IBM Plex Sans
     code: built in Electron, using Vue.js and d3.js for frontend and SQLite for the backend
@@ -101,7 +101,13 @@
     link: https://bfacd.parsons.edu/2022/nico-chilla
     link_copy: info
     assets:
-      - src: goby
+      - src: goby-new-relation
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
+      - src: goby-space
         type: video
         ratio: 0.58
         effects:
