@@ -13,6 +13,10 @@ async function getVars(){
 
 module.exports = function(eleventyConfig) {
 
+
+
+
+
   getVars();
   // Add a filter using the Config API
 
@@ -28,6 +32,16 @@ module.exports = function(eleventyConfig) {
     var result;
       try {
         result = marked.parseInline(value);
+        return result;
+      } catch (e) {
+        return e;
+      }
+  });
+
+  eleventyConfig.addNunjucksFilter( "mdblock", function(value) {
+    var result;
+      try {
+        result = marked.parse(value);
         return result;
       } catch (e) {
         return e;
