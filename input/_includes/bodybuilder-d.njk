@@ -63,21 +63,10 @@
       {{ macros.media(project.assets[0].src, project.assets[0].type,'','','',project.assets[0].ratio,path) }}
     </div>
     {% elseif project.type == 'gallery' %}
-    <div class="gallery media-box" data-position="{{ project.position }}" data-project="{{ project.title }}">
+    <div class="gallery media-box" data-position="{{ project.position }}" data-project="{{ project.title }}" style="--ratio: {{ project.ratio if project.ratio else 0.58 }};">
       {% for media in project.assets %}
-      <div class="slide">
-        {% if (media.type=='loop')%}
-        <div class="loop">
-          {% for img in media.images %}
-          {{ macros.media(img.src, img.type, img.effects, '', img.link,null,path) }}
-          {% endfor %}
-        </div>
-        {% else %}
-        {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link,null,path) }}
-        {% endif %}
-
-
-
+      <div class="slide" data-effects="{{media.effects}}">
+        {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link,media.ratio if media.ratio else null,path) }}
       </div>
       {% endfor %}
       <div class="end-cap">
@@ -97,7 +86,9 @@
       <p>{{ project.description | md | safe}}</p>
       <p>
         <button class="type expandable" data-text="{{project.typefaces}}"><span></span></button>
+        {% if project.code.length > 0 %}
         <button class="code expandable" data-text="{{project.code}}"><span></span></button>
+        {% endif %}
       </p>
     </div>
     {% endfor %}
@@ -150,7 +141,7 @@
     })
   });
 
-
+  console.log({{ projects | dump | safe }});
 
   function setColumnCount(){
     console.log('calculating columns');

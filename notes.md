@@ -17,14 +17,14 @@ single:
 
 single:
 
-`ffmpeg -i "cl-extend.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "cl-extend.webm"`
+`ffmpeg -i "flip-words.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "flip-words.webm"`
 
 #### FFMPEG get first frame of each mp4 in folder and save it as a jpg
 `for i in *.mp4; do ffmpeg -ss 00:00:00 -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done`
 
 single:
 
-`ffmpeg -ss 00:00:00 -i "goby-space.mp4" -vframes 1 -q:v 2 "goby-space.jpg"`
+`ffmpeg -ss 00:00:00 -i "flip-words.mp4" -vframes 1 -q:v 2 "flip-words.jpg"`
 
 
 

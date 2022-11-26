@@ -131,7 +131,8 @@ figure video,figure.video img{
   flex-flow:row nowrap;
   align-items: flex-end;
   grid-column: 1 / var(--edge);
-  --h:calc(var(--contentw) * 0.58);
+  --ratio:0.58;
+  --h:calc(var(--contentw) * var(--ratio));
   height:var(--h);
   overflow:scroll;
 }
@@ -140,7 +141,7 @@ figure video,figure.video img{
   background-color:#FFFEE2;
 }
 
-.gallery[data-position="left"]{
+.gallery[data-position="left"],.gallery[data-position="left small"]{
   padding-left:var(--outer);
 }
 
@@ -148,12 +149,21 @@ figure video,figure.video img{
   margin-left:calc(var(--outer) + var(--bump) * 2 * (var(--col) + var(--m)) - var(--m));
 }
 
-.gallery[data-position="center"]{
+.gallery[data-position="left small"] .end-cap{
+  margin-left:calc(var(--outer) + var(--col) + var(--bump) * 2 * (var(--col) + var(--m)));
+}
+
+
+.gallery[data-position="center"],.gallery[data-position="center small"]{
   padding-left:calc(var(--outer) + var(--bump) * (var(--col) + var(--m)) );
 }
 
 .gallery[data-position="center"] .end-cap{
   margin-left:calc(var(--outer) + var(--bump) * (var(--col) + var(--m)) - var(--m));
+}
+
+.gallery[data-position="center small"] .end-cap{
+  margin-left:calc(var(--outer) + (var(--bump) + 1) * (var(--col) + var(--m)) - var(--m));
 }
 
 .slide{
@@ -185,6 +195,10 @@ figure video,figure.video img{
 .slide .video{
   width:var(--contentw);
   height:100%;
+}
+
+.slide[data-effects="small"] .video{
+  width:calc(var(--contentw) - (var(--col) + var(--m)));
 }
 
 .slide .fitheight{
@@ -256,6 +270,13 @@ h3.label a{
   grid-column: var(--start) / var(--end);
 }
 
+.description[data-position="left small"],h3.label[data-position="left small"],.single[data-position="left small"],.description[data-position="center small"],h3.label[data-position="center small"],.single[data-position="center small"]{
+  /* --contentcols:calc(var(--contentcols) - 1); */
+  --end:calc(var(--start) + var(--contentcols) - 1);
+}
+
+
+
 .description,h3.label{
   background-color: var(--bg);
   position:relative;
@@ -263,9 +284,12 @@ h3.label a{
 }
 
 
-.description[data-position="center"],h3.label[data-position="center"],.single[data-position="center"]{
+.description[data-position="center"],h3.label[data-position="center"],.single[data-position="center"],.description[data-position="center small"],h3.label[data-position="center small"],.single[data-position="center small"]{
   --start:calc(2 + var(--bump));
 }
+
+
+
 
 .description[data-position="right"],h3.label[data-position="right"],.single[data-position="right"]{
   --end:calc(var(--edge) - 1);
@@ -441,7 +465,7 @@ nav :where(span,button,a){
 
 header{
   /* position:sticky; */
-  margin-bottom:4.5rem;
+  margin-bottom:3.5rem;
 }
 
 .stick{
@@ -493,6 +517,11 @@ header{
   header{
     margin-bottom:3rem;
   }
+
+  .slide[data-effects="small"] .video{
+    width:var(--contentw);
+  }
+
   /* header,nav{
     margin-left: 20px;
     margin-top:20px;
@@ -500,6 +529,7 @@ header{
     padding: 8px 0px;
     width: var(--contentw);
   }
+
 
 
 

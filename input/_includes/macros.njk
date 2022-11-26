@@ -1,7 +1,7 @@
 {% macro media(src,type,effects,caption,link,ratio,path="../assets/") %}
 
   {% if type == 'video'%}
-  {% set ratio = ratio if ratio.length<1 else 0.58  %}
+  {% set ratio = ratio if ratio else 0.58  %}
   <figure style='--ratio:{{ ratio }};' class='video media'>
     <video class="lozad" autoplay muted playsinline loop data-poster="{{ path }}video/{{ src }}.jpg">
       <source data-src="{{ path }}video/{{ src }}.webm" type="video/webm">

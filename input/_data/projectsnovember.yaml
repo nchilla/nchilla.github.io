@@ -155,7 +155,7 @@
     link:
     link_copy: visit
     assets:
-      - src: cl
+      - src: cl-extend
         type: video
         ratio: 0.64
         effects:
