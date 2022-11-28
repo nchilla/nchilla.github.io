@@ -192,6 +192,10 @@ figure video,figure.video img{
   left:-1px;
 }
 
+.single[data-project="To say a name (in)correctly"] video{
+  left:-2px;
+}
+
 .slide .video{
   width:var(--contentw);
   height:100%;
