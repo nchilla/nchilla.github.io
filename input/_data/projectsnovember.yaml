@@ -108,6 +108,24 @@
         link:
         caption:
 
+  - title: To say a name (in)correctly
+    type: single
+    position: center
+    typefaces: set in Violet Sans and Times New Roman
+    code: html+css+js
+    role:
+      - design
+      - development
+    description: Scroll-interactive essay discussing the ethical implications of pronouncing someone’s name incorrectly.
+    link:
+    link_copy: visit
+    assets:
+      - src: to-say-a-name
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
 
   - title: “The Secret” identity
     type: gallery

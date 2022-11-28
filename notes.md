@@ -10,21 +10,23 @@ start live server:
 
 single:
 
-`ffmpeg -i "cl-extend.mov" -vf "scale=1700:-1" "../video/cl-extend.mp4"`
+`ffmpeg -i "to-say-a-name.mov" -vf "scale=1700:-1" "../video/to-say-a-name.mp4"`
+
+`ffmpeg -i "both-sides.mp4" "../video/both-sides.mp4"`
 
 #### FFMPEG convert videos in a folder to nicely sized good quality webm:
 `for i in *.mp4; do ffmpeg -i "$i" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "${i%.*}.webm"; done`
 
 single:
 
-`ffmpeg -i "flip-words.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "flip-words.webm"`
+`ffmpeg -i "both-sides.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "both-sides.webm"`
 
 #### FFMPEG get first frame of each mp4 in folder and save it as a jpg
 `for i in *.mp4; do ffmpeg -ss 00:00:00 -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done`
 
 single:
 
-`ffmpeg -ss 00:00:00 -i "flip-words.mp4" -vframes 1 -q:v 2 "flip-words.jpg"`
+`ffmpeg -ss 00:00:00 -i "to-say-a-name.mp4" -vframes 1 -q:v 2 "to-say-a-name.jpg"`
 
 
 

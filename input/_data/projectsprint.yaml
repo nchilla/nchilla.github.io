@@ -35,9 +35,9 @@
         caption:
 
   - title: Words and Pictures
-    type: single
-    position: left small
-    ratio:
+    type: gallery
+    position: center small
+    ratio: 0.6
     typefaces: set in Authentic and Authentic Condensed
     code:
     role:
@@ -47,9 +47,33 @@
     link:
     link_copy:
     assets:
-      - src: flip-words
+      - src: both-sides
         type: video
-        ratio: 0.79
-        effects:
+        ratio: 0.75
+        effects: small
+        link:
+      - src: wp-table
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-scenes
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-associations
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-diagram
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-socrates
+        type: image
+        effects: fitheight
         link:
         caption:
