@@ -205,10 +205,14 @@ figure video,figure.video img{
   width:calc(var(--contentw) - (var(--col) + var(--m)));
 }
 
-.slide .fitheight{
+.slide .fitheight,.slide .mobilesize{
   height:auto;
   padding-bottom:var(--h);
   width:calc(var(--h) * 1 / var(--ratio));
+}
+
+.slide .mobilesize video{
+  position:absolute;
 }
 
 .slide .loop{
@@ -252,7 +256,7 @@ h3.label{
  position: relative;
 } */
 
-h3.label[data-project="“The Secret” identity"]{
+h3.label[data-project="“The Secret” identity"],h3.label[data-project="“The Secret” website"],h3.label[data-project="“Behold” project (development only)"]{
   margin-left:-0.5rem;
 }
 
@@ -551,7 +555,7 @@ header{
     margin-right:6px;
   } */
 
-  .slide .fitheight {
+  .slide .fitheight, .slide .mobilesize {
     --w:calc(var(--contentw) / 2 - 5px);
     width:var(--w);
     height:calc(var(--w) * var(--ratio));
@@ -583,7 +587,7 @@ header{
     position:relative;
     padding-bottom:calc(var(--ratio) * var(--contentw));
   }
-  .slide figure:not(.fitheight) picture,.slide figure:not(.fitheight) img{
+  .slide figure:not(.fitheight,.mobilesize) :where(picture,video,img){
     position:relative;
   }
   .slide figure.video video,.slide figure.video img,.slide figure.video picture{

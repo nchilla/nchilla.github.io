@@ -85,7 +85,9 @@
     <div class='description' data-position="{{ project.position }}" data-project="{{ project.title }}">
       <p>{{ project.description | md | safe}}</p>
       <p>
+        {% if project.typefaces.length > 0 %}
         <button class="type expandable" data-text="{{project.typefaces}}"><span></span></button>
+        {% endif %}
         {% if project.code.length > 0 %}
         <button class="code expandable" data-text="{{project.code}}"><span></span></button>
         {% endif %}

@@ -1,166 +1,289 @@
 ---
-  - title: 24 hours out at sea with Gazan fishermen
-    type: single
-    role: design/development
-    description: I designed and developed this side-scroll build for a profile of fishermen in the Gaza Strip, working with photographer Marcus Yam and editor Kate Kuo.
-    link: https://www.latimes.com/projects/24-hours-at-sea-with-gazan-fishermen/
-    assets:
-      - src: gf2
-        type: video
-        effects:
-        link:
-        caption:
-
-  - title: Image magazine landing template
-    type: gallery
-    role: design/development
-    description: As a self-initiated project, I designed a landing page template for issues of LAT’s *Image Magazine* under the guidance of creative director Jess de Jesus. I then programmed the template as a customizable page generator, which has been used for 7 issues thus far.
-    link: https://www.latimes.com/projects/reverence/
-    assets:
-      - src: image
-        type: video
-        effects:
-        link: https://www.latimes.com/projects/reverence/
-        caption: Issue 5 - Reverence 🡕
-      - src: image-i4
-        type: image
-        effects: video
-        link: https://www.latimes.com/projects/imagemakers/
-        caption: Issue 4 - Imagemakers 🡕
-      - src: image-i6
-        type: image
-        effects: video
-        link: https://www.latimes.com/projects/energy/
-        caption: Issue 6 - Energy 🡕
-
-  - title: What’s on your plate?
-    type: single
-    role: design/development
-    description: I collaborated with a team of 3 other interns on this project, wrangling their photography and reporting into a custom build that showcases people around L.A. with interesting vanity plates.
-    link: https://www.latimes.com/projects/license-plates/
-    assets:
-      - src: lp-2
-        type: video
-        effects:
-        link:
-        caption:
-
-  - title: Afghan women under the Taliban
-    type: single
-    role: design/development
-    description: Also under Marcus Yam and Kate Kuo, I built this fast-turnaround custom build for Yam’s photo profiles of Afghan women facing the return of the Taliban.
-    link: https://www.latimes.com/projects/afghan-women/
-    assets:
-      - src: aw
-        type: video
-        effects:
-        link:
-        caption:
-
-  - title: “The Secret” Animated Home Page
-    type: single
-    role: design/development
-    description: As a personal project I built this animated lead-in for a theatre company website. The animation is fully responsive, and users can scroll to move it forwards and backwards.
-    link: https://work.nicochilla.com/advanced_type_motion/
-    assets:
-      - src: secret
-        type: video
-        effects:
-        link:
-        caption:
-
-  - title: WNSR New School Radio
-    type: gallery
-    role: design/development
-    description: I built a single-page application for my college radio station, as a homepage and audio visualizer for student-produced media. I also designed a set of header graphics for their various shows to display on podcast platforms.
-    link: https://www.newschoolradio.org/
-    assets:
-      - src: wnsr
-        type: video
-        effects:
-        link:
-        caption:
-      - src: wnsr-whatsnew
-        type: image
-        effects:
-        link:
-        caption:
-      - src: wnsr-memories
-        type: image
-        effects:
-        link:
-        caption:
-      - src: wnsr-artculture
-        type: image
-        effects:
-        link:
-        caption:
-      - src: wnsr-centennial
-        type: image
-        effects:
-        link:
-        caption:
 
   - title: Tractatus Logico-Philosophicus Reader
-    type: single
-    role: design/development
-    description: This project presents a single text — Wittgenstein's *Tractatus Logico-Philosophicus* — in 4 different ways, experimenting with different forms of reading and navigation.
+    type: gallery
+    position: left
+    typefaces: heading is set in Panama, body text in Signifier, numbering and notation in Aktiv Grotesk
+    code: html+css+js, using Matter.js and D3.js
+    role:
+      - design
+      - development
+    description: This project presents a single text, Wittgenstein’s [Tractatus](https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus), in 4 different ways, experimenting with different forms of reading and navigation.
     link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
+    link_copy: visit
     assets:
       - src: tr
         type: video
+        ratio: 0.58
+        effects:
+        link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
+        caption: visit
+      - src: tabs-open
+        type: image
+        effects: video
+        link: https://work.nicochilla.com/tractatus-tree/tabs.html
+        caption: visit
+      - src: tractatus-nonsense
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://work.nicochilla.com/tractatus-tree/nonsense.html
+        caption: visit
+      - src: thread
+        type: image
+        effects: video
+        link: https://work.nicochilla.com/tractatus-tree/thread.html
+        caption: visit
+
+  - title: The distress signal
+    type: gallery
+    position: center small
+    ratio: 0.59
+    typefaces: set in Space Grotesk / Mono
+    code:
+    role:
+      - design
+      - development
+    description: Narrative told through descending levels of an isometric drawing (written and illustrated by me).
+    link:
+    link_copy:
+    assets:
+      - src: iso-flip-2
+        type: video
+        ratio: 0.71
+        effects: small
+        link:
+        caption:
+      - src: iso-1
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: iso-2
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: iso-3
+        type: image
+        effects: fitheight
+        link:
+        caption:
+
+  - title: To say a name (in)correctly
+    type: single
+    position: left
+    typefaces: set in Violet Sans and Times New Roman
+    code: html+css+js
+    role:
+      - design
+      - development
+    description: Experimental essay discussing the ethical implications of pronouncing someone’s name incorrectly.
+    link:
+    link_copy: visit
+    assets:
+      - src: to-say-a-name
+        type: video
+        ratio: 0.58
         effects:
         link:
         caption:
 
-  - title: Reimagine California illustrations
-    type: gallery
-    role: illustration
-    description: These illustrations ran with a series of op-eds entitled *How can we reimagine California*, which discussed different policy issues and visions for the future of the state.
-    link:
+  - title: Theory and practice
+    type: single
+    position: center
+    typefaces: set in Charter and Courier Light
+    code: html+css+js and nunjucks
+    role:
+      - design
+      - development
+    description: Two interlinked essays presented side-by-side in an experimental web reader. I wrote them during my Parsons thesis, reflecting on the making process and the philosophy driving it.
+    link: https://goby.garden/intention/
+    link_copy: visit
     assets:
-      - src: rc-waste
-        type: image
+      - src: goby-intention
+        type: video
+        ratio: 0.58
         effects:
-        link: https://www.latimes.com/opinion/story/2021-06-06/la-ed-reduce-reuse-recycle-reimagine-california
-        caption: Circular economy 🡕
+        link:
+        caption:
 
-      - src: rc-workfromhome
-        type: image
-        effects:
-        link: https://www.latimes.com/opinion/story/2021-06-06/editorial-weve-discovered-we-can-work-from-home-theres-no-turning-back
-        caption: Working from home 🡕
-
-      - src: rc-healthcare
-        type: image
-        effects:
-        link: https://www.latimes.com/opinion/story/2021-06-06/health-insurance-employer-plans-obamacare-pandemic-lessons
-        caption: Single-payer healthcare 🡕
-
-      - src: rc-housing
-        type: image
-        effects:
-        link: https://www.latimes.com/opinion/story/2021-06-06/homelessness-right-to-housing-human-right-reimagine-california
-        caption: Right to housing 🡕
-
-  - title: Editorial illustrations
+  - title: Goby — Parsons thesis
     type: gallery
-    role: illustration
-    description: More illustrations for LAT and for my college newspaper, *The New School Free Press*.
-    link:
+    position: left
+    typefaces: iA Writer Duospace and IBM Plex Sans
+    code: built in Electron, using Vue.js and d3.js for frontend and SQLite for the backend
+    role:
+      - design
+      - development
+    description: Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.
+    link: https://bfacd.parsons.edu/2022/nico-chilla
+    link_copy: info
     assets:
-      - src: socializing-post-covid
-        type: image
+      - src: goby-new-relation
+        type: video
+        ratio: 0.58
         effects:
-        link: https://www.latimes.com/lifestyle/story/2021-08-03/making-new-friends-los-angeles-guide
-        caption: How to make friends during the pandemic 🡕
-      - src: illos-schreiber
-        type: image
+        link:
+        caption:
+      - src: goby-space
+        type: video
+        ratio: 0.58
         effects:
-        link: https://www.newschoolfreepress.com/2019/02/01/parsonsdean/
-        caption: Parsons announces a new dean 🡕
-      - src: covid
+        link:
+        caption:
+
+  - title: Words and Pictures
+    type: gallery
+    position: center small
+    ratio: 0.6
+    typefaces: set in Authentic and Authentic Condensed
+    code:
+    role:
+      - design
+      - development
+    description: Two-sided risograph booklet comparing the qualities of expression through language versus images (written/illustrated by me).
+    link:
+    link_copy:
+    assets:
+      - src: both-sides
+        type: video
+        ratio: 0.75
+        effects: small
+        link:
+      - src: wp-question
         type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-question-copy
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-scenes
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-scenes-copy
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-flow
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-flow-copy
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-table
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-table-copy
+        type: image
+        effects: fitheight
+        link:
+        caption:
+
+
+  - title: “Behold” project (development only)
+    type: single
+    position: left small
+    typefaces:
+    code: html+css+js, using the L.A. Times static page generator, <a href="https://github.com/datadesk/baker" target="_blank">Baker</a>, and <a href="https://splidejs.com/" target="_blank">Splide.js</a> for infinite carousels.
+    role:
+      - design
+      - development
+    description: Interactive photo piece on Black culture in Los Angeles, built as a freelance developer working closely with designer [Alex Tatusian](http://alextatusian.com/).
+    link: https://www.latimes.com/projects/honoring-black-la-art-music-culture-activism-church/
+    link_copy: visit
+    assets:
+      - src: behold-full
+        type: video
+        ratio: 0.58
+        effects: small
+        link:
+
+
+  - title: Afghan women under the Taliban
+    type: gallery
+    position: center
+    typefaces: set in Standard, KisFB, and Georgia
+    code: nunjucks and html+css+js
+    role:
+      - design
+      - development
+    description: Custom build for an L.A. Times profile of Afghan women facing the return of the Taliban. Built in collaboration with foreign correspondent Marcus Yam and photo editor Kate Kuo.
+    link: https://www.latimes.com/projects/afghan-women/
+    link_copy: visit
+    assets:
+      - src: aw
+        type: video
+        ratio: 0.58
         effects:
-        link: https://www.newschoolfreepress.com/2020/02/01/as-coronavirus-outbreak-advances-the-new-school-temporarily-suspends-university-wide-travel-to-china/
-        caption: Covid-19 anti-Asian racism 🡕
+        link:
+        caption:
+
+  - title: “The Secret” website
+    type: single
+    position: right
+    typefaces: display set in Krona, body set in Space Mono
+    code: html+css+js, using D3.js
+    role:
+      - design
+      - development
+    description: Animated opening for an imaginary Shakespeare theatre company website, making use of a passage from King Lear.
+    link: https://work.nicochilla.com/advanced_type_motion/
+    link_copy: visit
+    assets:
+      - src: secret
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://work.nicochilla.com/advanced_type_motion/
+        caption: visit
+
+  - title: What’s on your plate?
+    type: gallery
+    position: center
+    typefaces: KisFB, Benton Sans, and Georgia
+    code: nunjucks and html+css+js
+    role:
+      - design
+      - development
+    description: Interactive for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while interning at The L.A. Times.
+    link: https://www.latimes.com/projects/license-plates/
+    link_copy: visit
+    assets:
+      - src: lp-2
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://www.latimes.com/projects/license-plates/
+        caption: visit
+
+  - title: Sonnet index
+    type: single
+    position: center
+    typefaces: set in Starling, IBM Plex Mono, and IBM Plex Sans
+    code: html+css+js
+    role:
+      - design
+      - development
+    description: Shakespeare’s 154 sonnets, presented as a single block of unbroken text. Visitors can browse each sonnet and learn about the body of work through filtering and editing features.
+    link: https://work.nicochilla.com/ci20/collection/
+    link_copy: visit
+    assets:
+      - src: sonnets
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
