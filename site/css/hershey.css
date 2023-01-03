@@ -1,4 +1,6 @@
 :root{
+  --fg:black;
+  /* #171717 */
   --bg:#f4f4f4;
   --mid:#696969;
   --m:15px;
@@ -17,6 +19,7 @@ body{
   line-height: 27px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:var(--fg);
 }
 
 main{
@@ -33,7 +36,7 @@ main[data-view="info"] :where(.single,.gallery,.description,h3.label){
 } */
 
 a{
-  color:black;
+  color:var(--fg);
   text-decoration-thickness:1px;
   text-underline-offset:2px;
   cursor:alias;
@@ -47,7 +50,7 @@ figure{
 }
 
 .expandable{
-  color:black;
+  color:var(--fg);
   text-align: left;
   /* white-space:nowrap; */
 }
@@ -63,7 +66,7 @@ figure{
 }
 
 .expandable.type span::before{
-  color:black;
+  color:var(--fg);
   content:'type...';
 }
 
@@ -73,7 +76,7 @@ figure{
 }
 
 .expandable.code span::before{
-  color:black;
+  color:var(--fg);
   content:'code...';
 
 }
@@ -341,7 +344,7 @@ footer>span{
 }
 
 #view-toggle span::after{
-  color:black;
+  color:var(--fg);
   display:inline-block;
   content:'more...';
 }

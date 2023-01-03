@@ -14,6 +14,7 @@
 
   {% elseif type == 'image' %}
   {% set srcpath = path+"images/" if effects !== 'video' else path+"images-large/"  %}
+  {% set srcpath = path+"images-large/" if 'fitheight large' in effects else srcpath  %}
 
   <figure style='--ratio:{{ src | getRatio }};' class="{{ effects }} media">
   <picture class="lozad">

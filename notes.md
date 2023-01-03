@@ -12,7 +12,7 @@ start live server:
 
 single:
 
-`ffmpeg -i "goby-intention.mov" -vf "scale=1700:-1" "../video/goby-intention.mp4"`
+`ffmpeg -i "image-issues.mov" -vf "scale=1700:-1" "../video/image-issues.mp4"`
 
 no resize:
 `ffmpeg -i "lp.mp4" "../video/lp.mp4"`
@@ -22,14 +22,14 @@ no resize:
 
 single:
 
-`ffmpeg -i "goby-intention.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "goby-intention.webm"`
+`ffmpeg -i "image-issues.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "image-issues.webm"`
 
 #### FFMPEG get first frame of each mp4 in folder and save it as a jpg
 `for i in *.mp4; do ffmpeg -ss 00:00:00 -n -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done`
 
 single:
 
-`ffmpeg -ss 00:00:00 -i "goby-intention.mp4" -vframes 1 -q:v 2 "goby-intention.jpg"`
+`ffmpeg -ss 00:00:00 -i "image-issues.mp4" -vframes 1 -q:v 2 "image-issues.jpg"`
 
 
 
