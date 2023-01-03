@@ -1,7 +1,7 @@
 :root{
-  --fg:black;
+  --fg:#fafafa;
   /* #171717 */
-  --bg:#f4f4f4;
+  --bg:#0e0e0e;
   --mid:#696969;
   --m:15px;
   --col:90px;
@@ -142,6 +142,7 @@ figure video,figure.video img{
 
 ::selection{
   background-color:#FFFEE2;
+  color:var(--bg);
 }
 
 .gallery[data-position="left"],.gallery[data-position="left small"]{
@@ -267,7 +268,7 @@ h3.label[data-project="“The Secret” identity"],h3.label[data-project="“The
 h3.label a{
   text-decoration: none;
   color:var(--bg);
-  background-color: var(--mid);
+  background-color: var(--fg);
   padding:1px 6px;
   border-radius:20px;
   margin-left:3px;
@@ -433,12 +434,17 @@ section.center{
 
 
 section h3{
-  color:#696969;
+  color:var(--mid);
 }
 
 section p,.description p{
+  /* color:var(--mid); */
   text-indent: var(--indent);
 }
+/*
+section a{
+  color: var(--mid);
+} */
 
 section p:first-of-type,.description p:first-of-type{
   text-indent: 0px;
