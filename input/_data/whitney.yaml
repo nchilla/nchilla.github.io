@@ -19,6 +19,36 @@
         link: https://platformeconomies.net/
         caption: visit
 
+  - title: Long Life / Cool White poster concept
+    type: gallery
+    position: left small
+    ratio: 0.62
+    typefaces: set in Helvetica and Courier
+    code:
+    role:
+      - design
+      - development
+    description: Typographic poster for a retrospective on photographer Moyra Davey, using sticker overlays to imitate her [mail artworks](https://www.artforum.com/print/reviews/202206/moyra-davey-88625).
+    link:
+    link_copy:
+    assets:
+      - src: moyra-davey-digital
+        type: image
+        ratio: 0.61
+        effects: fitheight large no
+        link:
+      - src: moyra-davey-in-situ
+        type: image
+        effects: fitheight large nomobile
+        ratio: 0.61
+        link:
+        caption:
+      - src: moyra-davey-closeup
+        type: image
+        effects: fitheight large nomobile
+        link:
+        caption:
+
   - title: Tractatus Logico-Philosophicus Reader
     type: gallery
     position: left
@@ -83,61 +113,6 @@
         link:
         caption:
 
-  - title: Goby — Parsons thesis
-    type: gallery
-    position: left
-    typefaces: iA Writer Duospace and IBM Plex Sans
-    code: built in Electron, using Vue.js and d3.js for frontend and SQLite for the backend
-    role:
-      - design
-      - development
-    description: Desktop app for organizing files and ideas, which allows you to alternate between table and graph representations of the same information.
-    link: https://bfacd.parsons.edu/2022/nico-chilla
-    link_copy: info
-    assets:
-      - src: goby-new-relation
-        type: video
-        ratio: 0.58
-        effects:
-        link:
-        caption:
-      - src: goby-space
-        type: video
-        ratio: 0.58
-        effects:
-        link:
-        caption:
-
-  - title: Long Life / Cool White poster concept
-    type: gallery
-    position: center small
-    ratio: 0.62
-    typefaces: set in Helvetica and Courier
-    code:
-    role:
-      - design
-      - development
-    description: Typographic poster for a retrospective on photographer Moyra Davey, using sticker overlays to imitate her [mail artworks](https://www.artforum.com/print/reviews/202206/moyra-davey-88625).
-    link:
-    link_copy:
-    assets:
-      - src: moyra-davey-digital
-        type: image
-        ratio: 0.61
-        effects: fitheight large no
-        link:
-      - src: moyra-davey-in-situ
-        type: image
-        effects: fitheight large nomobile
-        ratio: 0.61
-        link:
-        caption:
-      - src: moyra-davey-closeup
-        type: image
-        effects: fitheight large nomobile
-        link:
-        caption:
-
   - title: “The Secret” identity
     type: single
     position: left
@@ -175,31 +150,6 @@
         effects:
         link:
         caption:
-
-  - title: Image Magazine landing page generator
-    type: gallery
-    position: left
-    typefaces: set in Druk Wide, Mabry Mono, and Grenette
-    code: Custom template written in Nunjucks with the L.A. Times static page generator, <a href="https://github.com/datadesk/baker" target="_blank">Baker</a>
-    role:
-      - design
-      - development
-    description: Customizeable template for the landing page of each issue, designed to correspond with Image’s print identity system. It has been used going on 16 issues and won a [bronze award](https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&viewControls=on) from the Society of News Design.
-    link: https://www.latimes.com/projects/imagemakersvol2/
-    link_copy: visit
-    assets:
-      - src: image-issues
-        type: video
-        ratio: 0.58
-        effects:
-        link:
-        caption: issues
-      - src: image
-        type: video
-        ratio: 0.58
-        effects:
-        link: https://www.latimes.com/projects/reverence/
-        caption: Issue 5 - Reverence 🡕
 
   - title: WNSR New School Radio
     type: gallery
@@ -239,25 +189,6 @@
         effects: fitheight
         link:
         caption:
-
-  # - title: What’s on your plate?
-  #   type: single
-  #   position: right
-  #   typefaces: KisFB, Benton Sans, and Georgia
-  #   code: nunjucks and html+css+js
-  #   role:
-  #     - design
-  #     - development
-  #   description: Interactive for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while interning at The L.A. Times.
-  #   link: https://www.latimes.com/projects/license-plates/
-  #   link_copy: visit
-  #   assets:
-  #     - src: lp-2
-  #       type: video
-  #       ratio: 0.58
-  #       effects:
-  #       link: https://www.latimes.com/projects/license-plates/
-  #       caption: visit
 
   - title: Words and Pictures
     type: gallery

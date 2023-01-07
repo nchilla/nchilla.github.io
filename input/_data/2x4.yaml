@@ -1,0 +1,329 @@
+---
+
+  - title: “The Secret” identity
+    type: gallery
+    position: center
+    typefaces: display set in Krona, body set in Space Mono
+    code: html+css+js, using D3.js
+    role:
+      - design
+      - development
+    description: Identity system and website for a hypothetical theatre company. Rather than using a logo, excerpts from play scripts are used to conceal and reveal the name (‘the secret’) on different assets.
+    link: https://work.nicochilla.com/advanced_type_motion/
+    link_copy: visit
+    assets:
+      - src: secret
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://work.nicochilla.com/advanced_type_motion/
+        caption: visit
+      - src: lear-1
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: lear-2
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: lear-3
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: lear-4
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: tempest-4
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: msd-4
+        type: image
+        effects: fitheight
+        link:
+        caption:
+
+  - title: Long Life / Cool White poster concept
+    type: gallery
+    position: left small
+    ratio: 0.62
+    typefaces: set in Helvetica and Courier
+    code:
+    role:
+      - design
+      - development
+    description: Typographic poster for a retrospective on photographer Moyra Davey, using sticker overlays to imitate her [mail artworks](https://www.artforum.com/print/reviews/202206/moyra-davey-88625).
+    link:
+    link_copy:
+    assets:
+      - src: moyra-davey-digital
+        type: image
+        ratio: 0.61
+        effects: fitheight large no
+        link:
+      - src: moyra-davey-in-situ
+        type: image
+        effects: fitheight large nomobile
+        ratio: 0.61
+        link:
+        caption:
+      - src: moyra-davey-closeup
+        type: image
+        effects: fitheight large nomobile
+        link:
+        caption:
+
+  - title: Common Language studio website
+    type: single
+    position: center
+    typefaces: set in Nimbus Sans and Nimbus Roman
+    code: Wordpress custom theme written in php and html+css+js
+    role:
+      - design
+      - development
+    description: Studio website for a design student’s personal practice predicated on exploring the intersection of architecture and musical form.
+    link:
+    link_copy: visit
+    assets:
+      - src: cl-extend
+        type: video
+        ratio: 0.64
+        effects:
+        link:
+        caption:
+
+  - title: WNSR New School Radio
+    type: gallery
+    position: left
+    typefaces: set in Neue and Neue Haas Unica
+    code: written in php and html+css+js, pulling data from an RSS feed and using the Web Audio API and D3.js for the visualizer
+    role:
+      - design
+      - development
+    description: Identity system and website for my college radio station, featuring an audio visualizer and track listings for student-produced media, as well as series graphics to display on audio platforms.
+    link: https://www.newschoolradio.org/
+    link_copy: visit
+    assets:
+      - src: wnsr-memories
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wnsr
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
+      - src: wnsr-whatsnew
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wnsr-artculture
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wnsr-centennial
+        type: image
+        effects: fitheight
+        link:
+        caption:
+
+  - title: Wiki/Abiogenesis
+    type: gallery
+    position: left small
+    ratio: 0.61
+    typefaces: set in Neue Haas Unica
+    code:
+    role:
+      - design
+      - development
+    description: Book designed by typesetting content from [the wikipedia page](https://en.wikipedia.org/wiki/Abiogenesis) for abiogenesis, described as “the natural process by which life has arisen from non-living matter.”
+    link:
+    link_copy:
+    assets:
+      - src: abiogenesis-dark
+        type: video
+        ratio: 0.75
+        effects: small
+        link:
+      - src: abiogenesis-toc-dark
+        type: image
+        effects: fitheight large
+        link:
+        caption:
+      - src: abiogenesis-interior-dark
+        type: image
+        effects: fitheight large
+        link:
+        caption:
+
+  - title: Platform Economies Research Network (PERN)
+    type: single
+    position: right
+    typefaces: set in Anonymous Pro and Aktiv Grotesk
+    code: Wordpress custom theme written in php and html+css+js
+    role:
+      - design
+      - development
+    description: Website and identity designed as a freelancer for PERN, a research collaboration based out of my university which studies the economics of digital platforms.
+    link: https://platformeconomies.net/
+    link_copy: visit
+    assets:
+      - src: pern
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://platformeconomies.net/
+        caption: visit
+
+  - title: Tractatus Logico-Philosophicus Reader
+    type: gallery
+    position: left
+    typefaces: heading is set in Panama, body text in Signifier, numbering and notation in Aktiv Grotesk
+    code: html+css+js, using Matter.js and D3.js
+    role:
+      - design
+      - development
+    description: This project presents a single text, Wittgenstein’s [Tractatus](https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus), in 4 different ways, experimenting with different forms of reading and navigation.
+    link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
+    link_copy: visit
+    assets:
+      - src: tr
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://work.nicochilla.com/tractatus-tree/dendrogram.html
+        caption: visit
+      - src: tractatus-nonsense
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://work.nicochilla.com/tractatus-tree/nonsense.html
+        caption: visit
+      - src: tabs-open
+        type: image
+        effects: video
+        link: https://work.nicochilla.com/tractatus-tree/tabs.html
+        caption: visit
+      - src: thread
+        type: image
+        effects: video
+        link: https://work.nicochilla.com/tractatus-tree/thread.html
+        caption: visit
+
+
+  - title: Image Magazine landing page generator
+    type: gallery
+    position: center
+    typefaces: set in Druk Wide, Mabry Mono, and Grenette
+    code: Custom template written in Nunjucks with the L.A. Times static page generator, <a href="https://github.com/datadesk/baker" target="_blank">Baker</a>
+    role:
+      - design
+      - development
+    description: Customizeable template for the landing page of each issue, designed to correspond with Image’s print identity system. It has been used going on 16 issues and won a [bronze award](https://airtable.com/shrMLVqYbqJ5nOxel/tblcwLDp60XQygKbq/viwb5v6acVmfP9fnd/rectGczoFQb1mquN0?backgroundColor=gray&viewControls=on) from the Society of News Design.
+    link: https://www.latimes.com/projects/imagemakersvol2/
+    link_copy: visit
+    assets:
+      - src: image-issues
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption: issues
+      - src: image
+        type: video
+        ratio: 0.58
+        effects:
+        link: https://www.latimes.com/projects/reverence/
+        caption: Issue 5 - Reverence 🡕
+
+  # - title: What’s on your plate?
+  #   type: single
+  #   position: right
+  #   typefaces: KisFB, Benton Sans, and Georgia
+  #   code: nunjucks and html+css+js
+  #   role:
+  #     - design
+  #     - development
+  #   description: Interactive for a story showcasing people around L.A. with interesting vanity plates. Built in collaboration with a team of reporters and photographers while interning at The L.A. Times.
+  #   link: https://www.latimes.com/projects/license-plates/
+  #   link_copy: visit
+  #   assets:
+  #     - src: lp-2
+  #       type: video
+  #       ratio: 0.58
+  #       effects:
+  #       link: https://www.latimes.com/projects/license-plates/
+  #       caption: visit
+
+  - title: Words and Pictures
+    type: gallery
+    position: left small
+    ratio: 0.6
+    typefaces: set in Authentic and Authentic Condensed
+    code:
+    role:
+      - design
+      - development
+    description: Two-sided risograph booklet comparing the qualities of expression through language versus images.
+    link:
+    link_copy:
+    assets:
+      - src: both-sides
+        type: video
+        ratio: 0.75
+        effects: small
+        link:
+      - src: wp-table
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-scenes
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-associations
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-diagram
+        type: image
+        effects: fitheight
+        link:
+        caption:
+      - src: wp-socrates
+        type: image
+        effects: fitheight nomobile
+        link:
+        caption:
+
+  - title: Sonnet index
+    type: single
+    position: center
+    typefaces: set in Starling, IBM Plex Mono, and IBM Plex Sans
+    code: html+css+js
+    role:
+      - design
+      - development
+    description: Shakespeare’s 154 sonnets, presented as a single block of unbroken text. Visitors can browse each sonnet and learn about the body of work through filtering and editing features.
+    link: https://work.nicochilla.com/ci20/collection/
+    link_copy: visit
+    assets:
+      - src: sonnets
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
