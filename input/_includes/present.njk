@@ -1,199 +1,62 @@
-{% macro html(projects,path="../../assets/") %}
+{% macro html(slides,path="../../assets/") %}
 
-<style media="screen">
-  video{
-    cursor:crosshair;
-  }
-</style>
-<main data-view="projects">
+
+
+
+<main>
+  <section data-step="0">
+    <h2><span>Hi! I’m Nico.</span></h2>
+  </section>
   <nav>
-    <h1><span>Nico Chilla</span><br><button class="expandable" id="view-toggle"><span></span></button></h1>
+    <h1><span>Nico Chilla</span><br></h1>
     <a class='email stick' href="mailto:jnico.chilla@gmail.com">contact</a>
   </nav>
-  <header>
-    <h1><span class="hide">Nico Chilla</span><span class="pronunciation-key">*</span>
-    </h1>
-  </header>
-  <div id="grid">
-    <section class="center" style="--mark:0;">
-      <h3 class="pronunciation"><span>Spanish: (chi-ya),</span> <span>Argentinean: (chi-sha),</span> <span>American: (chill-uh)</span></h3>
-    </section>
-    <section class="center" style="--mark:0;">
-      <h3>Me:</h3>
-      <p>Originally from San Jose, CA, I’m an undergraduate at Parsons / The New School in New York. While in school, I’ve worked as both a designer and developer for the L.A. Times, <a href="https://908a.org/" target="_blank">908A</a>, and various freelance clients.</p>
-    </section>
-    <section class="center" style="--mark:1;">
-      <h3>Currently:</h3>
-      <p>Finishing out my degrees in <a target="_blank" href="https://bfacd.parsons.edu/2022/nico-chilla">Communication Design</a> and Philosophy (expected fall 2022), and pursuing positions beginning in the spring.</p>
-    </section>
-    <section class="center" style="--mark:0;">
-      <h3>Elsewhere:</h3>
-      <p>You can find me in these places:<br>
-        <a target="_blank" href="mailto:jnico.chilla@gmail.com">email</a>,
-        <a target="_blank" href="https://www.are.na/nico-chilla">are.na</a>,
-        <a target="_blank" href="https://github.com/nchilla">github</a>,
-        <a target="_blank" href="https://www.linkedin.com/in/nico-chilla-359529182/">linkedin</a>
-    </section>
-    <section class="center small-break" style="--mark:0;">
-      <h3>Activities:</h3>
-      <p>Here are some other things I’ve been up to:</p>
-    </section>
-    <section class="center small-break" style="--mark:1;">
-      <p class='bullet'>I use Are.na to write, order, and discuss my ideas with other people. Last spring, I had the chance to present one of my channels at an are.na event and <a target="_blank" href="https://www.are.na/blog/on-rejecting-narrative-identity">write about it</a> for their blog.</p>
-    </section>
-    <section class="center small-break" style="--mark:1;">
-      <p class='bullet'><a href="https://bfacd.parsons.edu/2022/nico-chilla" target="_blank">Goby</a> is my ongoing personal project to create a new interface for organizing and representing information. You can find my documentation <a href="https://www.are.na/nico-chilla/goby-journal" target="_blank">here</a>, and feel free to reach out! I love talking to people thinking about how interfaces shape our thought.</p>
-    </section>
-    <section class="center small-break" style="--mark:1;">
-      <p class='bullet'>This past June I developed a web interactive for <a target="_blank" href="https://www.latimes.com/projects/honoring-black-la-art-music-culture-activism-church/" target="_blank">L.A. Times “Behold” portrait project</a>, designed by the amazing <a target="_blank" href="http://alextatusian.com/">Alex Tatusian</a>.</p>
-    </section>
+  {% for slide in slides %}
+    <section data-step="{{ loop.index }}" data-type="{{ slide.type }}" data-effects="{{slide.effects}}">
 
+      {% if slide.type == 'single' %}
+      <a href="{{ slide.url if slide.url }}" target="_blank">
+        {{ macros.media(slide.assets[0].src, slide.assets[0].type,'','','',slide.assets[0].ratio,path) }}
+      </a>
 
-    {% for project in projects %}
-    {% if project.type == 'single' %}
-    <div class="single media-box" style="--ratio:{{project.assets[0].ratio}}" data-position="{{ project.position }}" data-project="{{ project.title }}" data-step="{{ loop.index0 }}">
-      {% if project.link %}
-      <a class="media-link" href="{{ project.link }}" target="_blank"></a>
+      {% elseif slide.type == 'diptych' %}
+        {{ macros.media(slide.assets[0].src, slide.assets[0].type,'','','',slide.assets[0].ratio,path) }}
+        {{ macros.media(slide.assets[1].src, slide.assets[1].type,'','','',slide.assets[1].ratio,path) }}
       {% endif %}
-      {{ macros.media(project.assets[0].src, project.assets[0].type,'','','',project.assets[0].ratio,path,false) }}
-    </div>
-    {% elseif project.type == 'gallery' %}
-    <div class="gallery media-box" data-position="{{ project.position }}" data-project="{{ project.title }}" style="--ratio: {{ project.ratio if project.ratio else 0.58 }};" data-step="{{ loop.index0 }}">
-      {% for media in project.assets %}
-      <div class="slide" data-effects="{{media.effects}}">
-        {% if media.link %}
-        <a class="media-link" href="{{ media.link }}" target="_blank"></a>
-        {% endif %}
-        {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link,media.ratio if media.ratio else null,path,false) }}
-      </div>
-      {% endfor %}
-      <div class="end-cap">
+      <figcaption class="noselect">{{slide.title}}</figcaption>
+    </section>
+  {% endfor %}
 
-      </div>
-    </div>
-    {% endif %}
-    <h3 class="label" data-position="{{ project.position }}" data-project="{{ project.title }}">
-      {{ project.title }}
 
-    </h3>
-    <div class='description' data-position="{{ project.position }}" data-project="{{ project.title }}">
-      <p>{{ project.description | md | safe}}</p>
-
-    </div>
-    {% endfor %}
-  </div>
-
+  {# <section data-step="0">
+    <figure></figure>
+  </section>
+  <section data-step="1">
+    <figure></figure>
+  </section>
+  <section data-step="2">
+    <figure></figure>
+  </section> #}
+  <footer></footer>
 </main>
+
+
 <script type="text/javascript">
+  const slides=document.querySelectorAll('main section')
 
-  const main=document.querySelector('main');
-
-  document.querySelector('#view-toggle').addEventListener('click',function(){
-    let current=main.dataset.view;
-    window.scroll(0,0);
-    main.dataset.view=current=='projects'?'info':'projects';
-  })
-
-  let large=window.matchMedia('(min-width:1000px)');
-  const grid=document.querySelector('#grid');
-
-  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-  observer.observe();
-  setColumnCount();
-
-  let timer;
-  window.addEventListener('resize',setColumnCount);
-
-  function timeOutResize(){
-    clearTimeout(timer);
-    timer=setTimeout(setColumnCount,10);
-  }
-
-  document.querySelectorAll('.expandable.type, .expandable.code').forEach((button) => {
-    button.addEventListener('click',function(){
-      let el=event.currentTarget;
-      let inside=el.querySelector('span');
-      if(!el.classList.contains('open')){
-        el.classList.add('open');
-        inside.innerHTML=el.dataset.text;
-      }else{
-        el.classList.remove('open');
-        inside.innerText='';
+  slides.forEach((slide, i) => {
+    slide.addEventListener('click',function(){
+      if(event.target.tagName!=='A'){
+        let next=i>=(slides.length-1)?0:i+1;
+        document.querySelector(`section[data-step="${next}"]`).scrollIntoView();
       }
     })
   });
 
-  const videos=Array.from(document.querySelectorAll('video'));
-
-  for (let video of videos){
-    video.parentNode.parentNode.addEventListener('mouseenter',function(){
-      video.play();
-    })
-
-    video.parentNode.parentNode.addEventListener('mouseleave',function(){
-      video.pause();
-    })
-  }
 
 
-  console.log({{ projects | dump | safe }});
 
-  function setColumnCount(){
-    console.log('calculating columns');
-    const w=window.innerWidth;
-    const col=large.matches?110:90;
-    const gap=15;
-    const outer=large.matches?90:80;
-    const content=large.matches?6:6;
-
-    let count=Math.floor((w - outer + gap) / (col + gap));
-    if(count % 2 == 1) count--;
-    count=Math.min(count,10);
-
-
-    console.log(count);
-
-    let styleStr=`1fr repeat(${count},var(--col)) 1fr`;
-    grid.style.setProperty('--fancy',styleStr);
-    grid.style.setProperty('--edge',count + 3);
-    grid.style.setProperty('--count',count);
-    grid.style.setProperty('--bump',Math.ceil((count - content) / 2));
-  }
-
-  let ind=0;
-  const steps=4;
-  window.addEventListener('keydown',function(){
-
-  if(event.key=='ArrowRight'){
-    event.preventDefault();
-    let next=document.querySelector(`div[data-step="${ind == steps? 0 : ind + 1 }"]`);
-    ind=ind == steps? 0 : ind + 1;
-    let scrolltop=next.offsetTop - (window.innerHeight - next.offsetHeight - 100)/2;
-    window.scroll({
-      top:scrolltop,
-      left:0,
-      behavior:'smooth'
-    })
-
-    // console.log(next,scrolltop);
-    // next.scrollIntoView();
-  }else if(event.key=='ArrowLeft'){
-    event.preventDefault();
-    let i=ind == 0? steps : ind - 1;
-    ind=i;
-    let back=document.querySelector(`div[data-step="${i}"]`);
-
-    let scrolltop=back.offsetTop - (window.innerHeight - back.offsetHeight - 100)/2;
-
-    window.scroll({
-      top:scrolltop,
-      left:0,
-      behavior:'smooth'
-    })
-
-  }
-})
-
-
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
 </script>
 {% endmacro %}
