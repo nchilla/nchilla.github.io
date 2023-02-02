@@ -1,10 +1,10 @@
 ---
 
-  - title: To say a name
+  - title: Sonnet explorer
     type: single
-    url:
+    url: https://work.nicochilla.com/ci20/collection/
     assets:
-      - src: to-say-a-name
+      - src: sonnets-long
         type: video
         ratio: 0.58
 
@@ -32,11 +32,11 @@
         type: video
         ratio: 0.58
 
-  - title: Sonnet explorer
+  - title: To say a name
     type: single
-    url: https://work.nicochilla.com/ci20/collection/
+    url:
     assets:
-      - src: sonnets-long
+      - src: to-say-a-name
         type: video
         ratio: 0.58
 
