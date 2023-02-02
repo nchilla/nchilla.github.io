@@ -1,10 +1,10 @@
 ---
 
-  - title: Platform Economies Research Network (PERN)
+  - title: To say a name
     type: single
-    url: https://platformeconomies.net/
+    url:
     assets:
-      - src: pern-all-pages
+      - src: to-say-a-name
         type: video
         ratio: 0.58
 
@@ -24,31 +24,19 @@
         type: video
         ratio: 0.58
 
+  - title: Platform Economies Research Network (PERN)
+    type: single
+    url: https://platformeconomies.net/
+    assets:
+      - src: pern-all-pages
+        type: video
+        ratio: 0.58
+
   - title: Sonnet explorer
     type: single
     url: https://work.nicochilla.com/ci20/collection/
     assets:
       - src: sonnets-long
-        type: video
-        ratio: 0.58
-
-  - title: To say a name
-    type: single
-    url:
-    assets:
-      - src: to-say-a-name
-        type: video
-        ratio: 0.58
-
-  - title: Tractatus Logico-Philosophicus reader
-    type: diptych
-    effects: mobile-one-col
-    url: https://work.nicochilla.com/tractatus-tree/dendrogram.html
-    assets:
-      - src: tr
-        type: video
-        ratio: 0.58
-      - src: tractatus-nonsense
         type: video
         ratio: 0.58
 
@@ -76,6 +64,18 @@
       - src: wnsr-centennial
         type: image
 
+  - title: Tractatus Logico-Philosophicus reader
+    type: diptych
+    effects: mobile-one-col
+    url: https://work.nicochilla.com/tractatus-tree/dendrogram.html
+    assets:
+      - src: tr
+        type: video
+        ratio: 0.58
+      - src: tractatus-nonsense
+        type: video
+        ratio: 0.58
+
   - title: Common Language studio website
     type: single
     url: https://xd.adobe.com/view/195a2ce2-4272-462f-ab2a-62373a859246-4c09/
@@ -91,10 +91,6 @@
       - src: image-issues
         type: video
         ratio: 0.58
-
-
-
-
 
   - title: What’s on your plate? (for L.A. Times)
     type: single
