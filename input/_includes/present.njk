@@ -16,12 +16,12 @@
 
       {% if slide.type == 'single' %}
       <a href="{{ slide.url if slide.url }}" target="_blank">
-        {{ macros.media(slide.assets[0].src, slide.assets[0].type,'','','',slide.assets[0].ratio,path) }}
+        {{ macros.media(slide.assets[0].src, slide.assets[0].type,slide.assets[0].effects if slide.assets[0].effects else '','','',slide.assets[0].ratio,path) }}
       </a>
 
       {% elseif slide.type == 'diptych' %}
-        {{ macros.media(slide.assets[0].src, slide.assets[0].type,'','','',slide.assets[0].ratio,path) }}
-        {{ macros.media(slide.assets[1].src, slide.assets[1].type,'','','',slide.assets[1].ratio,path) }}
+        {{ macros.media(slide.assets[0].src, slide.assets[0].type,slide.assets[0].effects if slide.assets[0].effects else '','','',slide.assets[0].ratio,path) }}
+        {{ macros.media(slide.assets[1].src, slide.assets[1].type,slide.assets[1].effects if slide.assets[1].effects else '','','',slide.assets[1].ratio,path) }}
       {% endif %}
       <figcaption class="noselect">{{slide.title}}</figcaption>
     </section>
@@ -46,7 +46,8 @@
 
   slides.forEach((slide, i) => {
     slide.addEventListener('click',function(){
-      if(event.target.tagName!=='A'){
+      // console.log(event.target.parentNode.parentNode.tagName,event);
+      if(event.target.parentNode.parentNode.tagName!=='A'&&event.target.parentNode.tagName!=='H2'){
         let next=i>=(slides.length-1)?0:i+1;
         document.querySelector(`section[data-step="${next}"]`).scrollIntoView();
       }

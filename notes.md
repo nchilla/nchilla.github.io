@@ -12,7 +12,7 @@ start live server:
 
 single:
 
-`ffmpeg -i "sonnets-long.mov" -vf "scale=1700:-1" "../video/sonnets-long.mp4"`
+`ffmpeg -i "pern-all-pages.mov" -vf "scale=1700:-1" "../video/pern-all-pages.mp4"`
 
 no resize:
 `ffmpeg -i "lp.mp4" "../video/lp.mp4"`
@@ -22,14 +22,14 @@ no resize:
 
 single:
 
-`ffmpeg -i "sonnets-long.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "sonnets-long.webm"`
+`ffmpeg -i "pern-all-pages.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "pern-all-pages.webm"`
 
 #### FFMPEG get first frame of each mp4 in folder and save it as a jpg
 `for i in *.mp4; do ffmpeg -ss 00:00:00 -n -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done`
 
 single:
 
-`ffmpeg -ss 00:00:00 -i "sonnets-long.mp4" -vframes 1 -q:v 2 "sonnets-long.jpg"`
+`ffmpeg -ss 00:00:00 -i "pern-all-pages.mp4" -vframes 1 -q:v 2 "pern-all-pages.jpg"`
 
 
 

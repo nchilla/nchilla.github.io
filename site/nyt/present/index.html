@@ -372,7 +372,8 @@
 
   slides.forEach((slide, i) => {
     slide.addEventListener('click',function(){
-      if(event.target.tagName!=='A'){
+      // console.log(event.target.parentNode.parentNode.tagName,event);
+      if(event.target.parentNode.parentNode.tagName!=='A'&&event.target.parentNode.tagName!=='H2'){
         let next=i>=(slides.length-1)?0:i+1;
         document.querySelector(`section[data-step="${next}"]`).scrollIntoView();
       }
