@@ -54,9 +54,26 @@
         link: https://work.nicochilla.com/tractatus-tree/thread.html
         caption: visit
 
+  - title: The National Restaurant List
+    type: single
+    position: right
+    typefaces: Cheltenham, Imperial, NYT Franklin
+    code: Sveltekit (via Birdkit, NYT’s custom interactive publishing tool)
+    role:
+      - design
+      - development
+    description: List presentation designed and developed in collaboration with [Umi Syam](https://umi.codes/).
+    link: https://www.nytimes.com/interactive/2023/dining/best-restaurants-america.html
+    link_copy: visit
+    assets:
+      - src: the-restaurant-list
+        type: video
+        ratio: 0.58
+        effects:
+
   - title: 52 Places to Go in 2024
     type: gallery
-    position: center
+    position: left
     size: small
     ratio: 0.89
     place_info: inline-end
@@ -74,36 +91,6 @@
         type: video
         ratio: 1.85
         effects: extra-small
-        link:
-        caption:
-
-  - title: Wiki/Abiogenesis
-    type: gallery
-    position: center
-    size: small
-    ratio: 0.61
-    typefaces: set in Neue Haas Unica
-    code:
-    role:
-      - design
-      - development
-    description: Book designed by typesetting content from [the wikipedia page](https://en.wikipedia.org/wiki/Abiogenesis) for abiogenesis, described as “the natural process by which life has arisen from non-living matter.”
-    link:
-    link_copy:
-    assets:
-      - src: abiogenesis-dark
-        type: video
-        ratio: 0.75
-        effects: small
-        link:
-      - src: abiogenesis-toc-dark
-        type: image
-        effects: fitheight large
-        link:
-        caption:
-      - src: abiogenesis-interior-dark
-        type: image
-        effects: fitheight large
         link:
         caption:
 
@@ -217,6 +204,36 @@
         type: video
         ratio: 0.64
         effects:
+        link:
+        caption:
+
+  - title: Wiki/Abiogenesis
+    type: gallery
+    position: left
+    size: small
+    ratio: 0.61
+    typefaces: set in Neue Haas Unica
+    code:
+    role:
+      - design
+      - development
+    description: Book designed by typesetting content from [the wikipedia page](https://en.wikipedia.org/wiki/Abiogenesis) for abiogenesis, described as “the natural process by which life has arisen from non-living matter.”
+    link:
+    link_copy:
+    assets:
+      - src: abiogenesis-dark
+        type: video
+        ratio: 0.75
+        effects: small
+        link:
+      - src: abiogenesis-toc-dark
+        type: image
+        effects: fitheight large
+        link:
+        caption:
+      - src: abiogenesis-interior-dark
+        type: image
+        effects: fitheight large
         link:
         caption:
 
