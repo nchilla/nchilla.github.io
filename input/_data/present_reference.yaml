@@ -1,0 +1,113 @@
+---
+
+  - title: Sonnet explorer
+    type: single
+    url: https://work.nicochilla.com/ci20/collection/
+    assets:
+      - src: sonnets-long
+        type: video
+        ratio: 0.58
+
+  - title: “The Secret” identity system
+    type: diptych
+    assets:
+      - src: lear-1
+        type: image
+      - src: lear-2
+        type: image
+
+  - title: “The Secret” identity system
+    type: single
+    url: https://work.nicochilla.com/advanced_type_motion/
+    assets:
+      - src: secret-ticket
+        type: video
+        ratio: 0.58
+
+  - title: Platform Economies Research Network (PERN)
+    type: single
+    url: https://platformeconomies.net/
+    assets:
+      - src: pern-all-pages
+        type: video
+        ratio: 0.58
+
+  - title: To say a name
+    type: single
+    url:
+    assets:
+      - src: to-say-a-name
+        type: video
+        ratio: 0.58
+
+  - title: New School Radio
+    type: single
+    url: https://www.newschoolradio.org/
+    assets:
+      - src: wnsr
+        type: video
+        ratio: 0.58
+
+  - title: New School Radio
+    type: diptych
+    assets:
+      - src: wnsr-memories
+        type: image
+      - src: wnsr-whatsnew
+        type: image
+
+  - title: New School Radio
+    type: diptych
+    assets:
+      - src: wnsr-artculture
+        type: image
+      - src: wnsr-centennial
+        type: image
+
+  - title: Tractatus Logico-Philosophicus reader
+    type: diptych
+    effects: mobile-one-col
+    url: https://work.nicochilla.com/tractatus-tree/dendrogram.html
+    assets:
+      - src: tr
+        type: video
+        ratio: 0.58
+      - src: tractatus-nonsense
+        type: video
+        ratio: 0.58
+
+  - title: Common Language studio website
+    type: single
+    url: https://xd.adobe.com/view/195a2ce2-4272-462f-ab2a-62373a859246-4c09/
+    assets:
+      - src: cl-extend
+        type: video
+        ratio: 0.64
+
+  - title: Image Magazine landing page generator
+    type: single
+    url: https://www.latimes.com/projects/imagemakersvol2/
+    assets:
+      - src: image-issues
+        type: video
+        ratio: 0.58
+
+  - title: What’s on your plate? (for L.A. Times)
+    type: single
+    url: https://www.latimes.com/projects/license-plates/
+    assets:
+      - src: lp-2
+        type: video
+        ratio: 0.58
+
+  - title: Parsons thesis - Goby
+    type: diptych
+    effects: mobile-one-col
+    url:
+    assets:
+      - src: goby-new-relation
+        type: video
+        ratio: 0.58
+      - src: goby-space
+        type: video
+        ratio: 0.58

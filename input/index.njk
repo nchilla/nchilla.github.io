@@ -1,5 +1,5 @@
 {% import 'macros.njk' as macros %}
-{% import 'bodybuilder-d.njk' as bodybuilder with context %}
+{% import 'bodybuilder.njk' as bodybuilder with context %}
 
 {% set rootpath="" %}
 
@@ -28,6 +28,6 @@
 
   {% set captions = false %}
   <body>
-    {{ bodybuilder.html(projectsjanuarydark,rootpath+'assets/') }}
+    {{ bodybuilder.html(projects,rootpath+'assets/') }}
   </body>
 </html>

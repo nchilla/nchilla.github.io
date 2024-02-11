@@ -1,0 +1,161 @@
+{% macro html(projects,path="../assets/") %}
+<main data-view="projects">
+  <nav>
+    <h1><span>Nico Chilla</span><br><button class="expandable" id="view-toggle"><span></span></button></h1>
+    <a class='email stick' href="mailto:jnico.chilla@gmail.com">contact</a>
+  </nav>
+  <header>
+    <h1><span class="hide">Nico Chilla</span><span class="pronunciation-key">*</span>
+    </h1>
+  </header>
+  <div id="grid">
+    <section class="center" style="--mark:0;">
+      <h3 class="pronunciation"><span>Spanish: (chi-ya),</span> <span>Argentinian: (chi-sha),</span> <span>American: (chill-uh)</span></h3>
+    </section>
+    <section class="center" style="--mark:0;">
+      <h3>Before:</h3>
+      <p>Graduated from Parsons/The New School with degrees in <a target="_blank" href="https://bfacd.parsons.edu/2022/nico-chilla">Communication Design</a> and philosophy. Have previously designed and developed for the L.A. Times, <a href="https://908a.org/" target="_blank">908A</a>, <a href="https://www.xxix.co/" target="_blank">XXIX</a>, and various freelance clients.</p>
+
+    </section>
+    <section class="center" style="--mark:0;">
+      <h3>Now:</h3>
+      <p>Doing a one-year <a href="https://www.nytimes.com/by/nico-chilla" target="_blank">fellowship</a> with the digital news design department at The New York Times.</p>
+        
+        
+    </section>
+    
+
+    <section class="center" style="--mark:1;">
+      <h3>Elsewhere:</h3>
+      <p>You can find me in these places:<br>
+        <a target="_blank" href=" https://nicochilla.com/">homepage</a>,
+        <a target="_blank" href="mailto:jnico.chilla@gmail.com">email</a>,
+        <a target="_blank" href="https://www.are.na/nico-chilla">are.na</a>,
+        <a target="_blank" href="https://github.com/nchilla">github</a>,
+        <a target="_blank" href="https://www.linkedin.com/in/nico-chilla-359529182/">linkedin</a>
+        
+    </section>
+
+
+
+    {% for project in projects %}
+    {% if project.type == 'single' %}
+    <div class="single media-box text-col" data-effects="{{project.assets[0].effects}}" style="--ratio:{{project.assets[0].ratio}}" data-size="{{ project.size }}"  data-position="{{ project.position }}" data-project="{{ project.title }}">
+      {{ macros.media(project.assets[0].src, project.assets[0].type,'','','',project.assets[0].ratio,path) }}
+    </div>
+    {% elseif project.type == 'gallery'%}
+    <div class="gallery media-box" data-position="{{ project.position }}" data-inline-info="{{ "true" if project.place_info else "false" }}" data-size="{{ project.size }}" data-project="{{ project.title }}" style="--ratio: {{ project.ratio if project.ratio else 0.58 }};">
+      {% for media in project.assets %}
+      <div class="slide" data-effects="{{media.effects}}">
+        {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link,media.ratio if media.ratio else null,path) }}
+      </div>
+      {% endfor %}
+      {% if project.place_info == 'inline-end'%}
+      <div class='slide inline-project-info'>
+        {{ macros.projectinfo(project) }}
+      </div>
+      {% endif %}
+      {% if not project.no_end_cap %}
+        <div class="end-cap">
+
+        </div>
+      {% endif %}
+      
+    </div>
+ 
+    {% endif %}
+    {% if project.place_info !== 'inline' and project.place_info !== 'inline-end' %}
+      {{ macros.projectinfo(project) }}
+      {# <h3 class="label text-col" data-position="{{ project.position }}" data-size="{{ project.size }}" data-project="{{ project.title }}">
+        {{ project.title }}
+        {% if project.link %}
+          <a href="{{ project.link }}" target="_blank">{{ project.link_copy }}</a>
+        {% endif %}
+      </h3>
+      <div class='description text-col' data-position="{{ project.position }}" data-size="{{ project.size }}" data-project="{{ project.title }}">
+        <p>{{ project.description | md | safe}}</p>
+        <p>
+          {% if project.typefaces.length > 0 %}
+          <button class="type expandable" data-text="{{project.typefaces}}"><span></span></button>
+          {% endif %}
+          {% if project.code.length > 0 %}
+          <button class="code expandable" data-text="{{project.code}}"><span></span></button>
+          {% endif %}
+        </p>
+      </div> #}
+    {% endif %}
+    
+    {% endfor %}
+  </div>
+  <footer>
+    <span>
+      <button class="type expandable" data-text='set in <a href="http://hershey-noailles.luuse.io/www/#Hershey-Noailles-Times-Simplex-Regular" target="_blank">Hershey Times Simplex</a>'><span></span></button>
+      <button class="code expandable" data-text="html+css+js, using eleventy as a static site generator"><span></span></button>
+    </span>
+
+  </footer>
+</main>
+<script type="text/javascript">
+
+  const main=document.querySelector('main');
+
+  document.querySelector('#view-toggle').addEventListener('click',function(){
+    let current=main.dataset.view;
+    window.scroll(0,0);
+    main.dataset.view=current=='projects'?'info':'projects';
+  })
+
+  let large=window.matchMedia('(min-width:1000px)');
+  const grid=document.querySelector('#grid');
+
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+  setColumnCount();
+
+  let timer;
+  window.addEventListener('resize',setColumnCount);
+
+  function timeOutResize(){
+    clearTimeout(timer);
+    timer=setTimeout(setColumnCount,10);
+  }
+
+  document.querySelectorAll('.expandable.type, .expandable.code').forEach((button) => {
+    button.addEventListener('click',function(){
+      let el=event.currentTarget;
+      let inside=el.querySelector('span');
+      if(!el.classList.contains('open')){
+        el.classList.add('open');
+        inside.innerHTML=el.dataset.text;
+      }else{
+        el.classList.remove('open');
+        inside.innerText='';
+      }
+    })
+  });
+
+  console.log({{ projects | dump | safe }});
+
+  function setColumnCount(){
+    console.log('calculating columns');
+    const w=window.innerWidth;
+    const col=large.matches?110:90;
+    const gap=15;
+    const outer=large.matches?90:80;
+    const content=large.matches?6:6;
+
+    let count=Math.floor((w - outer + gap) / (col + gap));
+    if(count % 2 == 1) count--;
+    count=Math.min(count,10);
+
+
+    console.log(count);
+
+    let styleStr=`1fr repeat(${count},var(--col)) 1fr`;
+    grid.style.setProperty('--fancy',styleStr);
+    grid.style.setProperty('--edge',count + 3);
+    grid.style.setProperty('--count',count);
+    grid.style.setProperty('--bump',Math.ceil((count - content) / 2));
+  }
+</script>
+{% endmacro %}

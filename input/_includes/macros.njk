@@ -15,8 +15,9 @@
   {% elseif type == 'image' %}
   {% set srcpath = path+"images/" if effects !== 'video' else path+"images-large/"  %}
   {% set srcpath = path+"images-large/" if 'fitheight large' in effects else srcpath  %}
+  {% set srcpath = path+"images-large/" if 'extra-small' in effects else srcpath  %}
 
-  <figure style='--ratio:{{ src | getRatio }};' class="{{ effects }} media">
+  <figure style='--ratio:{{ src | getRatio }};' class="image {{ effects }} media">
   <picture class="lozad">
     <source type="image/webp" srcset="{{ srcpath }}{{ src }}.webp" type="image/webp">
     <source type="image/jpg" srcset="{{ srcpath }}{{ src }}.jpg">
@@ -34,3 +35,24 @@
 
   {% endif %}
 {% endmacro %}
+
+{% macro projectinfo(project) %}
+<h3 class="label text-col" data-position="{{ project.position }}" data-size="{{ project.size }}" data-project="{{ project.title }}">
+  {{ project.title }}
+  {% if project.link %}
+    <a href="{{ project.link }}" target="_blank">{{ project.link_copy }}</a>
+  {% endif %}
+</h3>
+<div class='description text-col' data-position="{{ project.position }}" data-size="{{ project.size }}" data-project="{{ project.title }}">
+  <p>{{ project.description | md | safe}}</p>
+  <p>
+    {% if project.typefaces.length > 0 %}
+    <button class="type expandable" data-text="{{project.typefaces}}"><span></span></button>
+    {% endif %}
+    {% if project.code.length > 0 %}
+    <button class="code expandable" data-text="{{project.code}}"><span></span></button>
+    {% endif %}
+  </p>
+</div>
+{% endmacro %}
+
