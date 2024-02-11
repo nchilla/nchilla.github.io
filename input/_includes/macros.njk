@@ -3,9 +3,9 @@
   {% if type == 'video'%}
   {% set ratio = ratio if ratio else 0.58  %}
   <figure style='--ratio:{{ ratio }};' class='video media {{effects}}'>
-    <video class="lozad" {% if autoplay %} autoplay {% endif %} muted playsinline loop data-poster="{{ path }}video/{{ src }}.jpg">
-      <source data-src="{{ path }}video/{{ src }}.webm" type="video/webm">
-      <source data-src="{{ path }}video/{{ src }}.mp4" type="video/mp4">
+    <video preload="none" {% if autoplay %} autoplay {% endif %} muted playsinline loop poster="{{ path }}video/{{ src }}.jpg">
+      <source src="{{ path }}video/{{ src }}.webm" type="video/webm">
+      <source src="{{ path }}video/{{ src }}.mp4" type="video/mp4">
     </video>
     {% if caption %}
       <figcaption><a href="{{ link }}" target='_blank'>{{ caption }}</a></figcaption>
@@ -18,9 +18,10 @@
   {% set srcpath = path+"images-large/" if 'extra-small' in effects else srcpath  %}
 
   <figure style='--ratio:{{ src | getRatio }};' class="image {{ effects }} media">
-  <picture class="lozad">
+  <picture>
     <source type="image/webp" srcset="{{ srcpath }}{{ src }}.webp" type="image/webp">
     <source type="image/jpg" srcset="{{ srcpath }}{{ src }}.jpg">
+    <img loading="lazy" src="{{ srcpath }}{{ src }}.jpg">
   </picture>
   {% if caption %}
     <figcaption>

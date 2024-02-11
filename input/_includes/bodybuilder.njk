@@ -108,8 +108,8 @@
   let large=window.matchMedia('(min-width:1000px)');
   const grid=document.querySelector('#grid');
 
-  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-  observer.observe();
+  {# const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe(); #}
   setColumnCount();
 
   let timer;
