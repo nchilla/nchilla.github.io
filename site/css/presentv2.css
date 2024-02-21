@@ -378,9 +378,9 @@ footer{
 .spectrum-point{
     background-color: var(--pres-fg);
     border-radius:50%;
-    width:0.5em;
-    height:0.5em;
-    transform:translate(-50%,-1.05em);
+    width:0.7em;
+    height:0.7em;
+    transform:translate(-50%,-0.95em);
 }
 
 .spectrum-point.last{
