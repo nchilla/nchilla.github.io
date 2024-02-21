@@ -87,13 +87,13 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
 
 {.step}
     [.+text]
-    The Digital News Design team calls this “design as editing”: all the ways that, in thinking through the framing and structure of an article, we influence the work of writers and editors
+    The Digital News Design team calls this “design as editing”: all the ways that, in thinking through the framing and structure of an article, we influence the content.
     []
 {}
 
 {.step}
     [.+text]
-    Now I want to switch ... tk
+    tk transition...
     []
 {}
 
@@ -108,17 +108,13 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
 {.step}
     [.+text]
     How do those motivations manifest in the interface? To name a few ways:
-    []
-{}
 
-
-{.step}
-    [.+text]
     This is all not to say that you shouldn’t use Instagram, or that there aren’t many creative uses and misuses of the platform — there certainly are
 
     But at least when it came to my personal expression, I wanted to have a space that wasn’t mediated by the interests of a giant company. 
     []
 {}
+
 
 {.step}
     [.+text]
@@ -185,32 +181,35 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         exit:3
         col: 7 / 12
         row: 2 / 8
-        src: wp-socrates
+        src: species-screenshot
         type: image
-        caption: From [What Is a Species, Anyway?](https://www.nytimes.com/2024/02/19/science/what-is-a-species.html) by Carl Zimmer.
+        effects: video
+        caption: From [What Is a Species, Anyway?](https://www.nytimes.com/2024/02/19/science/what-is-a-species.html) by Carl Zimmer
     {}
 
     {.grid-loop}
         entry:4
         exit:4
         [.items]
-            src: wp-table
-            type: image
+            src: artoftranslation
+            type: video
             col: 2 / 7
             row: 2 / 5
-            caption: From [What Is a Species, Anyway?](https://www.nytimes.com/2024/02/19/science/what-is-a-species.html) by Carl Zimmer.
+            caption: [The Art of Translation](https://www.nytimes.com/interactive/2023/07/07/books/literature-translation.html), produced by Gray Beltran, Gabriel Gianordoli, and Tala Safie
 
-            src: wp-scenes
+            src: williamsburg
             type: image
+            effects: video
             col: 7 / 12
             row: 2 / 5
-            caption: From [What Is a Species, Anyway?](https://www.nytimes.com/2024/02/19/science/what-is-a-species.html) by Carl Zimmer.
+            caption: [Williamsburg. What Happened?](https://www.nytimes.com/interactive/2024/01/29/style/williamsburg-brooklyn-history-timeline.html), produced by Shannon Lin and Gabriel Gianordoli.
 
-            src: wp-associations
+            src: brt
             type: image
+            effects: video
             col: 7 / 12
             row: 5 / 8
-            caption: From [What Is a Species, Anyway?](https://www.nytimes.com/2024/02/19/science/what-is-a-species.html) by Carl Zimmer.
+            caption: [Could Better Buses Fix Your Commute?](https://www.nytimes.com/interactive/2023/12/07/headway/bus-systems-routes.html) by Eden Weingart, produced by Eden Weingart and Alice Fang
         []    
     {}
 
@@ -237,23 +236,25 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         entry:6
         exit:6
         [.items]
-            src: wp-table
+            src: generator
             type: image
-            col: 2 / 7
+            effects: video
+            col: 2 / 8
             row: 2 / 5
-            caption: Embeds
+            caption: Design generator
 
-            src: wp-scenes
+            src: film-slider2
             type: image
-            col: 7 / 12
-            row: 2 / 5
-            caption: Embeds
+            effects: video
+            col: 8 / 12
+            row: 2 / 7
+            caption: Film recommendation slider produced by Aliza Aufrichtig
         []    
     {}
 
     {.spectrum}
         entry:6
-        exit:19
+        exit:18
         col: 2 / 12
         row: 7 / 8
         align: end
@@ -269,17 +270,18 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         entry:7
         exit:7
         [.items]
-            src: wp-table
-            type: image
+            src: closereads
+            type: video
             col: 2 / 8
             row: 2 / 6
-            caption: Close Reads
+            caption: [Close Reads](https://www.nytimes.com/interactive/2021/arts/close-read.html), produced by Alicia DeSantis, Nick Donofrio, Gabriel Gianordoli, Tala Safie and Josephine Sedgwick
 
-            src: wp-scenes
+            src: patternrecognition
             type: image
+            effects: video
             col: 8 / 12
             row: 2 / 5
-            caption: Pattern Recognition
+            caption: [Pattern Recognition](https://www.nytimes.com/interactive/2021/arts/close-read.html), produced by Alicia DeSantis, Nick Donofrio, Gabriel Gianordoli, Jolie Ruben, Tala Safie and Josephine Sedgwick
         []    
     {}
 
@@ -294,9 +296,9 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         exit:8
         col: 2 / 10
         row: 2 / 8
-        src: pern
+        src: 52places-scrollthrough
         type: video
-        caption: 52 places scroll-through
+        caption: [52 places to Go in 2024](https://www.nytimes.com/interactive/2024/travel/places-to-travel-destinations-2024.html), produced by Nico Chilla and Gabriel Gianordoli.
     {}
 
     {.spectrum-point}
@@ -309,17 +311,19 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         entry:9
         exit:9
         [.items]
-            src: wp-table
+            src: 52places-still
+            effects:video
             type: image
             col: 2 / 7
             row: 2 / 5
-            caption: 52 places still
+            caption:
 
-            src: wp-scenes
+            src: 52places-oak
+            effects:video
             type: image
             col: 7 / 12
             row: 2 / 7
-            caption: oak editor
+            caption:
         []
     {}
 
@@ -328,9 +332,9 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         exit:10
         col: 2 / 10
         row: 2 / 8
-        src: pern
+        src: 52places-tags
         type: video
-        caption: 52 places tag demo
+        caption:
     {}
 
     {.heading}
@@ -362,10 +366,11 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         entry:14
         exit:15
         col: 2 / 6
-        row: 2 / 8
-        src: wp-socrates
+        row: 2 / 7
+        src: subwaycreatures
         type: image
-        caption: Instagram
+        effects: video
+        caption:
     {}
 
     {.spectrum-point}
@@ -389,8 +394,8 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
   
 
     {.spectrum-point}
-        entry:17
-        exit:19
+        entry:16
+        exit:18
         col: 11 / 11
         last: true
     {}
@@ -398,11 +403,11 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
     {.media}
         entry:16
         exit:16
-        col: 2 / 6
-        row: 2 / 8
-        src: wp-socrates
-        type: image
-        caption: fun Instagram
+        col: 3 / 11
+        row: 2 / 7
+        src: homepage
+        type: video
+        caption:
     {}
 
     {.media}
@@ -410,9 +415,10 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         exit:17
         col: 3 / 11
         row: 2 / 7
-        src: wp-socrates
+        src: home-article
         type: image
-        caption: my home page
+        effects: video
+        caption:
     {}
 
     {.media}
@@ -420,34 +426,16 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
         exit:18
         col: 3 / 11
         row: 2 / 7
-        src: wp-table
-        type: image
-        caption: article page
+        src: collections
+        type: video
+        caption:
     {}
 
 
-
-    {.grid-loop}
-        entry:19
-        exit:19
-        [.items]
-            src: wp-table
-            type: image
-            col: 2 / 7
-            row: 2 / 6
-            caption: collection pages
-
-            src: wp-scenes
-            type: image
-            col: 7 / 12
-            row: 2 / 6
-            caption: collection pages
-        []
-    {}
 
     {.text}
-        entry:20
-        exit:20
+        entry:19
+        exit:19
         col: 2 / 6
         row: 2 / 8
         [.+text]
@@ -456,8 +444,8 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
     {}
 
     {.text}
-        entry:20
-        exit:20
+        entry:19
+        exit:19
         col: 7 / 12
         row: 2 / 8
         [.+text]
@@ -469,8 +457,8 @@ host: <a href="https://ddap.xyz/" target="_blank">DD@P</a>
 
     {.heading}
         text: Thanks!
-        entry:21
-        exit:21
+        entry:20
+        exit:20
         col: 2 / 12
         row: 7 / 8
         textalign:end

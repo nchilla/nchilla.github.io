@@ -6,7 +6,7 @@ start live server:
 
 
 #### FFMPEG golden 1-step command for mov->scaled mp4 saved in video folder:
-`for i in *.mov; do ffmpeg -n -i "$i" -vf "scale=1700:-1" "../video/${i%.*}.mp4"; done`
+`for i in *.mov; do ffmpeg -n -i "$i" -vf "scale=1606:-1" "../video/${i%.*}.mp4"; done`
 
 `for i in *-mobile.mov; do ffmpeg -i "$i" -vf "scale=600:-1" "../video/${i%.*}.mp4"; done`
 

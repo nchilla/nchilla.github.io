@@ -15,18 +15,33 @@
                             <h3 style="--align:{{textalign}};">{{props.text | safe}}</h3>
                         </div>
                     {% elseif el.type == 'media' %}
-                        {{ media_el(props,align,path,props.row,props.col,props.src,props.caption,props.type) }}
+                        {{ media_el(
+                            props,
+                            align,
+                            path,
+                            props.row,
+                            props.col,
+                            props.src,
+                            props.caption,
+                            props.type,
+                            props.effects
+                            ) }}
                     {% elseif el.type == 'grid-loop' %}
                         
                         {% for item in props.items%}
+
                             {{ media_el(
                                 props,
                                 'start',
                                 path,
                                 item.row,
                                 item.col,
-                                item.src,item.caption,item.type,el.type
+                                item.src,
+                                item.caption,
+                                item.type,
+                                item.effects
                             ) }}
+                            
                         {% endfor %}
                     {% elseif el.type == 'spectrum' %}
                         <div class='stage-element' data-align="{{align}}" style="--entry:{{props.entry}}; --exit:{{props.exit}}; --row:{{props.row}}; --col:{{props.col}};">
@@ -67,14 +82,14 @@
                 
                 {% for p in scene.value.text %}
                     
-                    <p>{{ num if loop.index == 1 else "" }}{{ p.value | md | safe }}</p>
+                    <p>{{ p.value | md | safe }}</p>
                 {% endfor %}
             </footer>
         {% else%}
             <section class='scene' data-i="{{loop.index}}">
                 {# <span class='num'>{{loop.index}}</span> #}
                 {% for p in scene.value.text %}
-                    <p>{{ num if loop.index == 1 else "" }}{{ p.value | md | safe }}</p>
+                    <p>{{ p.value | md | safe }}</p>
                 {% endfor %}
             </section>
         {% endif %}
@@ -164,13 +179,14 @@
     src,
     caption,
     type,
-    el_type='media'
+    el_type='media',
+    effects
     ) %}
-<div class='stage-element' data-el="{{el_type}}" data-align="{{align}}" style="--entry:{{props.entry}}; --exit:{{props.exit}}; --row:{{row}}; --col:{{col}};">
+<div class='stage-element' data-effects="{{effects}}" data-el="{{el_type}}" data-align="{{align}}" style="--entry:{{props.entry}}; --exit:{{props.exit}}; --row:{{row}}; --col:{{col}};">
         {{ macros.media(
             src, 
             type,
-            "",
+            effects if effects else '',
             caption | md if caption else '',
             '',
             '',
