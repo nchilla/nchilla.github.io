@@ -8,7 +8,9 @@
       <source src="{{ path }}video/{{ src }}.mp4" type="video/mp4">
     </video>
     {% if caption %}
-      <figcaption><a href="{{ link }}" target='_blank'>{{ caption }}</a></figcaption>
+      <figcaption>
+        {{ caption | safe }}
+      </figcaption>
     {% endif%}
   </figure>
 
@@ -25,7 +27,7 @@
   </picture>
   {% if caption %}
     <figcaption>
-      <a href="{{ link }}" target='_blank'>{{ caption }}</a>
+      {{ caption | safe }}
     </figcaption>
   {% endif%}
   </figure>

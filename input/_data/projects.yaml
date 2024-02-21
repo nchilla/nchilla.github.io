@@ -171,7 +171,7 @@
 
   - title: “The Secret” identity
     type: single
-    position: left
+    position: center
     typefaces: display set in Krona, body set in Space Mono
     code: html+css+js, using D3.js
     role:

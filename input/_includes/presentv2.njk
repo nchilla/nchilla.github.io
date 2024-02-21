@@ -1,0 +1,180 @@
+{% macro html(pres,path="../../assets/") %}
+
+<div id="stage-wrapper">
+    <div id="stage">
+        <div id="grid">
+            {% for el in pres.stage_elements %}
+                {% set align = el.value.align if el.value.align else 'start'%}
+                {% set textalign = el.value.textalign if el.value.textalign else 'start'%}
+                {% set props = el.value %}
+                
+                    {% if el.type == 'heading' %}
+                        <div class='stage-element'
+                            data-align="{{align}}" 
+                            style="--entry:{{props.entry}}; --exit:{{props.exit}}; --row:{{props.row}}; --col:{{props.col}};">
+                            <h3 style="--align:{{textalign}};">{{props.text | safe}}</h3>
+                        </div>
+                    {% elseif el.type == 'media' %}
+                        {{ media_el(props,align,path,props.row,props.col,props.src,props.caption,props.type) }}
+                    {% elseif el.type == 'grid-loop' %}
+                        
+                        {% for item in props.items%}
+                            {{ media_el(
+                                props,
+                                'start',
+                                path,
+                                item.row,
+                                item.col,
+                                item.src,item.caption,item.type,el.type
+                            ) }}
+                        {% endfor %}
+                    {% elseif el.type == 'spectrum' %}
+                        <div class='stage-element' data-align="{{align}}" style="--entry:{{props.entry}}; --exit:{{props.exit}}; --row:{{props.row}}; --col:{{props.col}};">
+                            <div class="spectrum">
+                                <div class='right'><span>specificity</span></div>
+                                <div class='left'><span>repeatability</span></div>
+                            </div>
+                        </div>
+                    {% elseif el.type == 'spectrum-point' %}
+                        <div class='stage-element' data-align="end" style="--entry:{{props.entry}}; --exit:{{props.exit}}; --row:7 / 8; --col:{{props.col}};">
+                            <div class='spectrum-point {{ "last" if props.last else ""}}'></div>
+                        </div>
+
+                    {% elseif el.type == 'text' %}
+                        <div class='stage-element' data-type="{{el.type}}" data-align="{{align}}" style="--entry:{{props.entry}}; --exit:{{props.exit}}; --row:{{props.row}}; --col:{{props.col}};">
+                            {% for p in props.text %}
+                                <p>{{ p.value | md | safe }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<article>
+    <header class='scene active' data-i="0">
+        <h1>{{pres.title}}</h1>
+        <p>{{pres.date}} — {{pres.host | safe}}</p>
+    </header>
+    
+    {% for scene in pres.scenes %}
+        {% set num = "(" + loop.index + ") " %}
+        {% if loop.index == pres.scenes.length %}
+            <footer class='scene' data-i="{{loop.index}}">
+                {# <span class='num'>{{loop.index}}</span> #}
+                
+                {% for p in scene.value.text %}
+                    
+                    <p>{{ num if loop.index == 1 else "" }}{{ p.value | md | safe }}</p>
+                {% endfor %}
+            </footer>
+        {% else%}
+            <section class='scene' data-i="{{loop.index}}">
+                {# <span class='num'>{{loop.index}}</span> #}
+                {% for p in scene.value.text %}
+                    <p>{{ num if loop.index == 1 else "" }}{{ p.value | md | safe }}</p>
+                {% endfor %}
+            </section>
+        {% endif %}
+        
+    {% endfor %}
+    
+</article>
+<button id='toggle-notes' aria-label="toggle speaker notes"><span class='meta'><span></button>
+
+
+<script>
+    window.addEventListener('load',init);
+
+    let threshold=60;
+    let active=0;
+
+    let scenes;
+
+    function init(){
+        let observer=new IntersectionObserver(scene_callback, {
+			threshold: [0,0.1, 0.5, 0.9, 1],
+			rootMargin: `-${threshold}px 0px ${document.body.scrollHeight * 10}px 0px`
+		});
+        scenes=Array.from(document.querySelectorAll('.scene'))
+        for(let scene of scenes) observer.observe(scene);
+        window.addEventListener('keydown',handle_keydown);
+        
+        target_blank();
+        document.querySelector('#toggle-notes').onclick=()=>{
+            document.querySelector('body').classList.toggle('hide-notes');
+        }
+    }
+
+    function scene_callback(entries){
+        for(let entry of entries){
+            let top=entry.boundingClientRect.top;
+            let bottom=entry.boundingClientRect.bottom;
+            if(top<threshold && bottom>threshold) change_active(entry.target.dataset.i);
+            
+        }
+    }
+
+    function handle_keydown(event){
+        let scene;
+        if(event.key=='ArrowLeft'&&active>0){
+            scene=document.querySelector(`.scene[data-i="${active-1}"]`);
+        }else if(event.key=='ArrowRight'&&active<scenes.length)
+            scene=document.querySelector(`.scene[data-i="${active+1}"]`);
+        if(scene){
+            let top=scene.offsetTop;
+            change_active(scene.dataset.i);
+            window.scroll(0,top);
+        }
+    }
+    
+
+
+    function change_active(i){
+        active=parseInt(i);
+        for(let scene of scenes){
+            if(scene.dataset.i==active) scene.classList.add('active');
+            else scene.classList.remove('active');
+        }
+        document.documentElement.style.setProperty('--active',active);
+    }
+
+    function target_blank(){
+        document.querySelectorAll('a').forEach(link=>{
+            console.log(link.host);
+            if(link.host!==window.location.host){
+                link.setAttribute('target', '_blank');
+            }
+        })
+    }
+</script>
+
+
+{% endmacro %}
+
+
+{% macro media_el(
+    props,
+    align,
+    path,
+    row,
+    col,
+    src,
+    caption,
+    type,
+    el_type='media'
+    ) %}
+<div class='stage-element' data-el="{{el_type}}" data-align="{{align}}" style="--entry:{{props.entry}}; --exit:{{props.exit}}; --row:{{row}}; --col:{{col}};">
+        {{ macros.media(
+            src, 
+            type,
+            "",
+            caption | md if caption else '',
+            '',
+            '',
+            path
+        ) }}
+</div>
+{% endmacro %}

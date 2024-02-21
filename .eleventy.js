@@ -1,5 +1,6 @@
 const yaml = require("js-yaml");
 const marked = require('marked');
+const aml = require("archieml");
 const fs = require('fs');
 let aspectratios;
 
@@ -27,6 +28,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("input/assets/images-large");
   eleventyConfig.addPassthroughCopy("input/assets/favicon");
   eleventyConfig.addPassthroughCopy("input/CNAME");
+  
 
   eleventyConfig.addNunjucksFilter( "md", function(value) {
     var result;
@@ -37,6 +39,12 @@ module.exports = function(eleventyConfig) {
         return e;
       }
   });
+
+  eleventyConfig.addNunjucksFilter( "merge_objects", function(obj1,obj2) {
+    return {...obj1,...obj2};
+  });
+
+
 
   eleventyConfig.addNunjucksFilter( "mdblock", function(value) {
     var result;
@@ -62,6 +70,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
   // eleventyConfig.addDataExtension("yaml", contents => console.log(yaml.load(contents)));
 
+  eleventyConfig.addDataExtension("aml", contents => aml.load(contents));
 
   // You can return your Config object (optional).
   return {
