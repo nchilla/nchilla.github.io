@@ -6,75 +6,103 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 {.step}
     [.+text]
-        Hi!
+        \*Hellos, thank yous and pleasantries\*
     []
 {}
 
 {.step}
     [.+text]
-    sonnets
+        So I graduated from Parsons in Fall of 2022, where I actually took a class taught by Roon, which is similar to the one that you all are taking with him now! 
+
+        This is a project I did for that class, where I built this website to view and filter a collection of poetry written by Shakespeare.
     []
 {}
 
 {.step}
     [.+text]
-    digital news design team
+        Today I’m going to show you some of my projects and try to walk you through some of the ways that I think about the relationship between these two things in my practice.
     []
 {}
 
 {.step}
     [.+text]
-    show species article
+        To start off, currently I’m doing a one-year fellowship at The New York Times, on the Digital News Design team. 
     []
 {}
 
 {.step}
     [.+text]
-    show cms screenshot
+        When you think of The New York Times’ digital presence, what you might think of is this; this is the basic template used by 90% of articles published by the Times. It works really well and has a lot of customization options.
+
+        But this template is actually designed and maintained by a completely different group of product designers on the business side of the company.
+
+        When it comes to design and code, the product design team has a more traditionally separated structure; so there are designers on one side that make mockups, and software engineers on the other that program the site.
     []
 {}
 
 {.step}
     [.+text]
-    digital media design exists to break out of that template
-    - in the newsroom, working directly with editors and writers
-    - designer/programmers
+        In addition, the product design team is outside of the newsroom. That means they usually don’t work directly with writers and editors on individual stories. Instead, there’s a content management system that allows the newsroom to publish articles from a template with a set of options.
     []
 {}
 
 {.step}
     [.+text]
-    big text - implicit structure of the story warrants a unique format
+        By contrast, the Digital News Design team is embedded inside of the newsroom, and we work on producing individual stories from start to finish. It’s a relatively small team, and we program all of our own projects.
+
+        In essence, the team exists to break out of the normal article template, when something can be done with the visual and interactive presentation to enhance a reader’s experience. I think of basically two ways that we intervene in projects
     []
 {}
 
 {.step}
     [.+text]
-    52 places mobile video
+        The first is when something about the structure of the story, as its given to us by writers and editors, would be easier and more engaging to navigate in a custom format.
     []
 {}
 
 {.step}
     [.+text]
-    gop candidates
+        So for example, I worked on the 52 Places list, which is an article the travel desk puts out every year suggesting 52 places to visit. Since it has this well-defined list structure, we can make it easier to browse and emphasize the photography for each location.
     []
 {}
 
 {.step}
     [.+text]
-    big text: design itself influences the structure of the story
+        As another example, this is a story I worked on where the reporter went through every candidate in the Republican presidential primary and analyzed their position on different policy issues.
+
+        Our role in this story was creating a format where you can easily browse and filter the positions of each candidate. 
     []
 {}
 
 {.step}
     [.+text]
-    PARC
+        On the other hand, sometimes we as designers and editors come up with formats that change the way that a story is written or structured.
     []
 {}
 
 {.step}
     [.+text]
-    exorcist
+        So this is a story that just published yesterday actually, about two research laboratories in Silicon Valley that invented many of the basic elements of modern computers in the 60s and 70s, like the computer mouse, the internet, and graphic user interfaces. 
+
+        The editors came to us because they thought it could be interesting to include a timeline of inventions in the story, although they weren’t sure how it would integrate with the rest of the article.
+
+        As the designers we thought a lot about how to place it inside of the story, what events could be included, and what imagery we could use. Then we got the editor and the writer involved to rewrite a lot of the body text to make sense inside of the format.
+    []
+{}
+
+{.step}
+    [.+text]
+        You see the same idea in this story about the 50th anniversary of The Exorcist film.
+
+        Basically the designer and the editors on the culture desk came up with this idea to contrast the reactions people had to the movie it came out (which you can see on the white background) with new interpretations of it from New York Times film critics (which you can see in the black). 
+
+        I mostly worked on the programming for this story, but the designer Tala actually went through a bunch of news clips with the photo editor to find funny quotes and headlines.
+    []
+{}
+
+{.step}
+    [.+text]
+    So in these latter cases code empowers us not only to break out of the existing templates, but create new “templates” that shape the output of writers and editors to create new kinds of stories.
     []
 {}
 
@@ -88,15 +116,22 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 {.step}
     [.+text]
-    elegant code in my experience is code that achieves what you want in a simple, organized, efficient, and sometimes ingenious manner
+    52 places scrollthrough
     []
 {}
 
 {.step}
     [.+text]
-    Reusability - show exorcist reactions and doc side-by-side
+    52 places content
     []
 {}
+
+{.step}
+    [.+text]
+    52 places
+    []
+{}
+
 
 {.step}
     [.+text]
@@ -128,7 +163,7 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 {.step}
     [.+text]
-    transition - code enables design
+    transition - Code expands design
 
     the tools and templates we use condition the types of work we’re able to produce
     []
@@ -143,6 +178,18 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {.step}
     [.+text]
     to me, being a programmer means considering the tools that I use in my work and my life as part of my practice, rather than external constraints
+    []
+{}
+
+{.step}
+    [.+text]
+    sdf poster builder
+    []
+{}
+
+{.step}
+    [.+text]
+    risographed posters
     []
 {}
 
@@ -170,6 +217,11 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
     []
 {}
 
+{.step}
+    [.+text]
+    Thank you!
+    []
+{}
 
 
 
@@ -205,7 +257,7 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
         align:start
 {}
 {.heading}
-        text: Code enables design
+        text: Code expands design
         entry:0
         exit:0
         col: 6 / 11
@@ -244,7 +296,29 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 {.media}
     entry:4
+    exit:4
+    col: 2 / 8
+    row: 2 / 8
+    src: tusk-room
+    type: image
+    effects: video
+    caption:
+{}
+
+{.text}
+    [.+text]
+        Standard article template, designed by product team
+    []
+    entry:5
     exit:5
+    col: 2 / 6
+    row: 2 / 8
+    align:start
+{}
+
+{.media}
+    entry:5
+    exit:6
     col: 7 / 12
     row: 2 / 8
     src: species-screenshot
@@ -255,14 +329,36 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 
 {.media}
-    entry:5
-    exit:5
+    entry:6
+    exit:6
     col: 2 / 7
     row: 2 / 8
     src: what-is-a-species-cms
     type: image
     effects: video
-    caption: 
+    caption: NYT’s Oak text editor
+{}
+
+{.text}
+    [.+text]
+        Digital News Design designs, edits, and programs individual stories.
+    []
+    entry:7
+    exit:7
+    col: 3 / 9
+    row: 4 / 8
+    align:start
+{}
+
+{.text}
+    [.+text]
+        Our role is to enhance or break out of the standard template.
+    []
+    entry:7
+    exit:7
+    col: 4 / 9
+    row: 5 / 8
+    align:start
 {}
 
 
@@ -271,16 +367,16 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
     [.+text]
         Scenario 1: the story content could benefit from a custom design
     []
-    entry:7
-    exit:7
+    entry:8
+    exit:8
     col: 2 / 12
     row: 2 / 8
     align:start
 {}
 
 {.media}
-    entry:8
-    exit:8
+    entry:9
+    exit:9
     col: 5 / 9
     row: 2 / 8
     src: 52places-mobile
@@ -289,8 +385,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.media}
-    entry:9
-    exit:9
+    entry:10
+    exit:10
     col: 2 / 12
     row: 2 / 8
     src: gop-positions
@@ -302,16 +398,16 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
     [.+text]
         Scenario 2: the design itself shapes the structure of the story
     []
-    entry:10
-    exit:10
+    entry:11
+    exit:11
     col: 2 / 12
     row: 2 / 8
     align:start
 {}
 
 {.media}
-    entry:11
-    exit:11
+    entry:12
+    exit:12
     col: 2 / 12
     row: 2 / 8
     src: parc-sri
@@ -320,8 +416,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.media}
-    entry:12
-    exit:12
+    entry:13
+    exit:13
     col: 2 / 12
     row: 2 / 8
     src: exorcist-from-top
@@ -331,62 +427,49 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 {.heading}
     text: Design of code
-    entry:13
-    exit:13
+    entry:15
+    exit:15
     col: 4 / 10
     row: 4 / 5
     textalign:start
     align:start
 {}
 
-{.text}
-    entry:14
-    exit:14
-    col: 2 / 11
+{.media}
+    entry:16
+    exit:16
+    col: 2 / 12
     row: 2 / 8
-    [.+text]
-     I call code ‘well-designed’ or ‘elegant’ that achieves what you want in a simple, organized, efficient, and sometimes ingenious manner.
-    []
+    src: 52places-scrollthrough
+    type: video
+    caption: [52 places to Go in 2024](https://www.nytimes.com/interactive/2024/travel/places-to-travel-destinations-2024.html), produced by Nico Chilla and Gabriel Gianordoli.
 {}
 
 {.media}
-    entry:15
-    exit:15
-    col: 2 / 8
-    row: 4 / 8
-    src: exorcist-doc
+    entry:17
+    exit:17
+    col: 4 / 10
+    row: 2 / 8
+    src: 52places-oak
     type: image
     effects: video
     caption: 
     
 {}
 
-
 {.media}
-    entry:15
-    exit:15
-    col: 8 / 12
+    entry:18
+    exit:18
+    col: 2 / 12
     row: 2 / 8
-    src: exorcist-reactions
-    type: image
-    effects: video
+    src: 52places-tags
+    type: video
     caption: 
-    align:end
-{}
-
-{.text}
-    entry:15
-    exit:15
-    col: 2 / 11
-    row: 2 / 8
-    [.+text]
-     Reusability
-    []
 {}
 
 {.media}
-    entry:16
-    exit:16
+    entry:19
+    exit:19
     col: 8 / 12
     row: 2 / 8
     src: exorcist-slideover-mobile
@@ -397,8 +480,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.media}
-    entry:16
-    exit:16
+    entry:19
+    exit:19
     col: 2 / 7
     row: 2 / 8
     src: exorcist-sticky-curtain
@@ -410,8 +493,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 {.heading}
         text: Designing in code
-        entry:17
-        exit:17
+        entry:20
+        exit:20
         col: 5 / 10
         row: 5 / 6
         textalign:start
@@ -419,8 +502,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.media}
-    entry:18
-    exit:18
+    entry:21
+    exit:21
     col: 2 / 12
     row: 2 / 8
     src: glitch-border-manifesto-figma
@@ -429,8 +512,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.media}
-    entry:19
-    exit:19
+    entry:22
+    exit:22
     col: 2 / 12
     row: 2 / 8
     src: glitch-border-manifesto-tests
@@ -439,9 +522,9 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.heading}
-        text: Code enables design
-        entry:20
-        exit:20
+        text: Code expands design
+        entry:23
+        exit:23
         col: 6 / 11
         row: 6 / 7
         textalign:start
@@ -449,8 +532,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.text}
-    entry:21
-    exit:21
+    entry:24
+    exit:24
     col: 2 / 11
     row: 2 / 7
     [.+text]
@@ -459,8 +542,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.text}
-    entry:22
-    exit:22
+    entry:25
+    exit:25
     col: 2 / 11
     row: 2 / 7
     [.+text]
@@ -468,9 +551,40 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
     []
 {}
 
+{.media}
+    entry:26
+    exit:26
+    col: 2 / 12
+    row: 2 / 8
+    src: sdf-poster-maker
+    type: video
+    caption: [Signed distance field poster generator](https://work.nicochilla.com/shaders/sdf-posters/)
+
+{}
+
+{.grid-loop}
+    entry:27
+    exit:27
+    [.items]
+        src: sdf-poster-live-love-laugh
+        type: image
+        effects: video
+        col: 2 / 7
+        row: 2 / 8
+        caption: By Nico
+
+        src: sdf-poster-patrick
+        type: image
+        effects: video
+        col: 7 / 12
+        row: 2 / 8
+        caption: By Patrick
+    []    
+{}
+
 {.text}
-    entry:23
-    exit:23
+    entry:28
+    exit:28
     col: 2 / 11
     row: 3 / 7
     [.+text]
@@ -479,8 +593,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.text}
-    entry:23
-    exit:23
+    entry:28
+    exit:28
     col: 8 / 12
     row: 4 / 7
     [.+text]
@@ -489,8 +603,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.text}
-    entry:23
-    exit:23
+    entry:28
+    exit:28
     col: 7 / 11
     row: 6 / 7
     [.+text]
@@ -501,8 +615,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 
 {.text}
-    entry:23
-    exit:23
+    entry:28
+    exit:28
     col: 7 / 11
     row: 2 / 7
     [.+text]
@@ -511,8 +625,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.text}
-    entry:23
-    exit:23
+    entry:28
+    exit:28
     col: 3 / 8
     row: 5 / 7
     [.+text]
@@ -521,12 +635,23 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
     textalign:end
 {}
 
+{.text}
+    entry:28
+    exit:28
+    col: 4 / 11
+    row: 7 / 8
+    [.+text]
+     decontextualized imagery
+    []
+{}
+
+
 
 
 
 {.media}
-    entry:24
-    exit:24
+    entry:29
+    exit:29
     col: 2 / 12
     row: 2 / 8
     src: homepage
@@ -535,8 +660,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.media}
-    entry:25
-    exit:25
+    entry:30
+    exit:30
     col: 2 / 12
     row: 2 / 8
     src: home-article
@@ -546,8 +671,8 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 {}
 
 {.media}
-    entry:26
-    exit:26
+    entry:31
+    exit:31
     col: 2 / 12
     row: 2 / 8
     src: collections
@@ -555,14 +680,15 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
     caption:
 {}
 
-{.text}
-    entry:23
-    exit:23
-    col: 4 / 11
+
+{.heading}
+    text: Thanks!
+    entry:32
+    exit:32
+    col: 2 / 12
     row: 7 / 8
-    [.+text]
-     decontextualized imagery
-    []
+    textalign:end
+    align:end
 {}
 
 
