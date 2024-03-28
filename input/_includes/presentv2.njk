@@ -87,7 +87,7 @@
             </footer>
         {% else%}
             <section class='scene' data-i="{{loop.index}}">
-                {# <span class='num'>{{loop.index}}</span> #}
+                <span class='num'>{{loop.index}}</span>
                 {% for p in scene.value.text %}
                     <p>{{ p.value | md | safe }}</p>
                 {% endfor %}

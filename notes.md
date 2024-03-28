@@ -10,11 +10,11 @@ start live server:
 
 `for i in *-mobile.mov; do ffmpeg -i "$i" -vf "scale=600:-1" "../video/${i%.*}.mp4"; done`
 
-`for i in *-mobile.mp4; do ffmpeg -i "$i" "../video/${i%.*}.mp4"; done`
+`for i in *-mobile.mov; do ffmpeg -i "$i" "../video/${i%.*}.mp4"; done`
 
 single:
 
-`ffmpeg -i "pern-all-pages.mov" -vf "scale=1700:-1" "../video/pern-all-pages.mp4"`
+`ffmpeg -i "gop-positions.mov" -vf "scale=1602:-1" "../video/gop-positions.mp4"`
 
 no resize:
 `ffmpeg -i "lp.mp4" "../video/lp.mp4"`

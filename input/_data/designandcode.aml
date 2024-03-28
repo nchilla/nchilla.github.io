@@ -1,0 +1,570 @@
+title: On design and code
+date: 3/28/24
+host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA class
+
+[+scenes]
+
+{.step}
+    [.+text]
+        Hi!
+    []
+{}
+
+{.step}
+    [.+text]
+    sonnets
+    []
+{}
+
+{.step}
+    [.+text]
+    digital news design team
+    []
+{}
+
+{.step}
+    [.+text]
+    show species article
+    []
+{}
+
+{.step}
+    [.+text]
+    show cms screenshot
+    []
+{}
+
+{.step}
+    [.+text]
+    digital media design exists to break out of that template
+    - in the newsroom, working directly with editors and writers
+    - designer/programmers
+    []
+{}
+
+{.step}
+    [.+text]
+    big text - implicit structure of the story warrants a unique format
+    []
+{}
+
+{.step}
+    [.+text]
+    52 places mobile video
+    []
+{}
+
+{.step}
+    [.+text]
+    gop candidates
+    []
+{}
+
+{.step}
+    [.+text]
+    big text: design itself influences the structure of the story
+    []
+{}
+
+{.step}
+    [.+text]
+    PARC
+    []
+{}
+
+{.step}
+    [.+text]
+    exorcist
+    []
+{}
+
+{.step}
+    [.+text]
+    transition - Design of code
+
+    The idea that code itself is a creative practice, and the way that you design your code can make it elegant or dare-I-say-beautiful.
+    []
+{}
+
+{.step}
+    [.+text]
+    elegant code in my experience is code that achieves what you want in a simple, organized, efficient, and sometimes ingenious manner
+    []
+{}
+
+{.step}
+    [.+text]
+    Reusability - show exorcist reactions and doc side-by-side
+    []
+{}
+
+{.step}
+    [.+text]
+    In web development, manipulating geometry and using the tools of HTML and CSS to achieve unconventional outputs
+
+    show position-sticky diagram side-by-side with slide-over effect
+    []
+{}
+
+{.step}
+    [.+text]
+    transition - Designing in code
+
+    constraints imposed by programming languages and the web can creatively inform your work
+    []
+{}
+
+{.step}
+    [.+text]
+    show glitch border figma mockups
+    []
+{}
+
+{.step}
+    [.+text]
+    show glitch border live testing
+    []
+{}
+
+{.step}
+    [.+text]
+    transition - code enables design
+
+    the tools and templates we use condition the types of work we’re able to produce
+    []
+{}
+
+{.step}
+    [.+text]
+    tools and templates we use condition the types of work we're able to produce or even imagine
+    []
+{}
+
+{.step}
+    [.+text]
+    to me, being a programmer means considering the tools that I use in my work and my life as part of my practice, rather than external constraints
+    []
+{}
+
+{.step}
+    [.+text]
+    escaping constraints of traditional social media - show typeset list
+    []
+{}
+
+{.step}
+    [.+text]
+    show home page
+    []
+{}
+
+{.step}
+    [.+text]
+    article page
+    []
+{}
+
+{.step}
+    [.+text]
+    collection pages
+    []
+{}
+
+
+
+
+[]
+
+
+[+stage_elements]
+{.heading}
+        text: Design and code
+        entry:0
+        exit:0
+        col: 3 / 10
+        row: 3 / 7
+        textalign:start
+        align:start
+{}
+{.heading}
+        text: Design of code
+        entry:0
+        exit:0
+        col: 4 / 10
+        row: 4 / 5
+        textalign:start
+        align:start
+{}
+{.heading}
+        text: Designing in code
+        entry:0
+        exit:0
+        col: 5 / 10
+        row: 5 / 6
+        textalign:start
+        align:start
+{}
+{.heading}
+        text: Code enables design
+        entry:0
+        exit:0
+        col: 6 / 11
+        row: 6 / 7
+        textalign:start
+        align:start
+{}
+
+{.heading}
+        text: Hi!
+        entry:1
+        exit:1
+        col: 2 / 12
+        row: 2 / 3
+    {}
+
+{.media}
+    entry:2
+    exit:2
+    col: 3 / 11
+    row: 3 / 8
+    src: sonnets
+    type: video
+    caption: Nico’s work in Roon’s class circa 2020
+{}
+
+{.heading}
+    text: Design and code
+    entry:3
+    exit:3
+    col: 3 / 10
+    row: 3 / 7
+    textalign:start
+    align:start
+{}
+
+{.media}
+    entry:4
+    exit:5
+    col: 7 / 12
+    row: 2 / 8
+    src: species-screenshot
+    type: image
+    effects: video
+    caption: From [What Is a Species, Anyway?](https://www.nytimes.com/2024/02/19/science/what-is-a-species.html) by Carl Zimmer
+{}
+
+
+{.media}
+    entry:5
+    exit:5
+    col: 2 / 7
+    row: 2 / 8
+    src: what-is-a-species-cms
+    type: image
+    effects: video
+    caption: 
+{}
+
+
+
+{.text}
+    [.+text]
+        Scenario 1: the story content could benefit from a custom design
+    []
+    entry:7
+    exit:7
+    col: 2 / 12
+    row: 2 / 8
+    align:start
+{}
+
+{.media}
+    entry:8
+    exit:8
+    col: 5 / 9
+    row: 2 / 8
+    src: 52places-mobile
+    type: video
+    caption: [52 places to Go in 2024](https://www.nytimes.com/interactive/2024/travel/places-to-travel-destinations-2024.html), produced by Nico Chilla and Gabriel Gianordoli.
+{}
+
+{.media}
+    entry:9
+    exit:9
+    col: 2 / 12
+    row: 2 / 8
+    src: gop-positions
+    type: video
+    caption: [GOP Candidates issue tracker](https://www.nytimes.com/interactive/2023/08/18/us/politics/republican-candidates-2024-issues.html), produced by Nico Chilla and Rebecca Lieberman 
+{}
+
+{.text}
+    [.+text]
+        Scenario 2: the design itself shapes the structure of the story
+    []
+    entry:10
+    exit:10
+    col: 2 / 12
+    row: 2 / 8
+    align:start
+{}
+
+{.media}
+    entry:11
+    exit:11
+    col: 2 / 12
+    row: 2 / 8
+    src: parc-sri
+    type: video
+    caption: [Can Xerox’s PARC, a Silicon Valley Icon, Find New Life with SRI?](https://www.nytimes.com/interactive/2024/03/26/business/silicon-valley-tech-xerox-parc-sri.html), produced by Nico Chilla and Aliza Aufrichtig
+{}
+
+{.media}
+    entry:12
+    exit:12
+    col: 2 / 12
+    row: 2 / 8
+    src: exorcist-from-top
+    type: video
+    caption: [Reconsidering ‘The Exorcist’ at 50](https://www.nytimes.com/interactive/2023/10/17/movies/the-exorcist-50th-anniversary.html), designed by Tala Safie and developed by Nico Chilla
+{}
+
+{.heading}
+    text: Design of code
+    entry:13
+    exit:13
+    col: 4 / 10
+    row: 4 / 5
+    textalign:start
+    align:start
+{}
+
+{.text}
+    entry:14
+    exit:14
+    col: 2 / 11
+    row: 2 / 8
+    [.+text]
+     I call code ‘well-designed’ or ‘elegant’ that achieves what you want in a simple, organized, efficient, and sometimes ingenious manner.
+    []
+{}
+
+{.media}
+    entry:15
+    exit:15
+    col: 2 / 8
+    row: 4 / 8
+    src: exorcist-doc
+    type: image
+    effects: video
+    caption: 
+    
+{}
+
+
+{.media}
+    entry:15
+    exit:15
+    col: 8 / 12
+    row: 2 / 8
+    src: exorcist-reactions
+    type: image
+    effects: video
+    caption: 
+    align:end
+{}
+
+{.text}
+    entry:15
+    exit:15
+    col: 2 / 11
+    row: 2 / 8
+    [.+text]
+     Reusability
+    []
+{}
+
+{.media}
+    entry:16
+    exit:16
+    col: 8 / 12
+    row: 2 / 8
+    src: exorcist-slideover-mobile
+    type: video
+    effects: video
+    caption: 
+    align:end
+{}
+
+{.media}
+    entry:16
+    exit:16
+    col: 2 / 7
+    row: 2 / 8
+    src: exorcist-sticky-curtain
+    type: image
+    effects: video
+    caption: 
+    
+{}
+
+{.heading}
+        text: Designing in code
+        entry:17
+        exit:17
+        col: 5 / 10
+        row: 5 / 6
+        textalign:start
+        align:start
+{}
+
+{.media}
+    entry:18
+    exit:18
+    col: 2 / 12
+    row: 2 / 8
+    src: glitch-border-manifesto-figma
+    type: video
+    caption: Work-in-progress Figma sketches designed with Patrick Yang MacDonald
+{}
+
+{.media}
+    entry:19
+    exit:19
+    col: 2 / 12
+    row: 2 / 8
+    src: glitch-border-manifesto-tests
+    type: video
+    caption: Live-testing glitchy transitions in the browser
+{}
+
+{.heading}
+        text: Code enables design
+        entry:20
+        exit:20
+        col: 6 / 11
+        row: 6 / 7
+        textalign:start
+        align:start
+{}
+
+{.text}
+    entry:21
+    exit:21
+    col: 2 / 11
+    row: 2 / 7
+    [.+text]
+     The tools we use condition our output.
+    []
+{}
+
+{.text}
+    entry:22
+    exit:22
+    col: 2 / 11
+    row: 2 / 7
+    [.+text]
+     For me, being a programmer means considering the tools that I use in my work and my life as part of my practice, rather than external constraints.
+    []
+{}
+
+{.text}
+    entry:23
+    exit:23
+    col: 2 / 11
+    row: 3 / 7
+    [.+text]
+     recommendation feeds
+    []
+{}
+
+{.text}
+    entry:23
+    exit:23
+    col: 8 / 12
+    row: 4 / 7
+    [.+text]
+     advertisements and grift
+    []
+{}
+
+{.text}
+    entry:23
+    exit:23
+    col: 7 / 11
+    row: 6 / 7
+    [.+text]
+     closed ecosystems
+    []
+{}
+
+
+
+{.text}
+    entry:23
+    exit:23
+    col: 7 / 11
+    row: 2 / 7
+    [.+text]
+     data surveillance
+    []
+{}
+
+{.text}
+    entry:23
+    exit:23
+    col: 3 / 8
+    row: 5 / 7
+    [.+text]
+     shallow thresholds of engagement
+    []
+    textalign:end
+{}
+
+
+
+
+{.media}
+    entry:24
+    exit:24
+    col: 2 / 12
+    row: 2 / 8
+    src: homepage
+    type: video
+    caption:
+{}
+
+{.media}
+    entry:25
+    exit:25
+    col: 2 / 12
+    row: 2 / 8
+    src: home-article
+    type: image
+    effects: video
+    caption:
+{}
+
+{.media}
+    entry:26
+    exit:26
+    col: 2 / 12
+    row: 2 / 8
+    src: collections
+    type: video
+    caption:
+{}
+
+{.text}
+    entry:23
+    exit:23
+    col: 4 / 11
+    row: 7 / 8
+    [.+text]
+     decontextualized imagery
+    []
+{}
+
+
+
+[]
