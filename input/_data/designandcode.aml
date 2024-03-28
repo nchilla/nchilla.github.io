@@ -102,50 +102,51 @@ host: <a href="https://eroonkang.com/" target="_blank">E Roon Kang’s</a> CCA c
 
 {.step}
     [.+text]
-    So in these latter cases code empowers us not only to break out of the existing templates, but create new “templates” that shape the output of writers and editors to create new kinds of stories.
+    So in these latter cases code empowers us not only to break out of the existing templates, but create new “templates” that shape the output of writers and editors, and allow them to create new kinds of stories.
     []
 {}
 
 {.step}
     [.+text]
-    transition - Design of code
-
-    The idea that code itself is a creative practice, and the way that you design your code can make it elegant or dare-I-say-beautiful.
+    Another way that I think about the relationship between design and code is that there’s actually a lot of resemblance between the two.
     []
 {}
 
 {.step}
     [.+text]
-    52 places scrollthrough
+    This is the desktop version of the 52 places article I showed you earlier. As you can see, there’s a design system for each location, with a typographic and visual hierarchy for information about each location.
     []
 {}
 
 {.step}
     [.+text]
-    52 places content
+    Analogously, on the programming side we have to design a hierarchy and a structure that allows the machine to treat different pieces of information differently.
+
+    So for this article, we wrote a program that reads text from the New York Times content management system, where the editors were working, and converts it into the visual output you saw just now. 
+
+    You can also see we added a way for the editors to add a set of tags to each location
     []
 {}
 
 {.step}
     [.+text]
-    52 places
-    []
-{}
-
-
-{.step}
-    [.+text]
-    In web development, manipulating geometry and using the tools of HTML and CSS to achieve unconventional outputs
-
-    show position-sticky diagram side-by-side with slide-over effect
+        Then in the interface, we were able to build a way of filtering the locations by those tags.
     []
 {}
 
 {.step}
     [.+text]
-    transition - Designing in code
+    You can also think of the process of coding as a kind of design. By that I mean, you design your code to be simple and clear, and you try to creatively solve the problems that you’re faced with. 
 
-    constraints imposed by programming languages and the web can creatively inform your work
+    For example, in the exorcist...
+
+    In web development, you’re constantly manipulating geometry and using the tools of HTML and CSS to achieve unconventional outputs.
+    []
+{}
+
+{.step}
+    [.+text]
+    That brings me to my next idea, which is that the constraints imposed by programming languages and the web can creatively inform your work
     []
 {}
 
