@@ -388,6 +388,63 @@ footer{
     transform:translate(50%,-1.05em);
 }
 
+
+@media(max-width:900px){
+    :root{
+        --m:15px;
+    }
+    body{
+        --notes-width:100%;
+    }
+    #stage-wrapper{
+        width:100%;
+        border-left:none;
+        z-index:30;
+        padding:var(--m) 0;
+        top:auto;
+        --stage-w:min(70vh,100vw);
+        --stage-h:calc(var(--stage-w) * 3 / 4);
+        height:var(--stage-h);
+        bottom:0;
+        background-color: var(--pres-bg);
+    }
+
+    #stage{
+        max-width:70vh;
+        
+        /* margin-top:calc((100vh - var(--stage-h)) - var(--m)); */
+        /* position:absolute;
+        bottom:var(--m); */
+    }
+
+    article{
+        padding:0;
+        /* padding-top:calc(min(70vh,100vw) * 0.8); */
+    }
+
+    .scene{
+        background-color:var(--bg);
+        margin:auto;
+        /* margin-bottom:80vw; */
+        /* border-bottom:none; */
+        width:500px;
+        max-width:calc(100% - var(--m) * 2);
+        padding:10px 0px;
+       
+    }
+
+    #toggle-notes{
+        display:none;
+    }
+
+    .scene p,.scene h1{
+        /* opacity:1; */
+        font-size:19px;
+        line-height:23px;
+    }
+}
+
+
 @font-face {
     font-family: 'hershey-times';
     src: url('../assets/fonts/hershey-noailles-simplex-regular.woff');
