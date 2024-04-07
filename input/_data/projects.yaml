@@ -1,20 +1,20 @@
 ---
 
-  - title: Platform Economies Research Network (PERN)
+  - title: Can Xerox’s PARC, a Silicon Valley Icon, Find New Life with SRI?
     type: single
     position: center
-    typefaces: set in Anonymous Pro and Aktiv Grotesk
-    code: Wordpress custom theme written in php and html+css+js
+    typefaces: NYT Cheltenham, Imperial, Franklin
+    code: Sveltekit (via Birdkit, NYT’s custom interactive publishing tool)
     role:
       - design
       - development
-    description: Website and identity designed as a freelancer for PERN, a research collaboration based out of my university which studies the economics of digital platforms.
-    link: https://platformeconomies.net/
+    description: Article produced with [Aliza Aufrichtig](https://www.alizaaufrichtig.com/) about the history of two research labs that invented many of the basic elements of personal computing.
+    link: https://www.nytimes.com/interactive/2024/03/26/business/silicon-valley-tech-xerox-parc-sri.html
     link_copy: visit
     assets:
-      - src: pern
+      - src: parc-sri
         type: video
-        ratio: 0.58
+        ratio: 0.66
         effects:
         link: https://platformeconomies.net/
         caption: visit
@@ -56,8 +56,8 @@
 
   - title: The National Restaurant List
     type: single
-    position: right
-    typefaces: Cheltenham, Imperial, NYT Franklin
+    position: left
+    typefaces: NYT Cheltenham, Imperial, Franklin
     code: Sveltekit (via Birdkit, NYT’s custom interactive publishing tool)
     role:
       - design
@@ -71,6 +71,25 @@
         ratio: 0.58
         effects:
 
+  - title: Sonnet index
+    type: single
+    position: right
+    typefaces: set in Starling, IBM Plex Mono, and IBM Plex Sans
+    code: html+css+js
+    role:
+      - design
+      - development
+    description: Shakespeare’s 154 sonnets, presented as a single block of unbroken text. Visitors can browse each sonnet and learn about the body of work through filtering and editing features.
+    link: https://work.nicochilla.com/ci20/collection/
+    link_copy: visit
+    assets:
+      - src: sonnets
+        type: video
+        ratio: 0.58
+        effects:
+        link:
+        caption:
+
   - title: 52 Places to Go in 2024
     type: gallery
     position: left
@@ -78,7 +97,7 @@
     ratio: 0.89
     place_info: inline-end
     no_end_cap: true
-    typefaces: Cheltenham, Imperial, NYT Franklin
+    typefaces: NYT Cheltenham, Imperial, Franklin
     code: Sveltekit (via Birdkit, NYT’s custom interactive publishing tool)
     role:
       - design
@@ -125,24 +144,24 @@
         link:
         caption:
 
-  - title: Sonnet index
+  - title: Platform Economies Research Network (PERN)
     type: single
-    position: right
-    typefaces: set in Starling, IBM Plex Mono, and IBM Plex Sans
-    code: html+css+js
+    position: center
+    typefaces: set in Anonymous Pro and Aktiv Grotesk
+    code: Wordpress custom theme written in php and html+css+js
     role:
       - design
       - development
-    description: Shakespeare’s 154 sonnets, presented as a single block of unbroken text. Visitors can browse each sonnet and learn about the body of work through filtering and editing features.
-    link: https://work.nicochilla.com/ci20/collection/
+    description: Website and identity designed as a freelancer for PERN, a research collaboration based out of my university which studies the economics of digital platforms.
+    link: https://platformeconomies.net/
     link_copy: visit
     assets:
-      - src: sonnets
+      - src: pern
         type: video
         ratio: 0.58
         effects:
-        link:
-        caption:
+        link: https://platformeconomies.net/
+        caption: visit
 
   - title: Goby — Parsons thesis
     type: gallery
@@ -171,7 +190,7 @@
 
   - title: “The Secret” identity
     type: single
-    position: center
+    position: right
     typefaces: display set in Krona, body set in Space Mono
     code: html+css+js, using D3.js
     role:
@@ -190,7 +209,7 @@
 
   - title: Common Language studio website
     type: single
-    position: right
+    position: left
     typefaces: set in Nimbus Sans and Nimbus Roman
     code: Wordpress custom theme written in php and html+css+js
     role:

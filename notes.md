@@ -6,7 +6,7 @@ start live server:
 
 
 #### FFMPEG golden 1-step command for mov->scaled mp4 saved in video folder:
-`for i in *.mov; do ffmpeg -n -i "$i" -vf "scale=1606:-1" "../video/${i%.*}.mp4"; done`
+`for i in *.mov; do ffmpeg -n -i "$i" -vf "scale=1704:-1" "../video/${i%.*}.mp4"; done`
 
 `for i in *-mobile.mov; do ffmpeg -i "$i" -vf "scale=600:-1" "../video/${i%.*}.mp4"; done`
 
@@ -14,7 +14,7 @@ start live server:
 
 single:
 
-`ffmpeg -i "gop-positions.mov" -vf "scale=1602:-1" "../video/gop-positions.mp4"`
+`ffmpeg -i "parc-sri-opt2.mov" -vf "scale=1702:-1" "../video/parc-sri-opt2.mp4"`
 
 no resize:
 `ffmpeg -i "lp.mp4" "../video/lp.mp4"`
