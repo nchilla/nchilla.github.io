@@ -1,0 +1,67 @@
+{% import 'macros.njk' as macros %}
+{% set rootpath="../" %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>words and pictures</title>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" >
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+
+    <!-- favicon -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ rootpath }}assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ rootpath }}assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ rootpath }}assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ rootpath }}assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="{{ rootpath }}assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link rel="stylesheet" href="{{ rootpath }}css/clearstyle.css">
+
+    {# <script src="{{ rootpath }}js/lozad.js" charset="utf-8"></script> #}
+    <style>
+        body{
+            background-color:#0e0e0e;
+        }
+        #stage{
+            position:fixed;
+            width:100%;
+            height:100vh;
+            height:100dvh;
+            top:0;
+            left:0;
+        }
+
+        #stage video{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            object-fit:contain;
+        }
+    </style>
+
+
+
+  </head>
+  <script>
+    {# console.log({{ templates | dump | safe }}) #}
+  </script>
+  {% set captions = false %}
+  <body>
+    <main id="stage">
+        {{ macros.media(
+            "wp-on-black2", 
+            "video",
+            "",
+            "",
+            '',
+            '',
+            "../../assets/"
+        ) }}
+    </main>
+   
+  </body>
+</html>
+<body>

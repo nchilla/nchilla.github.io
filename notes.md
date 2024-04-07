@@ -14,7 +14,7 @@ start live server:
 
 single:
 
-`ffmpeg -i "parc-sri-opt2.mov" -vf "scale=1702:-1" "../video/parc-sri-opt2.mp4"`
+`ffmpeg -i "wp-on-black.mov" -vf "scale=1702:-1" "../video/parc-sri-opt2.mp4"`
 
 no resize:
 `ffmpeg -i "lp.mp4" "../video/lp.mp4"`
