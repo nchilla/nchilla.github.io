@@ -26,6 +26,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("input/assets/fonts");
   eleventyConfig.addPassthroughCopy("input/assets/images");
   eleventyConfig.addPassthroughCopy("input/assets/images-large");
+  eleventyConfig.addPassthroughCopy("input/assets/images-preserve-scale");
   eleventyConfig.addPassthroughCopy("input/assets/favicon");
   eleventyConfig.addPassthroughCopy("input/CNAME");
   
@@ -60,7 +61,7 @@ module.exports = function(eleventyConfig) {
 
 
   eleventyConfig.addNunjucksFilter( "getRatio", function(value) {
-    return aspectratios.find(a=>a.name==value).ratio;
+    return aspectratios.find(a=>a.name==value)?.ratio || 'unknown';
   });
 
 

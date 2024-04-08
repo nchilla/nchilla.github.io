@@ -22,51 +22,1216 @@
     <style>
         body{
             background-color:#0e0e0e;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            
         }
-        #stage{
+
+        #scroll-wrapper,#stage{
             position:fixed;
             width:100%;
-            height:100vh;
-            height:100dvh;
+            --hundredvh:100vh;
+            --hundredvh:100dvh;
+            height:var(--hundredvh);
+            
+
             top:0;
             left:0;
         }
 
-        #stage video{
+        #scroll-wrapper{
+          overflow:scroll;
+          scroll-snap-type:y mandatory;
+        
+        }
+
+        #scroll-wrapper .step:last-child{
+          height:100vh;
+        }
+
+        #stage{
+            
+            overflow:hidden;
+            --active:1;
+        }
+
+        #stage figure{
+          display:contents;
+          width:100%;
+          height:100%;
+        }
+
+        #stage .frame{
             position:absolute;
             top:0;
             left:0;
             width:100%;
             height:100%;
+            --before:min(calc(var(--i) - var(--active)),0);
+            --after:max(calc(var(--i) - var(--active)),0);
+            
+            --comparison:calc(var(--i) - var(--active));
+            
+            --abs: max(var(--comparison), calc(-1 * var(--comparison)));
+            
+
+        
+            opacity:calc(1 - var(--abs));
+            --offset:calc(50vh * var(--comparison));
+            transform:translateY(var(--offset));
+            
+            box-sizing:border-box;
+        }
+
+        #stage img{
+            width:100%;
+            min-width:100%;
+            min-height:100%;
+            height:100%;
             object-fit:contain;
         }
+
+
+        .step.pause{
+          height:300px;
+          scroll-snap-align:start;
+          box-sizing:border-box;
+        }
+
+        .step.flip{
+          height:300px;
+        }
+
+        #instructions{
+          position:absolute;
+          text-align:center;
+          top:25vh;
+          color:white;
+          font-family:'hershey-times',courier,monospace;
+          font-size:22px;
+          line-height:22px;
+          width:100%;
+          padding:0px 15px;
+          box-sizing:border-box;
+        }
+
+        @font-face {
+          font-family: 'hershey-times';
+          src: url('../assets/fonts/hershey-noailles-simplex-regular.woff');
+      }
     </style>
 
 
 
   </head>
-  <script>
-    
-  </script>
+
   
   <body>
-    <main id="stage">
-        
+    <main id="stage" style=='--active:1;'>
+      
+      
+      
+        <div class='frame' style='--i:1;'>
+          
+            <p id="instructions">Scroll or use arrow keys to progress.</p>
+          
+          
 
   
   
-  <figure style='--ratio:0.58;' class='video media '>
-    <video preload="none"  autoplay  muted playsinline loop poster="../../assets/video/wp-on-black2.jpg">
-      <source src="../../assets/video/wp-on-black2.webm" type="video/webm">
-      <source src="../../assets/video/wp-on-black2.mp4" type="video/mp4">
-    </video>
-    
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f1.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f1.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f1.png">
+  </picture>
+  
   </figure>
 
+
+
+
+
   
 
+        </div>
+      
+      
+        <div class='frame' style='--i:2;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f2.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f2.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f2.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:3;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f3.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f3.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f3.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:4;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f4.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f4.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f4.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:5;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f5.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f5.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f5.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:6;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f6.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f6.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f6.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:7;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f7.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f7.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f7.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:8;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f8.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f8.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f8.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:9;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f9.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f9.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f9.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:10;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f10.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f10.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f10.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:11;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f11.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f11.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f11.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:12;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f12.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f12.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f12.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:13;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f13.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f13.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f13.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:14;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f14.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f14.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f14.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:15;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f15.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f15.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f15.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:16;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f16.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f16.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f16.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:17;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f17.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f17.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f17.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:18;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f18.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f18.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f18.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:19;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f19.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f19.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f19.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:20;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f20.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f20.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f20.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:21;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f21.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f21.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f21.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:22;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f22.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f22.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f22.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:23;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f23.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f23.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f23.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:24;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f24.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f24.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f24.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:25;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f25.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f25.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f25.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:26;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f26.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f26.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f26.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:27;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f27.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f27.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f27.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:28;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f28.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f28.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f28.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:29;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f29.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f29.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f29.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:30;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f30.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f30.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f30.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:31;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f31.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f31.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f31.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:32;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f32.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f32.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f32.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+      
+        <div class='frame' style='--i:33;'>
+          
+          
+
+  
+  
+  
+  
+  
+  
+
+  <figure style='--ratio:0.7486666666666667;' class="image preserve-scale png media">
+  <picture>
+    <source type="image/webp" srcset="../../assets/images-preserve-scale/wpvid-f33.webp" type="image/webp">
+    <source type="image/png" srcset="../../assets/images-preserve-scale/wpvid-f33.png">
+    <img loading="lazy" src="../../assets/images-preserve-scale/wpvid-f33.png">
+  </picture>
+  
+  </figure>
+
+
+
+
+
+  
+
+        </div>
+      
+        
     </main>
-   
+    <div id="scroll-wrapper">
+      
+      
+          <div class='step pause' data-i="1"></div>
+      
+          <div class='step flip' data-i="2"></div>
+      
+          <div class='step pause' data-i="3"></div>
+      
+          <div class='step flip' data-i="4"></div>
+      
+          <div class='step pause' data-i="5"></div>
+      
+          <div class='step flip' data-i="6"></div>
+      
+          <div class='step pause' data-i="7"></div>
+      
+          <div class='step flip' data-i="8"></div>
+      
+          <div class='step pause' data-i="9"></div>
+      
+          <div class='step flip' data-i="10"></div>
+      
+          <div class='step pause' data-i="11"></div>
+      
+          <div class='step flip' data-i="12"></div>
+      
+          <div class='step pause' data-i="13"></div>
+      
+          <div class='step flip' data-i="14"></div>
+      
+          <div class='step pause' data-i="15"></div>
+      
+          <div class='step flip' data-i="16"></div>
+      
+          <div class='step pause' data-i="17"></div>
+      
+          <div class='step flip' data-i="18"></div>
+      
+          <div class='step pause' data-i="19"></div>
+      
+          <div class='step flip' data-i="20"></div>
+      
+          <div class='step pause' data-i="21"></div>
+      
+          <div class='step flip' data-i="22"></div>
+      
+          <div class='step pause' data-i="23"></div>
+      
+          <div class='step flip' data-i="24"></div>
+      
+          <div class='step pause' data-i="25"></div>
+      
+          <div class='step flip' data-i="26"></div>
+      
+          <div class='step pause' data-i="27"></div>
+      
+          <div class='step flip' data-i="28"></div>
+      
+          <div class='step pause' data-i="29"></div>
+      
+          <div class='step flip' data-i="30"></div>
+      
+          <div class='step pause' data-i="31"></div>
+      
+          <div class='step flip' data-i="32"></div>
+      
+          <div class='step pause' data-i="33"></div>
+      
+    </div>
+    
+
+    <script>
+
+      let stage;
+      let scrollwrapper;
+
+      let items=[];
+      let cursor=0;
+      for(let i=1;i<35;i++){
+        let amount = i%2==0?300:300;
+        //let amount=window.innerHeight/2;
+        items.push([cursor,cursor+amount])
+        cursor+=amount;
+      }
+
+      let active=1;
+      
+
+      window.addEventListener('load',function(){
+        stage=document.querySelector('#stage');
+        scrollwrapper=document.querySelector('#scroll-wrapper')
+
+        scrollwrapper.addEventListener('scroll',function(){
+          window.requestAnimationFrame(()=>{
+            
+            let scrolly=scrollwrapper.scrollTop+150;
+            
+            let new_active=items.findIndex(a=>{
+              
+              return a[0]<=scrolly&&a[1]>=scrolly;
+            })+1;
+            if(new_active!==active){
+              
+              stage.style.setProperty('--active',new_active);
+              active=new_active;
+            }
+
+            
+          })
+        })
+
+        window.addEventListener('keydown',(event)=>{
+            let step;
+            let jump=active%2!==0?2:1;
+            if(event.key=='ArrowLeft'&&active>1){
+                step=document.querySelector(`.step[data-i="${active-jump}"]`);
+            }else if(event.key=='ArrowRight'&&active<items.length){
+                step=document.querySelector(`.step[data-i="${active+jump}"]`);
+            }
+
+            if(step){
+                let top=step.offsetTop;
+
+                //change_active(scene.dataset.i);
+                scrollwrapper.scroll({
+                  left:0,
+                  top,
+                  behavior:'smooth'
+                });
+            }
+        })
+
+
+      })
+      
+      //0.7488
+
+
+      
+    </script>
   </body>
 </html>
 <body>

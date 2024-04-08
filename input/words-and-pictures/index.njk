@@ -22,46 +22,209 @@
     <style>
         body{
             background-color:#0e0e0e;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            
         }
-        #stage{
+
+        #scroll-wrapper,#stage{
             position:fixed;
             width:100%;
-            height:100vh;
-            height:100dvh;
+            --hundredvh:100vh;
+            --hundredvh:100dvh;
+            height:var(--hundredvh);
+            {# height:calc(var(--hundredvh) - 40px); #}
+
             top:0;
             left:0;
         }
 
-        #stage video{
+        #scroll-wrapper{
+          overflow:scroll;
+          scroll-snap-type:y mandatory;
+        
+        }
+
+        #scroll-wrapper .step:last-child{
+          height:100vh;
+        }
+
+        #stage{
+            
+            overflow:hidden;
+            --active:1;
+        }
+
+        #stage figure{
+          display:contents;
+          width:100%;
+          height:100%;
+        }
+
+        #stage .frame{
             position:absolute;
             top:0;
             left:0;
             width:100%;
             height:100%;
+            --before:min(calc(var(--i) - var(--active)),0);
+            --after:max(calc(var(--i) - var(--active)),0);
+            {# --offset:calc(50vh * (var(--before) + var(--after))); #}
+            --comparison:calc(var(--i) - var(--active));
+            
+            --abs: max(var(--comparison), calc(-1 * var(--comparison)));
+            
+
+        
+            opacity:calc(1 - var(--abs));
+            --offset:calc(50vh * var(--comparison));
+            transform:translateY(var(--offset));
+            {# padding-bottom:40px; #}
+            box-sizing:border-box;
+        }
+
+        #stage img{
+            width:100%;
+            min-width:100%;
+            min-height:100%;
+            height:100%;
             object-fit:contain;
         }
+
+
+        .step.pause{
+          height:300px;
+          scroll-snap-align:start;
+          box-sizing:border-box;
+        }
+
+        .step.flip{
+          height:300px;
+        }
+
+        #instructions{
+          position:absolute;
+          text-align:center;
+          top:25vh;
+          color:white;
+          font-family:'hershey-times',courier,monospace;
+          font-size:22px;
+          line-height:22px;
+          width:100%;
+          padding:0px 15px;
+          box-sizing:border-box;
+        }
+
+        @font-face {
+          font-family: 'hershey-times';
+          src: url('../assets/fonts/hershey-noailles-simplex-regular.woff');
+      }
     </style>
 
 
 
   </head>
-  <script>
-    {# console.log({{ templates | dump | safe }}) #}
-  </script>
+
   {% set captions = false %}
   <body>
-    <main id="stage">
-        {{ macros.media(
-            "wp-on-black2", 
-            "video",
-            "",
+    <main id="stage" style=='--active:1;'>
+      
+      {% for i in range(1, 34) %}
+      
+        <div class='frame' style='--i:{{i}};'>
+          {% if i == 1%}
+            <p id="instructions">Scroll or use arrow keys to progress.</p>
+          {% endif %}
+          {{ macros.media(
+            "wpvid-f" + i, 
+            "image",
+            "preserve-scale png",
             "",
             '',
             '',
             "../../assets/"
         ) }}
+        </div>
+      {% endfor %}
+        
     </main>
-   
+    <div id="scroll-wrapper">
+      {% set cls = cycler("pause", "flip") %}
+      {% for i in range(1, 34) %}
+          <div class='step {{cls.next()}}' data-i="{{loop.index}}"></div>
+      {% endfor %}
+    </div>
+    
+
+    <script>
+
+      let stage;
+      let scrollwrapper;
+
+      let items=[];
+      let cursor=0;
+      for(let i=1;i<35;i++){
+        let amount = i%2==0?300:300;
+        //let amount=window.innerHeight/2;
+        items.push([cursor,cursor+amount])
+        cursor+=amount;
+      }
+
+      let active=1;
+      
+
+      window.addEventListener('load',function(){
+        stage=document.querySelector('#stage');
+        scrollwrapper=document.querySelector('#scroll-wrapper')
+
+        scrollwrapper.addEventListener('scroll',function(){
+          window.requestAnimationFrame(()=>{
+            
+            let scrolly=scrollwrapper.scrollTop+150;
+            
+            let new_active=items.findIndex(a=>{
+              
+              return a[0]<=scrolly&&a[1]>=scrolly;
+            })+1;
+            if(new_active!==active){
+              
+              stage.style.setProperty('--active',new_active);
+              active=new_active;
+            }
+
+            
+          })
+        })
+
+        window.addEventListener('keydown',(event)=>{
+            let step;
+            let jump=active%2!==0?2:1;
+            if(event.key=='ArrowLeft'&&active>1){
+                step=document.querySelector(`.step[data-i="${active-jump}"]`);
+            }else if(event.key=='ArrowRight'&&active<items.length){
+                step=document.querySelector(`.step[data-i="${active+jump}"]`);
+            }
+
+            if(step){
+                let top=step.offsetTop;
+
+                //change_active(scene.dataset.i);
+                scrollwrapper.scroll({
+                  left:0,
+                  top,
+                  behavior:'smooth'
+                });
+            }
+        })
+
+
+      })
+      
+      //0.7488
+
+
+      {# console.log({{ templates | dump | safe }}) #}
+    </script>
   </body>
 </html>
 <body>

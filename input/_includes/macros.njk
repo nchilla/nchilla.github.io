@@ -18,12 +18,14 @@
   {% set srcpath = path+"images/" if effects !== 'video' else path+"images-large/"  %}
   {% set srcpath = path+"images-large/" if 'fitheight large' in effects else srcpath  %}
   {% set srcpath = path+"images-large/" if 'extra-small' in effects else srcpath  %}
+  {% set srcpath = path+"images-preserve-scale/" if 'preserve-scale' in effects else srcpath  %}
+  {% set ext = "png" if "png" in effects else "jpg"  %}
 
   <figure style='--ratio:{{ src | getRatio }};' class="image {{ effects }} media">
   <picture>
     <source type="image/webp" srcset="{{ srcpath }}{{ src }}.webp" type="image/webp">
-    <source type="image/jpg" srcset="{{ srcpath }}{{ src }}.jpg">
-    <img loading="lazy" src="{{ srcpath }}{{ src }}.jpg">
+    <source type="image/{{ext}}" srcset="{{ srcpath }}{{ src }}.{{ext}}">
+    <img loading="lazy" src="{{ srcpath }}{{ src }}.{{ext}}">
   </picture>
   {% if caption %}
     <figcaption>

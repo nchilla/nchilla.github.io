@@ -4,4 +4,5 @@ gh-pages.pub
 input/assets/raw-video/
 input/assets/raw-images/
 input/assets/raw-images-large/
+input/assets/raw-images-preserve-scale/
 images.js
