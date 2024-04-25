@@ -181,6 +181,10 @@ figure picture{
     margin-bottom:0.5em;
 }
 
+.stage-element[data-type="text"][data-align="end"] p:last-child{
+    margin-bottom:0;
+}
+
 .stage-element[data-type="text"] strong{
     opacity:0.5;
     /* font-weight:600; */
