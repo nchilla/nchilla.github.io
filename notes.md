@@ -6,7 +6,7 @@ start live server:
 
 
 #### FFMPEG golden 1-step command for mov->scaled mp4 saved in video folder:
-`for i in *.mov; do ffmpeg -n -i "$i" -vf "scale=1704:-1" "../video/${i%.*}.mp4"; done`
+`for i in *.mov; do ffmpeg -n -i "$i" -vf "scale=1702:-1" "../video/${i%.*}.mp4"; done`
 
 `for i in *-mobile.mov; do ffmpeg -i "$i" -vf "scale=600:-1" "../video/${i%.*}.mp4"; done`
 
@@ -14,7 +14,7 @@ start live server:
 
 single:
 
-`ffmpeg -i "wp-on-black.mov" -vf "scale=1702:-1" "../video/parc-sri-opt2.mp4"`
+`ffmpeg -i "iyapo.mov" -vf "scale=1702:-1" "../video/iyapo.mp4"`
 
 no resize:
 `ffmpeg -i "lp.mp4" "../video/lp.mp4"`
@@ -24,14 +24,14 @@ no resize:
 
 single:
 
-`ffmpeg -i "pern-all-pages.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "pern-all-pages.webm"`
+`ffmpeg -i "iyapo.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "iyapo.webm"`
 
 #### FFMPEG get first frame of each mp4 in folder and save it as a jpg
 `for i in *.mp4; do ffmpeg -ss 00:00:00 -n -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done`
 
 single:
 
-`ffmpeg -ss 00:00:00 -i "pern-all-pages.mp4" -vframes 1 -q:v 2 "pern-all-pages.jpg"`
+`ffmpeg -ss 00:00:00 -i "iyapo.mp4" -vframes 1 -q:v 2 "iyapo.jpg"`
 
 
 

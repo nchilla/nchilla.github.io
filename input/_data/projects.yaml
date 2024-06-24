@@ -54,6 +54,25 @@
         link: https://work.nicochilla.com/tractatus-tree/thread.html
         caption: visit
 
+  - title: Iyapo Repository
+    type: single
+    position: center
+    typefaces: VTC Du Bois, JetBrains Mono
+    code: html+css+js, using <a href="https://www.11ty.dev/">11ty</a> for static site generation and Notion as a CMS
+    role:
+      - design
+      - development
+    description: Website and identity designed with [Patrick Yang MacDonald](https://patrick-y-m.com/) for the Iyapo Repository, an Afrofuturist archive and collaborative art initiative.
+    link: https://iyaporepository.org/
+    link_copy: visit
+    assets:
+      - src: iyapo
+        type: video
+        ratio: 0.66
+        effects:
+        link: 
+        caption: visit
+
   - title: The National Restaurant List
     type: single
     position: left
