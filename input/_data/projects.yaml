@@ -16,7 +16,7 @@
         type: video
         ratio: 0.66
         effects:
-        link: https://platformeconomies.net/
+        link: 
         caption: visit
 
   - title: Tractatus Reader
@@ -73,7 +73,7 @@
         link: 
         caption: visit
 
-  - title: The National Restaurant List
+  - title: At Home With
     type: single
     position: left
     typefaces: NYT Cheltenham, Imperial, Franklin
@@ -81,14 +81,16 @@
     role:
       - design
       - development
-    description: List presentation designed and developed in collaboration with [Umi Syam](https://umi.codes/).
-    link: https://www.nytimes.com/interactive/2023/dining/best-restaurants-america.html
+    description: Repeatable visual format for a celebrity home tour series (e.g. <a href="https://www.nytimes.com/interactive/2024/08/28/realestate/tony-danza-apartment.html">1</a> <a href="https://www.nytimes.com/interactive/2025/04/15/realestate/roxane-gay-debbie-millman-home.html">2</a> <a href="https://www.nytimes.com/interactive/2024/12/04/realestate/luxury/david-sybil-yurman-house-jewelry-marriage.html">3</a>), pitched and produced with Gabriel Gianordoli for NYT Real Estate.
+    link: https://www.nytimes.com/interactive/2025/01/15/realestate/luxury/david-rasche-home-maplewood-nj.html
     link_copy: visit
     assets:
-      - src: the-restaurant-list
+      - src: athomewith
         type: video
-        ratio: 0.58
+        ratio: 0.66
         effects:
+        link: 
+        caption: visit
 
   - title: Sonnet index
     type: single
@@ -181,6 +183,23 @@
         effects:
         link: https://platformeconomies.net/
         caption: visit
+
+  - title: The National Restaurant List
+    type: single
+    position: center
+    typefaces: NYT Cheltenham, Imperial, Franklin
+    code: Sveltekit (via Birdkit, NYT’s custom interactive publishing tool)
+    role:
+      - design
+      - development
+    description: List presentation designed and developed in collaboration with [Umi Syam](https://umi.codes/).
+    link: https://www.nytimes.com/interactive/2023/dining/best-restaurants-america.html
+    link_copy: visit
+    assets:
+      - src: the-restaurant-list
+        type: video
+        ratio: 0.58
+        effects:
 
   - title: Goby — Parsons thesis
     type: gallery

@@ -5,35 +5,49 @@ start live server:
 `npx @11ty/eleventy --serve`
 
 
-#### FFMPEG golden 1-step command for mov->scaled mp4 saved in video folder:
-`for i in *.mov; do ffmpeg -n -i "$i" -vf "scale=1702:-1" "../video/${i%.*}.mp4"; done`
+#### Video instructions
 
-`for i in *-mobile.mov; do ffmpeg -i "$i" -vf "scale=600:-1" "../video/${i%.*}.mp4"; done`
+1. Screen record...
 
-`for i in *-mobile.mov; do ffmpeg -i "$i" "../video/${i%.*}.mp4"; done`
+    - on a computer at 1200 x 800 for desktop videos (use inspector and quicktime modal to get the right dimensions) - should export at 2400x1600, give or take a few px. 
 
-single:
+    - on phone with native capture tool for mobile videos 
 
-`ffmpeg -i "iyapo.mov" -vf "scale=1702:-1" "../video/iyapo.mp4"`
+2. Drop it into `input/assets/raw-video` and run the following applicable “golden” ffmpeg command in that folder to scale and compress to mp4
 
-no resize:
-`ffmpeg -i "lp.mp4" "../video/lp.mp4"`
+- You may get the error `height not divisible by 2`, in which case you have to nudge the pixel width used in `scale` around a little by 2s until you find one it takes.
 
-#### FFMPEG convert videos in a folder to nicely sized good quality webm:
-`for i in *.mp4; do ffmpeg -n -i "$i" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "${i%.*}.webm"; done`
+```
+<!-- desktop single file -->
+ffmpeg -i "[NAME].mov" -vf "scale=1702:-1" "../video/[NAME].mp4"
 
-single:
+<!-- desktop whole folder -->
+for i in *.mov; do ffmpeg -n -i "$i" -vf "scale=1702:-1" "../video/${i%.*}.mp4"; done
 
-`ffmpeg -i "iyapo.mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "iyapo.webm"`
+<!-- mobile whole folder () -->
+for i in *-mobile.mov; do ffmpeg -i "$i" "../video/${i%.*}.mp4"; done
 
-#### FFMPEG get first frame of each mp4 in folder and save it as a jpg
-`for i in *.mp4; do ffmpeg -ss 00:00:00 -n -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done`
+<!-- single no resize -->
+ffmpeg -i "[NAME].mp4" "../video/[NAME].mp4"
+```
 
-single:
+3. CD into `input/asset/video` and run the following to convert to nicely-sized webm
 
-`ffmpeg -ss 00:00:00 -i "iyapo.mp4" -vframes 1 -q:v 2 "iyapo.jpg"`
+```
+<!-- single -->
+ffmpeg -i "[NAME].mp4" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "[NAME].webm"
+
+<!-- whole folder -->
+for i in *.mp4; do ffmpeg -n -i "$i" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "${i%.*}.webm"; done
+```
 
 
+4. In the same folder, run the following to create the poster image from the first frame of the video
 
+```
+<!-- single -->
+ffmpeg -ss 00:00:00 -i "[NAME].mp4" -vframes 1 -q:v 2 "[NAME].jpg"
 
-ffmpeg -i cl.mov -vf tpad=stop_mode=clone:stop_duration=1 cl-extend.mov
+<!-- whole folder -->
+for i in *.mp4; do ffmpeg -ss 00:00:00 -n -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done
+```
