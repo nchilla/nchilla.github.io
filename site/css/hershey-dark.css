@@ -128,6 +128,13 @@ figure video,figure.video img{
   width:calc(100% + 1px);
 }
 
+figure.video{
+  background-image:var(--fallback-poster);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 .single{
   padding-bottom:calc(var(--ratio) * 100%);
