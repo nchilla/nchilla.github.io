@@ -38,15 +38,16 @@
 
 
     {% for project in projects %}
+    {% set lazyload = loop.index0 !== 0%}
     {% if project.type == 'single' %}
     <div class="single media-box text-col" data-effects="{{project.assets[0].effects}}" style="--ratio:{{project.assets[0].ratio}}" data-size="{{ project.size }}"  data-position="{{ project.position }}" data-project="{{ project.title }}">
-      {{ macros.media(project.assets[0].src, project.assets[0].type,'','','',project.assets[0].ratio,path) }}
+      {{ macros.media(project.assets[0].src, project.assets[0].type,'','','',project.assets[0].ratio,path,true,lazyload) }}
     </div>
     {% elseif project.type == 'gallery'%}
     <div class="gallery media-box" data-position="{{ project.position }}" data-inline-info="{{ "true" if project.place_info else "false" }}" data-size="{{ project.size }}" data-project="{{ project.title }}" style="--ratio: {{ project.ratio if project.ratio else 0.58 }};">
       {% for media in project.assets %}
       <div class="slide" data-effects="{{media.effects}}">
-        {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link,media.ratio if media.ratio else null,path) }}
+        {{ macros.media(media.src, media.type, media.effects, media.caption if captions else '', media.link,media.ratio if media.ratio else null,path,true,lazyload) }}
       </div>
       {% endfor %}
       {% if project.place_info == 'inline-end'%}
@@ -65,23 +66,6 @@
     {% endif %}
     {% if project.place_info !== 'inline' and project.place_info !== 'inline-end' %}
       {{ macros.projectinfo(project) }}
-      {# <h3 class="label text-col" data-position="{{ project.position }}" data-size="{{ project.size }}" data-project="{{ project.title }}">
-        {{ project.title }}
-        {% if project.link %}
-          <a href="{{ project.link }}" target="_blank">{{ project.link_copy }}</a>
-        {% endif %}
-      </h3>
-      <div class='description text-col' data-position="{{ project.position }}" data-size="{{ project.size }}" data-project="{{ project.title }}">
-        <p>{{ project.description | md | safe}}</p>
-        <p>
-          {% if project.typefaces.length > 0 %}
-          <button class="type expandable" data-text="{{project.typefaces}}"><span></span></button>
-          {% endif %}
-          {% if project.code.length > 0 %}
-          <button class="code expandable" data-text="{{project.code}}"><span></span></button>
-          {% endif %}
-        </p>
-      </div> #}
     {% endif %}
     
     {% endfor %}
@@ -96,44 +80,83 @@
 </main>
 <script type="text/javascript">
 
+
   const main=document.querySelector('main');
-
-  document.querySelector('#view-toggle').addEventListener('click',function(){
-    let current=main.dataset.view;
-    window.scroll(0,0);
-    main.dataset.view=current=='projects'?'info':'projects';
-  })
-
-  let large=window.matchMedia('(min-width:1000px)');
   const grid=document.querySelector('#grid');
+  let large=window.matchMedia('(min-width:1000px)');
+  let timer;
 
-  {# const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-  observer.observe(); #}
+  window.addEventListener('load',init)
+  window.addEventListener('resize',setColumnCount);
+
   setColumnCount();
 
-  let timer;
-  window.addEventListener('resize',setColumnCount);
+  function init(){
+    document.querySelector('#view-toggle').addEventListener('click',function(){
+      let current=main.dataset.view;
+      window.scroll(0,0);
+      main.dataset.view=current=='projects'?'info':'projects';
+    })
+
+    videoLazyLoad();
+
+    
+
+    document.querySelectorAll('.expandable.type, .expandable.code').forEach((button) => {
+      button.addEventListener('click',function(){
+        let el=event.currentTarget;
+        let inside=el.querySelector('span');
+        if(!el.classList.contains('open')){
+          el.classList.add('open');
+          inside.innerHTML=el.dataset.text;
+        }else{
+          el.classList.remove('open');
+          inside.innerText='';
+        }
+      })
+    });
+
+    
+
+    
+  
+  }
+
+
+  
 
   function timeOutResize(){
     clearTimeout(timer);
     timer=setTimeout(setColumnCount,10);
   }
 
-  document.querySelectorAll('.expandable.type, .expandable.code').forEach((button) => {
-    button.addEventListener('click',function(){
-      let el=event.currentTarget;
-      let inside=el.querySelector('span');
-      if(!el.classList.contains('open')){
-        el.classList.add('open');
-        inside.innerHTML=el.dataset.text;
-      }else{
-        el.classList.remove('open');
-        inside.innerText='';
-      }
-    })
-  });
+  function videoLazyLoad(){
+      const observer=new IntersectionObserver(callback,{
+        threshold:[0,1],
+        rootMargin:"100px"
+      });
 
-  console.log({{ projects | dump | safe }});
+      const lazyVideos=document.querySelectorAll('.video.lazy video');
+      
+      for(let video of [...lazyVideos]) observer.observe(video);
+      
+
+      function callback(entries){
+        for(let entry of entries){
+          if(entry.target.dataset.loaded=='false'&&(entry.isIntersecting || entry.intersectionRatio>0)){
+              const sources=entry.target.querySelectorAll('source');
+              for(let source of [...sources]){
+                source.src=source.dataset.src;
+              }
+              entry.target.dataset.loaded="true";
+              entry.target.load();
+          }
+          
+        }
+      }
+      
+    }
+
 
   function setColumnCount(){
     console.log('calculating columns');
@@ -146,9 +169,6 @@
     let count=Math.floor((w - outer + gap) / (col + gap));
     if(count % 2 == 1) count--;
     count=Math.min(count,10);
-
-
-    console.log(count);
 
     let styleStr=`1fr repeat(${count},var(--col)) 1fr`;
     grid.style.setProperty('--fancy',styleStr);

@@ -1,11 +1,12 @@
-{% macro media(src,type,effects,caption,link,ratio,path="../assets/",autoplay=true) %}
+{% macro media(src,type,effects,caption,link,ratio,path="../assets/",autoplay=true,lazyload=false) %}
 
   {% if type == 'video'%}
   {% set ratio = ratio if ratio else 0.58  %}
-  <figure style='--ratio:{{ ratio }};' class='video media {{effects}}'>
-    <video preload="none" {% if autoplay %} autoplay {% endif %} muted playsinline loop poster="{{ path }}video/{{ src }}.jpg">
-      <source src="{{ path }}video/{{ src }}.webm" type="video/webm">
-      <source src="{{ path }}video/{{ src }}.mp4" type="video/mp4">
+  <figure style='--ratio:{{ ratio }};' class='video media {{effects}} {{ "lazy" if lazyload else ""}}'>
+    {% set src_attribute= "src" if not lazyload else "data-src" %}
+    <video preload="none" {% if autoplay %} autoplay {% endif %} muted playsinline loop poster="{{ path }}video/{{ src }}.jpg"  data-loaded="false"> 
+      <source {{src_attribute}}="{{ path }}video/{{ src }}.webm" type="video/webm">
+      <source {src_attribute}="{{ path }}video/{{ src }}.mp4" type="video/mp4">
     </video>
     {% if caption %}
       <figcaption>
