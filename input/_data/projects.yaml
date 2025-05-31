@@ -81,7 +81,7 @@
     role:
       - design
       - development
-    description: Repeatable visual format for a celebrity home tour series (e.g. <a href="https://www.nytimes.com/interactive/2024/08/28/realestate/tony-danza-apartment.html">1</a> <a href="https://www.nytimes.com/interactive/2025/04/15/realestate/roxane-gay-debbie-millman-home.html">2</a> <a href="https://www.nytimes.com/interactive/2024/12/04/realestate/luxury/david-sybil-yurman-house-jewelry-marriage.html">3</a>), pitched and produced with Gabriel Gianordoli for NYT Real Estate.
+    description: Repeatable visual format for a celebrity home tour series (e.g. <a href="https://www.nytimes.com/interactive/2024/08/28/realestate/tony-danza-apartment.html">1</a> <a href="https://www.nytimes.com/interactive/2025/04/15/realestate/roxane-gay-debbie-millman-home.html">2</a> <a href="https://www.nytimes.com/interactive/2024/12/04/realestate/luxury/david-sybil-yurman-house-jewelry-marriage.html">3</a>), pitched and produced with [Gabriel Gianordoli](https://gianordoli.com/) for NYT Real Estate.
     link: https://www.nytimes.com/interactive/2025/01/15/realestate/luxury/david-rasche-home-maplewood-nj.html
     link_copy: visit
     assets:

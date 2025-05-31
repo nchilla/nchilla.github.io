@@ -86,8 +86,12 @@
   let large=window.matchMedia('(min-width:1000px)');
   let timer;
 
+  let window_width=0;
+
   window.addEventListener('load',init)
-  window.addEventListener('resize',setColumnCount);
+  window.addEventListener('resize',()=>{
+    setColumnCount();
+  });
 
   setColumnCount();
 
@@ -132,24 +136,64 @@
 
   function videoLazyLoad(){
       const observer=new IntersectionObserver(callback,{
-        threshold:[0,1],
-        rootMargin:"100px"
+        threshold:[0,0.5,1],
+        rootMargin:window_width<800?"-74px 0px 0px":"100px"
       });
 
-      const lazyVideos=document.querySelectorAll('.video.lazy video');
+      let playing_videos=[];
+      let intersecting_videos=[];
+
+      const lazyVideos=document.querySelectorAll('.video video');
       
-      for(let video of [...lazyVideos]) observer.observe(video);
+      for(let video of [...lazyVideos]){
+         observer.observe(video);
+         video.addEventListener('click',()=>{
+          play_video(video);
+         })
+      }
+
+      function play_video(node){
+          node.play();
+          playing_videos.push(node);
+          if(playing_videos.length>2 && window_width<800){
+              playing_videos[0].pause();
+              console.log('paused for performance',playing_videos[0])
+              playing_videos=playing_videos.slice(1);
+
+              console.log('playing_videos',playing_videos)
+          }
+      }
       
 
       function callback(entries){
         for(let entry of entries){
-          if(entry.target.dataset.loaded=='false'&&(entry.isIntersecting || entry.intersectionRatio>0)){
+          const intersecting=(entry.isIntersecting || entry.intersectionRatio>0)
+          if(entry.target.dataset.loaded=='false'&&intersecting){
+            console.log('loaded',entry.target)
               const sources=entry.target.querySelectorAll('source');
               for(let source of [...sources]){
                 source.src=source.dataset.src;
               }
               entry.target.dataset.loaded="true";
               entry.target.load();
+          }
+
+          if(!intersecting){
+            console.log('out of view, paused',entry.target)
+            entry.target.pause();
+            playing_videos=playing_videos.filter((node)=>node!==entry.target);
+            intersecting_videos=intersecting_videos.filter((node)=>node!==entry.target);
+
+            const paused_intersecting=intersecting_videos.find((node)=>node.paused);
+            if(paused_intersecting&&playing_videos.length<2) play_video(paused_intersecting)
+          }else if(window_width>800 || entry.intersectionRatio>=0.5){
+            intersecting_videos.push(entry.target)
+          }
+          
+          if(intersecting&&entry.target.paused){
+            play_video(entry.target);
+            console.log('entered view, started play',entry.target)
+            
           }
           
         }
@@ -161,6 +205,7 @@
   function setColumnCount(){
     console.log('calculating columns');
     const w=window.innerWidth;
+    window_width=w;
     const col=large.matches?110:90;
     const gap=15;
     const outer=large.matches?90:80;

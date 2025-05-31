@@ -51,3 +51,17 @@ ffmpeg -ss 00:00:00 -i "[NAME].mp4" -vframes 1 -q:v 2 "[NAME].jpg"
 <!-- whole folder -->
 for i in *.mp4; do ffmpeg -ss 00:00:00 -n -i "$i" -vframes 1 -q:v 2 "${i%.*}.jpg"; done
 ```
+
+
+5. New step: create `-small` webm and mp4 versions of video, for mobile safari performance. 
+
+TODOS for me:
+- do not process video if already smaller than 800, and write template logic to use original in these cases
+- write a shell script to do all this stuff automatically instead of my current painful pasting
+- change all of these commands to use `-2` instead of `-1` since it deals with the height division for you
+
+```
+for i in *.mp4; do ffmpeg -n -i "$i" -vf "scale=800:-2" "${i%.*}-small.mp4"; done
+
+for i in *-small.mp4; do ffmpeg -n -i "$i" -c:v libvpx-vp9 -crf 40 -b:v 0 -b:a 128k -c:a libopus "${i%.*}.webm"; done
+```
